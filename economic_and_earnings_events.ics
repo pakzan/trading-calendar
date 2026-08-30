@@ -42,7 +42,7 @@ UID:economic-174-20260901T140000Z@economic-calendar.local
 SUMMARY:ISM Manufacturing Prices
 DTSTART:20260901T140000Z
 DTEND:20260901T143000Z
-DESCRIPTION:Currency: USD\nForecast: 72\nPrevious: 71.1
+DESCRIPTION:Currency: USD\nForecast: 71.2\nPrevious: 71.1
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: ISM Manufacturing Prices in 1 week
@@ -59,7 +59,7 @@ UID:economic-173-20260901T140000Z@economic-calendar.local
 SUMMARY:ISM Manufacturing PMI
 DTSTART:20260901T140000Z
 DTEND:20260901T143000Z
-DESCRIPTION:Currency: USD\nForecast: 55.3\nPrevious: 55.6
+DESCRIPTION:Currency: USD\nForecast: 55.2\nPrevious: 55.6
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: ISM Manufacturing PMI in 1 week
@@ -76,7 +76,7 @@ UID:economic-1057-20260901T140000Z@economic-calendar.local
 SUMMARY:JOLTS Job Openings
 DTSTART:20260901T140000Z
 DTEND:20260901T143000Z
-DESCRIPTION:Currency: USD\nForecast: 7.39M\nPrevious: 7.359M
+DESCRIPTION:Currency: USD\nForecast: 7.33M\nPrevious: 7.359M
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: JOLTS Job Openings in 1 week
@@ -93,7 +93,7 @@ UID:economic-1-20260902T121500Z@economic-calendar.local
 SUMMARY:ADP Nonfarm Employment Change
 DTSTART:20260902T121500Z
 DTEND:20260902T124500Z
-DESCRIPTION:Currency: USD\nForecast: N/A\nPrevious: 44K
+DESCRIPTION:Currency: USD\nForecast: 47K\nPrevious: 44K
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: ADP Nonfarm Employment Change in 1 week
@@ -127,7 +127,7 @@ UID:economic-294-20260903T123000Z@economic-calendar.local
 SUMMARY:Initial Jobless Claims
 DTSTART:20260903T123000Z
 DTEND:20260903T130000Z
-DESCRIPTION:Currency: USD\nForecast: N/A\nPrevious: 203K
+DESCRIPTION:Currency: USD\nForecast: 205K\nPrevious: 203K
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Initial Jobless Claims in 1 week
@@ -178,7 +178,7 @@ UID:economic-176-20260903T140000Z@economic-calendar.local
 SUMMARY:ISM Non-Manufacturing PMI
 DTSTART:20260903T140000Z
 DTEND:20260903T143000Z
-DESCRIPTION:Currency: USD\nForecast: N/A\nPrevious: 54.1
+DESCRIPTION:Currency: USD\nForecast: 54.1\nPrevious: 54.1
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: ISM Non-Manufacturing PMI in 1 week
@@ -195,7 +195,7 @@ UID:economic-8-20260904T123000Z@economic-calendar.local
 SUMMARY:Average Hourly Earnings (MoM)
 DTSTART:20260904T123000Z
 DTEND:20260904T130000Z
-DESCRIPTION:Currency: USD\nForecast: 0.2%\nPrevious: 0.1%
+DESCRIPTION:Currency: USD\nForecast: 0.3%\nPrevious: 0.1%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Average Hourly Earnings (MoM) in 1 week
@@ -212,7 +212,7 @@ UID:economic-227-20260904T123000Z@economic-calendar.local
 SUMMARY:Nonfarm Payrolls
 DTSTART:20260904T123000Z
 DTEND:20260904T130000Z
-DESCRIPTION:Currency: USD\nForecast: 45K\nPrevious: -23K
+DESCRIPTION:Currency: USD\nForecast: 58K\nPrevious: -23K
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Nonfarm Payrolls in 1 week
@@ -229,7 +229,7 @@ UID:economic-300-20260904T123000Z@economic-calendar.local
 SUMMARY:Unemployment Rate
 DTSTART:20260904T123000Z
 DTEND:20260904T130000Z
-DESCRIPTION:Currency: USD\nForecast: 4.2%\nPrevious: 4.1%
+DESCRIPTION:Currency: USD\nForecast: 4.1%\nPrevious: 4.1%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Unemployment Rate in 1 week
