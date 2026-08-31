@@ -127,7 +127,6 @@ try:
 
         for occ in occurrences:
             event_id = occ.get("event_id")
-            occurrence_id = occ.get("occurrence_id", event_id)
             event_info = events_lookup.get(event_id, {})
             name = event_info.get("event_translated") or event_info.get("short_name") or "Economic Event"
             currency = event_info.get("currency", "N/A")
@@ -152,7 +151,11 @@ try:
             
             description = f"Currency: {currency}\\nForecast: {forecast}\\nPrevious: {previous}"
             
-            uid = f"eco-{occurrence_id}@investing.com"
+            # 🔥 CREATE UID USING NAME + DATE INSTEAD OF ID 🔥
+            # Remove all spaces and special characters from the name for a clean ID
+            name_slug = re.sub(r'[^a-zA-Z0-9]', '', name)
+            clean_date_eco = dt_utc.strftime('%Y%m%d')
+            uid = f"eco-{name_slug}-{clean_date_eco}@investing.com"
 
             event_block = [
                 "BEGIN:VEVENT",
@@ -207,15 +210,16 @@ if fresh_token:
                     inst_id = earn.get("instrument_id")
                     inst_details = instruments_lookup.get(inst_id, {})
                     
-                    symbol = inst_details.get("symbol", f"ID:{inst_id}")
+                    symbol = inst_details.get("symbol", f"ID-{inst_id}")
                     phase_raw = earn.get("market_phase", "")
                     phase = "BMO" if phase_raw == "PRE_MARKET" else "AMC" if phase_raw == "AFTER_HOURS" else "TBA"
 
                     date_str = earn.get("date")
                     if not date_str: continue
                     
+                    # 🔥 CREATE UID USING SYMBOL + DATE INSTEAD OF ID 🔥
                     clean_date = date_str.replace("-", "")
-                    uid = f"earn-{inst_id}-{clean_date}@investing.com"
+                    uid = f"earn-{symbol}-{clean_date}@investing.com"
                     
                     if phase == "BMO":
                         dt_utc = get_utc_from_ny(date_str, 8, 0)
@@ -234,8 +238,6 @@ if fresh_token:
                     rev_forecast = format_large_number(earn.get("revenue_forecast", "N/A"))
                     
                     description = f"EPS Forecast: {eps_forecast}\\nRevenue Forecast: {rev_forecast}"
-                    
-                    # Removed (phase) from event_title here
                     event_title = f"[Earning] {symbol}"
                     
                     event_block = [
