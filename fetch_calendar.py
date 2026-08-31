@@ -1,6 +1,7 @@
 from curl_cffi import requests
 import datetime
 import re
+import time
 
 def make_uid(*parts):
     """Create a stable UID for an ICS event."""
@@ -40,22 +41,42 @@ def get_utc_from_ny(date_str, hour, minute):
     return utc_dt
 
 def get_anonymous_token():
-    """Visits the homepage and scrapes a fresh guest JWT Token from the source code."""
+    """Scrapes the token with a 3-try retry loop and deep diagnostic error logging."""
     print("Scraping fresh Auth Token from Investing.com...")
-    try:
-        res = requests.get("https://www.investing.com/", impersonate="chrome")
-        if res.status_code == 200:
-            # Regex to find standard JWT token starting with HS256 header (eyJhbGciOiJIUzI1NiIs...)
-            match = re.search(r'(eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\.[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+)', res.text)
-            if match:
-                print("✅ Successfully generated new session token!")
-                return match.group(1)
+    
+    for attempt in range(3):
+        try:
+            res = requests.get("https://www.investing.com/", impersonate="chrome")
+            
+            if res.status_code == 200:
+                # Regex looks for standard 3-part JWT token starting with eyJhb...
+                match = re.search(r'(eyJhbGciOiJIUzI1NiIs[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+)', res.text)
+                
+                if match:
+                    print(f"✅ Successfully generated new session token on attempt {attempt+1}!")
+                    return match.group(1)
+                else:
+                    print(f"⚠️ Attempt {attempt+1}: Connected to server (Status 200), but no token found in the HTML.")
+                    print(f"🔍 SERVER HEADERS: {dict(res.headers)}")
+                    print(f"📄 HTML SNIPPET (First 1500 chars):\n{res.text[:1500]}\n...")
+                    
+                    # Auto-detect if Cloudflare served a Captcha instead of the real homepage
+                    if "captcha" in res.text.lower() or "cloudflare" in res.text.lower() or "just a moment" in res.text.lower():
+                        print("🚨 DIAGNOSTIC: Cloudflare Bot Protection or Captcha page detected!")
+                        
+                    time.sleep(2)
             else:
-                print("❌ Failed to find token in page source.")
-                return None
-    except Exception as e:
-        print(f"❌ Error fetching token: {e}")
-        return None
+                print(f"⚠️ Attempt {attempt+1}: Blocked by server! HTTP Status: {res.status_code}")
+                print(f"🔍 SERVER HEADERS: {dict(res.headers)}")
+                print(f"📄 ERROR PAGE CONTENT (First 1500 chars):\n{res.text[:1500]}\n...")
+                time.sleep(2)
+                
+        except Exception as e:
+            print(f"⚠️ Attempt {attempt+1} network exception: {str(e)}")
+            time.sleep(2)
+            
+    print("❌ Failed to find token after 3 attempts.")
+    return None
 
 # 1. Calculate Dates
 now = datetime.datetime.now()
