@@ -123,16 +123,18 @@ else:
 # PART 2: FETCH NEW DATA
 # ==========================================
 now = datetime.datetime.now()
+start_date_obj = now - datetime.timedelta(days=2) # Start from 2 days ago
 future = now + datetime.timedelta(days=30) 
 
 tz_offset = "%2B08%3A00" # URL encoded "+08:00"
-start_date_eco = now.strftime("%Y-%m-%dT00%%3A00%%3A00.000") + tz_offset
+start_date_eco = start_date_obj.strftime("%Y-%m-%dT00%%3A00%%3A00.000") + tz_offset
 end_date_eco = future.strftime("%Y-%m-%dT23%%3A59%%3A59.999") + tz_offset
-start_date_earn = now.strftime("%Y-%m-%dT00%%3A00%%3A00.000Z")
+
+start_date_earn = start_date_obj.strftime("%Y-%m-%dT00%%3A00%%3A00.000Z")
 end_date_earn = future.strftime("%Y-%m-%dT23%%3A59%%3A59.999Z")
 
 new_events = {}
-print(f"Fetching new data from {now.strftime('%Y-%m-%d')} to {future.strftime('%Y-%m-%d')}...")
+print(f"Fetching new data from {start_date_obj.strftime('%Y-%m-%d')} to {future.strftime('%Y-%m-%d')}...")
 
 # --- FETCH ECONOMIC EVENTS ---
 print("\n--- Fetching Economic Events ---")
@@ -160,11 +162,16 @@ if res_eco:
         dtstart_line = f"DTSTART:{dt_utc.strftime('%Y%m%dT%H%M%SZ')}"
         dtend_line = f"DTEND:{(dt_utc + datetime.timedelta(minutes=30)).strftime('%Y%m%dT%H%M%SZ')}"
 
-        fcst, prev, unit = occ.get("forecast", "N/A"), occ.get("previous", "N/A"), occ.get("unit", "")
+        act = occ.get("actual", "N/A")
+        fcst = occ.get("forecast", "N/A")
+        prev = occ.get("previous", "N/A")
+        unit = occ.get("unit", "")
+        
+        if act != "N/A": act = f"{act}{unit}"
         if fcst != "N/A": fcst = f"{fcst}{unit}"
         if prev != "N/A": prev = f"{prev}{unit}"
         
-        description = f"Currency: {event_info.get('currency', 'N/A')}\\nForecast: {fcst}\\nPrevious: {prev}"
+        description = f"Currency: {event_info.get('currency', 'N/A')}\\nActual: {act}\\nForecast: {fcst}\\nPrevious: {prev}"
         
         uid = f"eco-{re.sub(r'[^a-zA-Z0-9]', '', name)}-{dt_utc.strftime('%Y%m%d')}@investing.com"
         new_events[uid] = build_vevent(uid, name, dtstart_line, dtend_line, description, name)
@@ -215,9 +222,12 @@ if token:
                     dtstart_line = f"DTSTART;VALUE=DATE:{date_obj.strftime('%Y%m%d')}"
                     dtend_line = f"DTEND;VALUE=DATE:{(date_obj + datetime.timedelta(days=1)).strftime('%Y%m%d')}"
                 
-                fcst = earn.get("eps_forecast", "N/A")
-                rev = format_large_number(earn.get("revenue_forecast", "N/A"))
-                description = f"EPS Forecast: {fcst}\\nRevenue Forecast: {rev}"
+                eps_act = earn.get("eps_actual", "N/A")
+                eps_fcst = earn.get("eps_forecast", "N/A")
+                rev_act = format_large_number(earn.get("revenue_actual", "N/A"))
+                rev_fcst = format_large_number(earn.get("revenue_forecast", "N/A"))
+                
+                description = f"EPS Actual: {eps_act}\\nEPS Forecast: {eps_fcst}\\nRevenue Actual: {rev_act}\\nRevenue Forecast: {rev_fcst}"
                 
                 uid = f"earn-{symbol}-{date_str.replace('-', '')}@investing.com"
                 new_events[uid] = build_vevent(uid, f"[Earning] {symbol}", dtstart_line, dtend_line, description, f"{symbol} Earnings")
