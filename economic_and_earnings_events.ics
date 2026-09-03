@@ -93,7 +93,7 @@ UID:eco-ADPNonfarmEmploymentChange-20260902@investing.com
 SUMMARY:ADP Nonfarm Employment Change
 DTSTART:20260902T121500Z
 DTEND:20260902T124500Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 47K\nPrevious: 44K
+DESCRIPTION:Currency: USD\nActual: 38K\nForecast: 47K\nPrevious: 46K
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: ADP Nonfarm Employment Change in 1 week
@@ -110,7 +110,7 @@ UID:eco-CrudeOilInventories-20260902@investing.com
 SUMMARY:Crude Oil Inventories
 DTSTART:20260902T143000Z
 DTEND:20260902T150000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: -0.4M\nPrevious: 0.095M
+DESCRIPTION:Currency: USD\nActual: -4.45M\nForecast: -0.4M\nPrevious: 0.095M
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Crude Oil Inventories in 1 week
@@ -144,7 +144,7 @@ UID:eco-SPGlobalServicesPMI-20260903@investing.com
 SUMMARY:S&P Global Services PMI
 DTSTART:20260903T134500Z
 DTEND:20260903T141500Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 56.8\nPrevious: 56.8
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 56.8\nPrevious: 54.6
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: S&P Global Services PMI in 1 week
@@ -178,7 +178,7 @@ UID:eco-ISMNonManufacturingPMI-20260903@investing.com
 SUMMARY:ISM Non-Manufacturing PMI
 DTSTART:20260903T140000Z
 DTEND:20260903T143000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 54.1\nPrevious: 54.1
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 54.2\nPrevious: 54.1
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: ISM Non-Manufacturing PMI in 1 week
@@ -467,7 +467,7 @@ UID:earn-NTAP-20260902@investing.com
 SUMMARY:[Earning] NTAP
 DTSTART:20260902T201500Z
 DTEND:20260902T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.11\nRevenue Actual: N/A\nRevenue Forecast: 1.83B
+DESCRIPTION:EPS Actual: 2.58\nEPS Forecast: 2.11\nRevenue Actual: 2.03B\nRevenue Forecast: 1.83B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: NTAP Earnings in 1 week
@@ -484,7 +484,7 @@ UID:earn-BFb-20260902@investing.com
 SUMMARY:[Earning] BFb
 DTSTART:20260902T120000Z
 DTEND:20260902T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.3696\nRevenue Actual: N/A\nRevenue Forecast: 917.95M
+DESCRIPTION:EPS Actual: 0.38\nEPS Forecast: 0.3696\nRevenue Actual: 911.00M\nRevenue Forecast: 917.95M
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: BFb Earnings in 1 week
@@ -501,7 +501,7 @@ UID:earn-AVGO-20260902@investing.com
 SUMMARY:[Earning] AVGO
 DTSTART:20260902T201500Z
 DTEND:20260902T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.21\nRevenue Actual: N/A\nRevenue Forecast: 29.25B
+DESCRIPTION:EPS Actual: 3.32\nEPS Forecast: 3.21\nRevenue Actual: 29.59B\nRevenue Forecast: 29.25B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: AVGO Earnings in 1 week
@@ -518,7 +518,7 @@ UID:earn-HPE-20260902@investing.com
 SUMMARY:[Earning] HPE
 DTSTART:20260902T201500Z
 DTEND:20260902T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.9247\nRevenue Actual: N/A\nRevenue Forecast: 11.93B
+DESCRIPTION:EPS Actual: 1.11\nEPS Forecast: 0.92\nRevenue Actual: 12.20B\nRevenue Forecast: 11.93B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: HPE Earnings in 1 week
@@ -1003,6 +1003,40 @@ END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: MKC Earnings in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eco-SPGlobalManufacturingPMI-20260923@investing.com
+SUMMARY:S&P Global Manufacturing PMI
+DTSTART:20260923T134500Z
+DTEND:20260923T141500Z
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 53.9
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: S&P Global Manufacturing PMI in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: S&P Global Manufacturing PMI in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eco-SPGlobalServicesPMI-20260923@investing.com
+SUMMARY:S&P Global Services PMI
+DTSTART:20260923T134500Z
+DTEND:20260923T141500Z
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: N/A
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: S&P Global Services PMI in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: S&P Global Services PMI in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
