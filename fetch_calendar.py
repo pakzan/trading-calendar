@@ -203,7 +203,12 @@ if token:
             
             for earn in earnings_data:
                 inst_id = earn.get("instrument_id")
-                symbol = instruments_lookup.get(inst_id, {}).get("symbol", f"ID-{inst_id}")
+                inst_details = instruments_lookup.get(inst_id, {})
+                
+                # Fetch Symbol and Company Full Name
+                symbol = inst_details.get("symbol", f"ID-{inst_id}")
+                company_name = inst_details.get("long_name") or inst_details.get("short_name") or symbol
+                
                 date_str = earn.get("date")
                 
                 if not date_str: continue
@@ -230,7 +235,9 @@ if token:
                 description = f"EPS Actual: {eps_act}\\nEPS Forecast: {eps_fcst}\\nRevenue Actual: {rev_act}\\nRevenue Forecast: {rev_fcst}"
                 
                 uid = f"earn-{symbol}-{date_str.replace('-', '')}@investing.com"
-                new_events[uid] = build_vevent(uid, f"[Earning] {symbol}", dtstart_line, dtend_line, description, f"{symbol} Earnings")
+                
+                # Use company_name for title instead of symbol
+                new_events[uid] = build_vevent(uid, f"[Earning] {company_name}", dtstart_line, dtend_line, description, f"{company_name} Earnings")
         print(f"✅ Parsed Earnings Events.")
 else:
     print("⚠️ Skipping Earnings. No token available.")
