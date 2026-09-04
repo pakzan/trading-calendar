@@ -2,7 +2,7 @@ name: Auto Update Calendar
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs automatically every day at midnight UTC
+    - cron: '0 1,13 * * *' # Runs at 1:00 AM and 1:00 PM UTC (9:00 AM and 9:00 PM SGT)
   workflow_dispatch: # Allows you to click a button to run it manually
 
 jobs:
