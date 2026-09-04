@@ -263,7 +263,7 @@ UID:eco-PPIMoM-20260910@investing.com
 SUMMARY:PPI (MoM)
 DTSTART:20260910T123000Z
 DTEND:20260910T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 0%
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 0.3%\nPrevious: 0%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: PPI (MoM) in 1 week
@@ -280,7 +280,7 @@ UID:eco-ExistingHomeSales-20260910@investing.com
 SUMMARY:Existing Home Sales
 DTSTART:20260910T140000Z
 DTEND:20260910T143000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 4.06M
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 4.03M\nPrevious: 4.06M
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Existing Home Sales in 1 week
@@ -297,7 +297,7 @@ UID:eco-CPIMoM-20260911@investing.com
 SUMMARY:CPI (MoM)
 DTSTART:20260911T123000Z
 DTEND:20260911T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 0.1%
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 0.4%\nPrevious: 0.1%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: CPI (MoM) in 1 week
@@ -331,7 +331,7 @@ UID:eco-CoreCPIMoM-20260911@investing.com
 SUMMARY:Core CPI (MoM)
 DTSTART:20260911T123000Z
 DTEND:20260911T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 0.2%
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 0.2%\nPrevious: 0.2%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Core CPI (MoM) in 1 week
@@ -464,103 +464,103 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-NTAP-20260902@investing.com
-SUMMARY:[Earning] NTAP
+SUMMARY:[Earning] NetApp Inc
 DTSTART:20260902T201500Z
 DTEND:20260902T211500Z
 DESCRIPTION:EPS Actual: 2.58\nEPS Forecast: 2.11\nRevenue Actual: 2.03B\nRevenue Forecast: 1.83B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: NTAP Earnings in 1 week
+DESCRIPTION:Reminder: NetApp Inc Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: NTAP Earnings in 2 days
+DESCRIPTION:Reminder: NetApp Inc Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-BFb-20260902@investing.com
-SUMMARY:[Earning] BFb
+SUMMARY:[Earning] Brown Forman
 DTSTART:20260902T120000Z
 DTEND:20260902T130000Z
 DESCRIPTION:EPS Actual: 0.38\nEPS Forecast: 0.3696\nRevenue Actual: 911.00M\nRevenue Forecast: 917.95M
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: BFb Earnings in 1 week
+DESCRIPTION:Reminder: Brown Forman Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: BFb Earnings in 2 days
+DESCRIPTION:Reminder: Brown Forman Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-AVGO-20260902@investing.com
-SUMMARY:[Earning] AVGO
+SUMMARY:[Earning] Broadcom Inc
 DTSTART:20260902T201500Z
 DTEND:20260902T211500Z
 DESCRIPTION:EPS Actual: 3.32\nEPS Forecast: 3.21\nRevenue Actual: 29.59B\nRevenue Forecast: 29.25B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: AVGO Earnings in 1 week
+DESCRIPTION:Reminder: Broadcom Inc Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: AVGO Earnings in 2 days
+DESCRIPTION:Reminder: Broadcom Inc Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-HPE-20260902@investing.com
-SUMMARY:[Earning] HPE
+SUMMARY:[Earning] Hewlett Packard Enterprise Co
 DTSTART:20260902T201500Z
 DTEND:20260902T211500Z
 DESCRIPTION:EPS Actual: 1.11\nEPS Forecast: 0.92\nRevenue Actual: 12.20B\nRevenue Forecast: 11.93B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: HPE Earnings in 1 week
+DESCRIPTION:Reminder: Hewlett Packard Enterprise Co Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: HPE Earnings in 2 days
+DESCRIPTION:Reminder: Hewlett Packard Enterprise Co Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-LULU-20260903@investing.com
-SUMMARY:[Earning] LULU
+SUMMARY:[Earning] Lululemon Athletica Inc
 DTSTART:20260903T201500Z
 DTEND:20260903T211500Z
 DESCRIPTION:EPS Actual: 2.92\nEPS Forecast: 1.82\nRevenue Actual: 2.42B\nRevenue Forecast: 2.46B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: LULU Earnings in 1 week
+DESCRIPTION:Reminder: Lululemon Athletica Inc Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: LULU Earnings in 2 days
+DESCRIPTION:Reminder: Lululemon Athletica Inc Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-CPB-20260903@investing.com
-SUMMARY:[Earning] CPB
+SUMMARY:[Earning] Campbell’s Co
 DTSTART:20260903T120000Z
 DTEND:20260903T130000Z
 DESCRIPTION:EPS Actual: 0.39\nEPS Forecast: 0.39\nRevenue Actual: 2.10B\nRevenue Forecast: 2.15B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: CPB Earnings in 1 week
+DESCRIPTION:Reminder: Campbell’s Co Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: CPB Earnings in 2 days
+DESCRIPTION:Reminder: Campbell’s Co Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
@@ -583,52 +583,52 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-COO-20260909@investing.com
-SUMMARY:[Earning] COO
+SUMMARY:[Earning] Cooper Companies Inc
 DTSTART:20260909T201500Z
 DTEND:20260909T211500Z
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.12\nRevenue Actual: N/A\nRevenue Forecast: 1.10B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: COO Earnings in 1 week
+DESCRIPTION:Reminder: Cooper Companies Inc Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: COO Earnings in 2 days
+DESCRIPTION:Reminder: Cooper Companies Inc Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-ADBE-20260910@investing.com
-SUMMARY:[Earning] ADBE
+SUMMARY:[Earning] Adobe Systems Incorporated
 DTSTART:20260910T201500Z
 DTEND:20260910T211500Z
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.07\nRevenue Actual: N/A\nRevenue Forecast: 6.69B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: ADBE Earnings in 1 week
+DESCRIPTION:Reminder: Adobe Systems Incorporated Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: ADBE Earnings in 2 days
+DESCRIPTION:Reminder: Adobe Systems Incorporated Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-KR-20260911@investing.com
-SUMMARY:[Earning] KR
+SUMMARY:[Earning] Kroger Company
 DTSTART:20260911T120000Z
 DTEND:20260911T130000Z
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.06\nRevenue Actual: N/A\nRevenue Forecast: 34.65B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: KR Earnings in 1 week
+DESCRIPTION:Reminder: Kroger Company Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: KR Earnings in 2 days
+DESCRIPTION:Reminder: Kroger Company Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
@@ -668,188 +668,188 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-LEN-20260917@investing.com
-SUMMARY:[Earning] LEN
+SUMMARY:[Earning] Lennar Corporation
 DTSTART;VALUE=DATE:20260917
 DTEND;VALUE=DATE:20260918
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.3\nRevenue Actual: N/A\nRevenue Forecast: 8.31B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: LEN Earnings in 1 week
+DESCRIPTION:Reminder: Lennar Corporation Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: LEN Earnings in 2 days
+DESCRIPTION:Reminder: Lennar Corporation Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-CCL-20260917@investing.com
-SUMMARY:[Earning] CCL
+SUMMARY:[Earning] Carnival Corporation
 DTSTART;VALUE=DATE:20260917
 DTEND;VALUE=DATE:20260918
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.42\nRevenue Actual: N/A\nRevenue Forecast: 8.54B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: CCL Earnings in 1 week
+DESCRIPTION:Reminder: Carnival Corporation Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: CCL Earnings in 2 days
+DESCRIPTION:Reminder: Carnival Corporation Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-AZO-20260922@investing.com
-SUMMARY:[Earning] AZO
+SUMMARY:[Earning] AutoZone Inc
 DTSTART:20260922T120000Z
 DTEND:20260922T130000Z
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 54.53\nRevenue Actual: N/A\nRevenue Forecast: 6.72B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: AZO Earnings in 1 week
+DESCRIPTION:Reminder: AutoZone Inc Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: AZO Earnings in 2 days
+DESCRIPTION:Reminder: AutoZone Inc Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-GIS-20260923@investing.com
-SUMMARY:[Earning] GIS
+SUMMARY:[Earning] General Mills Inc
 DTSTART:20260923T120000Z
 DTEND:20260923T130000Z
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7173\nRevenue Actual: N/A\nRevenue Forecast: 4.33B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: GIS Earnings in 1 week
+DESCRIPTION:Reminder: General Mills Inc Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: GIS Earnings in 2 days
+DESCRIPTION:Reminder: General Mills Inc Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-DRI-20260924@investing.com
-SUMMARY:[Earning] DRI
+SUMMARY:[Earning] Darden Restaurants Inc
 DTSTART:20260924T120000Z
 DTEND:20260924T130000Z
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.05\nRevenue Actual: N/A\nRevenue Forecast: 3.21B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: DRI Earnings in 1 week
+DESCRIPTION:Reminder: Darden Restaurants Inc Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: DRI Earnings in 2 days
+DESCRIPTION:Reminder: Darden Restaurants Inc Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-JBL-20260924@investing.com
-SUMMARY:[Earning] JBL
+SUMMARY:[Earning] Jabil Circuit Inc
 DTSTART;VALUE=DATE:20260924
 DTEND;VALUE=DATE:20260925
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.06\nRevenue Actual: N/A\nRevenue Forecast: 9.69B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: JBL Earnings in 1 week
+DESCRIPTION:Reminder: Jabil Circuit Inc Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: JBL Earnings in 2 days
+DESCRIPTION:Reminder: Jabil Circuit Inc Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-COST-20260924@investing.com
-SUMMARY:[Earning] COST
+SUMMARY:[Earning] Costco Wholesale Corp
 DTSTART:20260924T201500Z
 DTEND:20260924T211500Z
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.56\nRevenue Actual: N/A\nRevenue Forecast: 94.45B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: COST Earnings in 1 week
+DESCRIPTION:Reminder: Costco Wholesale Corp Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: COST Earnings in 2 days
+DESCRIPTION:Reminder: Costco Wholesale Corp Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-KMX-20260929@investing.com
-SUMMARY:[Earning] KMX
+SUMMARY:[Earning] CarMax Inc
 DTSTART:20260929T120000Z
 DTEND:20260929T130000Z
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7177\nRevenue Actual: N/A\nRevenue Forecast: 6.93B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: KMX Earnings in 1 week
+DESCRIPTION:Reminder: CarMax Inc Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: KMX Earnings in 2 days
+DESCRIPTION:Reminder: CarMax Inc Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-PAYX-20260930@investing.com
-SUMMARY:[Earning] PAYX
+SUMMARY:[Earning] Paychex Inc
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.32\nRevenue Actual: N/A\nRevenue Forecast: 1.63B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: PAYX Earnings in 1 week
+DESCRIPTION:Reminder: Paychex Inc Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: PAYX Earnings in 2 days
+DESCRIPTION:Reminder: Paychex Inc Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-CTAS-20260930@investing.com
-SUMMARY:[Earning] CTAS
+SUMMARY:[Earning] Cintas Corporation
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.35\nRevenue Actual: N/A\nRevenue Forecast: 2.98B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: CTAS Earnings in 1 week
+DESCRIPTION:Reminder: Cintas Corporation Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: CTAS Earnings in 2 days
+DESCRIPTION:Reminder: Cintas Corporation Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-MU-20260930@investing.com
-SUMMARY:[Earning] MU
+SUMMARY:[Earning] Micron Technology Inc
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 31.14\nRevenue Actual: N/A\nRevenue Forecast: 50.41B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: MU Earnings in 1 week
+DESCRIPTION:Reminder: Micron Technology Inc Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: MU Earnings in 2 days
+DESCRIPTION:Reminder: Micron Technology Inc Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
@@ -875,7 +875,7 @@ UID:eco-InitialJoblessClaims-20260910@investing.com
 SUMMARY:Initial Jobless Claims
 DTSTART:20260910T123000Z
 DTEND:20260910T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: N/A
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 206K
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Initial Jobless Claims in 1 week
@@ -889,18 +889,18 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-STZ-20261001@investing.com
-SUMMARY:[Earning] STZ
+SUMMARY:[Earning] Constellation Brands Inc Class A
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.61\nRevenue Actual: N/A\nRevenue Forecast: 2.55B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: STZ Earnings in 1 week
+DESCRIPTION:Reminder: Constellation Brands Inc Class A Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: STZ Earnings in 2 days
+DESCRIPTION:Reminder: Constellation Brands Inc Class A Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
@@ -923,86 +923,86 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-LW-20261001@investing.com
-SUMMARY:[Earning] LW
+SUMMARY:[Earning] Lamb Weston Holdings Inc
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.589\nRevenue Actual: N/A\nRevenue Forecast: 1.65B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: LW Earnings in 1 week
+DESCRIPTION:Reminder: Lamb Weston Holdings Inc Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: LW Earnings in 2 days
+DESCRIPTION:Reminder: Lamb Weston Holdings Inc Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-ACN-20261001@investing.com
-SUMMARY:[Earning] ACN
+SUMMARY:[Earning] Accenture plc
 DTSTART:20261001T120000Z
 DTEND:20261001T130000Z
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.18\nRevenue Actual: N/A\nRevenue Forecast: 18.05B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: ACN Earnings in 1 week
+DESCRIPTION:Reminder: Accenture plc Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: ACN Earnings in 2 days
+DESCRIPTION:Reminder: Accenture plc Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-NKE-20261001@investing.com
-SUMMARY:[Earning] NKE
+SUMMARY:[Earning] Nike Inc
 DTSTART:20261001T201500Z
 DTEND:20261001T211500Z
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.4484\nRevenue Actual: N/A\nRevenue Forecast: 11.38B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: NKE Earnings in 1 week
+DESCRIPTION:Reminder: Nike Inc Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: NKE Earnings in 2 days
+DESCRIPTION:Reminder: Nike Inc Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-CAG-20260930@investing.com
-SUMMARY:[Earning] CAG
+SUMMARY:[Earning] Conagra Brands Inc
 DTSTART:20260930T120000Z
 DTEND:20260930T130000Z
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.2827\nRevenue Actual: N/A\nRevenue Forecast: 2.59B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: CAG Earnings in 1 week
+DESCRIPTION:Reminder: Conagra Brands Inc Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: CAG Earnings in 2 days
+DESCRIPTION:Reminder: Conagra Brands Inc Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-MKC-20261001@investing.com
-SUMMARY:[Earning] MKC
+SUMMARY:[Earning] McCormick & Company Incorporated
 DTSTART:20261001T120000Z
 DTEND:20261001T130000Z
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7566\nRevenue Actual: N/A\nRevenue Forecast: 1.98B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: MKC Earnings in 1 week
+DESCRIPTION:Reminder: McCormick & Company Incorporated Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: MKC Earnings in 2 days
+DESCRIPTION:Reminder: McCormick & Company Incorporated Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
@@ -1059,52 +1059,69 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-ORCL-20260910@investing.com
-SUMMARY:[Earning] ORCL
+SUMMARY:[Earning] Oracle Corporation
 DTSTART:20260910T201500Z
 DTEND:20260910T211500Z
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.73\nRevenue Actual: N/A\nRevenue Forecast: 19.13B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: ORCL Earnings in 1 week
+DESCRIPTION:Reminder: Oracle Corporation Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: ORCL Earnings in 2 days
+DESCRIPTION:Reminder: Oracle Corporation Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-CPRT-20260910@investing.com
-SUMMARY:[Earning] CPRT
+SUMMARY:[Earning] Copart Inc
 DTSTART:20260910T201500Z
 DTEND:20260910T211500Z
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.3869\nRevenue Actual: N/A\nRevenue Forecast: 1.14B
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: CPRT Earnings in 1 week
+DESCRIPTION:Reminder: Copart Inc Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: CPRT Earnings in 2 days
+DESCRIPTION:Reminder: Copart Inc Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-FDS-20260930@investing.com
-SUMMARY:[Earning] FDS
+SUMMARY:[Earning] FactSet Research Systems Inc
 DTSTART:20260930T120000Z
 DTEND:20260930T130000Z
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.34\nRevenue Actual: N/A\nRevenue Forecast: 629.11M
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: FDS Earnings in 1 week
+DESCRIPTION:Reminder: FactSet Research Systems Inc Earnings in 1 week
 TRIGGER:-P1W
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: FDS Earnings in 2 days
+DESCRIPTION:Reminder: FactSet Research Systems Inc Earnings in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eco-30YearBondAuction-20260910@investing.com
+SUMMARY:30-Year Bond Auction
+DTSTART:20260910T170100Z
+DTEND:20260910T173100Z
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 5.216%
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: 30-Year Bond Auction in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: 30-Year Bond Auction in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
