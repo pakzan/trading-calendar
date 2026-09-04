@@ -195,7 +195,7 @@ UID:eco-AverageHourlyEarningsMoM-20260904@investing.com
 SUMMARY:Average Hourly Earnings (MoM)
 DTSTART:20260904T123000Z
 DTEND:20260904T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 0.3%\nPrevious: 0.1%
+DESCRIPTION:Currency: USD\nActual: 0.3%\nForecast: 0.3%\nPrevious: 0.2%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Average Hourly Earnings (MoM) in 1 week
@@ -212,7 +212,7 @@ UID:eco-NonfarmPayrolls-20260904@investing.com
 SUMMARY:Nonfarm Payrolls
 DTSTART:20260904T123000Z
 DTEND:20260904T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 55K\nPrevious: -23K
+DESCRIPTION:Currency: USD\nActual: 162K\nForecast: 55K\nPrevious: 21K
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Nonfarm Payrolls in 1 week
@@ -229,7 +229,7 @@ UID:eco-UnemploymentRate-20260904@investing.com
 SUMMARY:Unemployment Rate
 DTSTART:20260904T123000Z
 DTEND:20260904T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 4.1%\nPrevious: 4.1%
+DESCRIPTION:Currency: USD\nActual: 4.1%\nForecast: 4.1%\nPrevious: 4.1%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Unemployment Rate in 1 week
@@ -1122,6 +1122,57 @@ END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: 30-Year Bond Auction in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eco-CrudeOilInventories-20260910@investing.com
+SUMMARY:Crude Oil Inventories
+DTSTART:20260910T160000Z
+DTEND:20260910T163000Z
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: -4.45M
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Crude Oil Inventories in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Crude Oil Inventories in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eco-DurableGoodsOrdersMoM-20260925@investing.com
+SUMMARY:Durable Goods Orders (MoM)
+DTSTART:20260925T123000Z
+DTEND:20260925T130000Z
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 1.1%
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Durable Goods Orders (MoM) in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Durable Goods Orders (MoM) in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:earn-LEN-20260916@investing.com
+SUMMARY:[Earning] Lennar Corporation
+DTSTART:20260916T201500Z
+DTEND:20260916T211500Z
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.3\nRevenue Actual: N/A\nRevenue Forecast: 8.31B
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Lennar Corporation Earnings in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Lennar Corporation Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
