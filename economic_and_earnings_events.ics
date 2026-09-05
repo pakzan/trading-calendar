@@ -246,7 +246,7 @@ UID:eco-GDPQoQ-20260907@investing.com
 SUMMARY:GDP (QoQ)
 DTSTART:20260907T235000Z
 DTEND:20260908T002000Z
-DESCRIPTION:Currency: JPY\nActual: N/A\nForecast: 0.3%\nPrevious: 0.5%
+DESCRIPTION:Currency: JPY\nActual: N/A\nForecast: 0.3%\nPrevious: 0.3%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: GDP (QoQ) in 1 week
