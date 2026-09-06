@@ -263,7 +263,7 @@ UID:eco-PPIMoM-20260910@investing.com
 SUMMARY:PPI (MoM)
 DTSTART:20260910T123000Z
 DTEND:20260910T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 0.3%\nPrevious: 0%
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 0.4%\nPrevious: 0%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: PPI (MoM) in 1 week
@@ -280,7 +280,7 @@ UID:eco-ExistingHomeSales-20260910@investing.com
 SUMMARY:Existing Home Sales
 DTSTART:20260910T140000Z
 DTEND:20260910T143000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 4.03M\nPrevious: 4.06M
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 3.98M\nPrevious: 4.06M
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Existing Home Sales in 1 week
@@ -314,7 +314,7 @@ UID:eco-CPIYoY-20260911@investing.com
 SUMMARY:CPI (YoY)
 DTSTART:20260911T123000Z
 DTEND:20260911T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 3.4%
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 3.4%\nPrevious: 3.4%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: CPI (YoY) in 1 week
@@ -875,7 +875,7 @@ UID:eco-InitialJoblessClaims-20260910@investing.com
 SUMMARY:Initial Jobless Claims
 DTSTART:20260910T123000Z
 DTEND:20260910T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 206K
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 205K\nPrevious: 206K
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Initial Jobless Claims in 1 week
