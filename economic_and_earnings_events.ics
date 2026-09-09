@@ -586,7 +586,7 @@ UID:earn-COO-20260909@investing.com
 SUMMARY:[Earning] Cooper Companies Inc
 DTSTART:20260909T201500Z
 DTEND:20260909T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.12\nRevenue Actual: N/A\nRevenue Forecast: 1.10B
+DESCRIPTION:EPS Actual: 1.15\nEPS Forecast: 1.12\nRevenue Actual: 1.07B\nRevenue Forecast: 1.10B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Cooper Companies Inc Earnings in 1 week
@@ -858,7 +858,7 @@ UID:eco-10YearNoteAuction-20260909@investing.com
 SUMMARY:10-Year Note Auction
 DTSTART:20260909T170000Z
 DTEND:20260909T173000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 4.683%
+DESCRIPTION:Currency: USD\nActual: 4.834%\nForecast: N/A\nPrevious: 4.683%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: 10-Year Note Auction in 1 week
@@ -1462,6 +1462,23 @@ END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: BlackRock Inc Earnings in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eco-ChicagoPMI-20260930@investing.com
+SUMMARY:Chicago PMI
+DTSTART:20260930T134500Z
+DTEND:20260930T141500Z
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 47.1
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Chicago PMI in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Chicago PMI in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
