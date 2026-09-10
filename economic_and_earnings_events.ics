@@ -280,7 +280,7 @@ UID:eco-ExistingHomeSales-20260910@investing.com
 SUMMARY:Existing Home Sales
 DTSTART:20260910T140000Z
 DTEND:20260910T143000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 3.98M\nPrevious: 4.06M
+DESCRIPTION:Currency: USD\nActual: 3.98M\nForecast: 3.98M\nPrevious: 4.06M
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Existing Home Sales in 1 week
@@ -603,7 +603,7 @@ UID:earn-ADBE-20260910@investing.com
 SUMMARY:[Earning] Adobe Systems Incorporated
 DTSTART:20260910T201500Z
 DTEND:20260910T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.07\nRevenue Actual: N/A\nRevenue Forecast: 6.69B
+DESCRIPTION:EPS Actual: 6.13\nEPS Forecast: 6.07\nRevenue Actual: 6.76B\nRevenue Forecast: 6.69B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Adobe Systems Incorporated Earnings in 1 week
@@ -1062,7 +1062,7 @@ UID:earn-ORCL-20260910@investing.com
 SUMMARY:[Earning] Oracle Corporation
 DTSTART:20260910T201500Z
 DTEND:20260910T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.73\nRevenue Actual: N/A\nRevenue Forecast: 19.13B
+DESCRIPTION:EPS Actual: 1.92\nEPS Forecast: 1.73\nRevenue Actual: 19.30B\nRevenue Forecast: 19.13B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Oracle Corporation Earnings in 1 week
@@ -1079,7 +1079,7 @@ UID:earn-CPRT-20260910@investing.com
 SUMMARY:[Earning] Copart Inc
 DTSTART:20260910T201500Z
 DTEND:20260910T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.3869\nRevenue Actual: N/A\nRevenue Forecast: 1.14B
+DESCRIPTION:EPS Actual: 0.35\nEPS Forecast: 0.39\nRevenue Actual: 1.15B\nRevenue Forecast: 1.14B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Copart Inc Earnings in 1 week
@@ -1113,7 +1113,7 @@ UID:eco-30YearBondAuction-20260910@investing.com
 SUMMARY:30-Year Bond Auction
 DTSTART:20260910T170100Z
 DTEND:20260910T173100Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 5.216%
+DESCRIPTION:Currency: USD\nActual: 5.308%\nForecast: N/A\nPrevious: 5.216%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: 30-Year Bond Auction in 1 week
@@ -1130,7 +1130,7 @@ UID:eco-CrudeOilInventories-20260910@investing.com
 SUMMARY:Crude Oil Inventories
 DTSTART:20260910T160000Z
 DTEND:20260910T163000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: -1.4M\nPrevious: -4.45M
+DESCRIPTION:Currency: USD\nActual: -0.391M\nForecast: -1.4M\nPrevious: -4.45M
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Crude Oil Inventories in 1 week
@@ -1564,6 +1564,57 @@ END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Jabil Circuit Inc Earnings in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eco-SPGlobalManufacturingPMI-20261001@investing.com
+SUMMARY:S&P Global Manufacturing PMI
+DTSTART:20261001T134500Z
+DTEND:20261001T141500Z
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 53.9
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: S&P Global Manufacturing PMI in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: S&P Global Manufacturing PMI in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eco-ISMManufacturingPMI-20261001@investing.com
+SUMMARY:ISM Manufacturing PMI
+DTSTART:20261001T140000Z
+DTEND:20261001T143000Z
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 54.6
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: ISM Manufacturing PMI in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: ISM Manufacturing PMI in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eco-ISMManufacturingPrices-20261001@investing.com
+SUMMARY:ISM Manufacturing Prices
+DTSTART:20261001T140000Z
+DTEND:20261001T143000Z
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 71.1
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: ISM Manufacturing Prices in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: ISM Manufacturing Prices in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
