@@ -297,7 +297,7 @@ UID:eco-CPIMoM-20260911@investing.com
 SUMMARY:CPI (MoM)
 DTSTART:20260911T123000Z
 DTEND:20260911T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 0.4%\nPrevious: 0.1%
+DESCRIPTION:Currency: USD\nActual: 0.4%\nForecast: 0.4%\nPrevious: 0.1%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: CPI (MoM) in 1 week
@@ -314,7 +314,7 @@ UID:eco-CPIYoY-20260911@investing.com
 SUMMARY:CPI (YoY)
 DTSTART:20260911T123000Z
 DTEND:20260911T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 3.4%\nPrevious: 3.4%
+DESCRIPTION:Currency: USD\nActual: 3.4%\nForecast: 3.4%\nPrevious: 3.4%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: CPI (YoY) in 1 week
@@ -331,7 +331,7 @@ UID:eco-CoreCPIMoM-20260911@investing.com
 SUMMARY:Core CPI (MoM)
 DTSTART:20260911T123000Z
 DTEND:20260911T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 0.2%\nPrevious: 0.2%
+DESCRIPTION:Currency: USD\nActual: 0.3%\nForecast: 0.2%\nPrevious: 0.2%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Core CPI (MoM) in 1 week
@@ -620,7 +620,7 @@ UID:earn-KR-20260911@investing.com
 SUMMARY:[Earning] Kroger Company
 DTSTART:20260911T120000Z
 DTEND:20260911T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.06\nRevenue Actual: N/A\nRevenue Forecast: 34.65B
+DESCRIPTION:EPS Actual: 1.09\nEPS Forecast: 1.06\nRevenue Actual: 34.60B\nRevenue Forecast: 34.65B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Kroger Company Earnings in 1 week
@@ -1232,7 +1232,7 @@ UID:eco-InitialJoblessClaims-20260917@investing.com
 SUMMARY:Initial Jobless Claims
 DTSTART:20260917T123000Z
 DTEND:20260917T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: N/A
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 206K
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Initial Jobless Claims in 1 week
@@ -1615,6 +1615,74 @@ END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: ISM Manufacturing Prices in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eco-NonfarmPayrolls-20261002@investing.com
+SUMMARY:Nonfarm Payrolls
+DTSTART:20261002T123000Z
+DTEND:20261002T130000Z
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 162K
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Nonfarm Payrolls in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Nonfarm Payrolls in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eco-UnemploymentRate-20261002@investing.com
+SUMMARY:Unemployment Rate
+DTSTART:20261002T123000Z
+DTEND:20261002T130000Z
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 4.1%
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Unemployment Rate in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Unemployment Rate in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eco-AverageHourlyEarningsMoM-20261002@investing.com
+SUMMARY:Average Hourly Earnings (MoM)
+DTSTART:20261002T123000Z
+DTEND:20261002T130000Z
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 0.3%
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Average Hourly Earnings (MoM) in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Average Hourly Earnings (MoM) in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:earn-STZ-20261006@investing.com
+SUMMARY:[Earning] Constellation Brands Inc Class A
+DTSTART:20261006T201500Z
+DTEND:20261006T211500Z
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.61\nRevenue Actual: N/A\nRevenue Forecast: 2.55B
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Constellation Brands Inc Class A Earnings in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Constellation Brands Inc Class A Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
