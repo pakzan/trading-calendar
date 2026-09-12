@@ -348,7 +348,7 @@ UID:eco-CoreRetailSalesMoM-20260916@investing.com
 SUMMARY:Core Retail Sales (MoM)
 DTSTART:20260916T123000Z
 DTEND:20260916T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: -0.3%
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 0.5%\nPrevious: -0.3%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Core Retail Sales (MoM) in 1 week
@@ -365,7 +365,7 @@ UID:eco-RetailSalesMoM-20260916@investing.com
 SUMMARY:Retail Sales (MoM)
 DTSTART:20260916T123000Z
 DTEND:20260916T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: -0.6%
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 0.8%\nPrevious: -0.6%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Retail Sales (MoM) in 1 week
@@ -399,7 +399,7 @@ UID:eco-PhiladelphiaFedManufacturingIndex-20260917@investing.com
 SUMMARY:Philadelphia Fed Manufacturing Index
 DTSTART:20260917T123000Z
 DTEND:20260917T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 47.4
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 28.9\nPrevious: 47.4
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Philadelphia Fed Manufacturing Index in 1 week
@@ -1232,7 +1232,7 @@ UID:eco-InitialJoblessClaims-20260917@investing.com
 SUMMARY:Initial Jobless Claims
 DTSTART:20260917T123000Z
 DTEND:20260917T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 206K
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 209K\nPrevious: 206K
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Initial Jobless Claims in 1 week
