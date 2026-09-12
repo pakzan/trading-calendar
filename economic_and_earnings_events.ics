@@ -722,7 +722,7 @@ UID:earn-GIS-20260923@investing.com
 SUMMARY:[Earning] General Mills Inc
 DTSTART:20260923T120000Z
 DTEND:20260923T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7173\nRevenue Actual: N/A\nRevenue Forecast: 4.33B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7168\nRevenue Actual: N/A\nRevenue Forecast: 4.34B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: General Mills Inc Earnings in 1 week
@@ -773,7 +773,7 @@ UID:earn-COST-20260924@investing.com
 SUMMARY:[Earning] Costco Wholesale Corp
 DTSTART:20260924T201500Z
 DTEND:20260924T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.56\nRevenue Actual: N/A\nRevenue Forecast: 94.73B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.55\nRevenue Actual: N/A\nRevenue Forecast: 94.73B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Costco Wholesale Corp Earnings in 1 week
@@ -960,7 +960,7 @@ UID:earn-NKE-20261001@investing.com
 SUMMARY:[Earning] Nike Inc
 DTSTART:20261001T201500Z
 DTEND:20261001T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.4484\nRevenue Actual: N/A\nRevenue Forecast: 11.38B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.445\nRevenue Actual: N/A\nRevenue Forecast: 11.37B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Nike Inc Earnings in 1 week
@@ -994,7 +994,7 @@ UID:earn-MKC-20261001@investing.com
 SUMMARY:[Earning] McCormick & Company Incorporated
 DTSTART:20261001T120000Z
 DTEND:20261001T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7557\nRevenue Actual: N/A\nRevenue Forecast: 1.98B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7555\nRevenue Actual: N/A\nRevenue Forecast: 1.98B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: McCormick & Company Incorporated Earnings in 1 week
@@ -1096,7 +1096,7 @@ UID:earn-FDS-20260930@investing.com
 SUMMARY:[Earning] FactSet Research Systems Inc
 DTSTART:20260930T120000Z
 DTEND:20260930T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.34\nRevenue Actual: N/A\nRevenue Forecast: 629.11M
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.34\nRevenue Actual: N/A\nRevenue Forecast: 629.70M
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: FactSet Research Systems Inc Earnings in 1 week
@@ -1164,7 +1164,7 @@ UID:earn-LEN-20260916@investing.com
 SUMMARY:[Earning] Lennar Corporation
 DTSTART:20260916T201500Z
 DTEND:20260916T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.3\nRevenue Actual: N/A\nRevenue Forecast: 8.31B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.29\nRevenue Actual: N/A\nRevenue Forecast: 8.31B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Lennar Corporation Earnings in 1 week
@@ -1266,7 +1266,7 @@ UID:earn-DAL-20261008@investing.com
 SUMMARY:[Earning] Delta Air Lines Inc
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.1\nRevenue Actual: N/A\nRevenue Forecast: 17.57B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.05\nRevenue Actual: N/A\nRevenue Forecast: 17.59B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Delta Air Lines Inc Earnings in 1 week
@@ -1283,7 +1283,7 @@ UID:earn-PGR-20261008@investing.com
 SUMMARY:[Earning] Progressive Corp
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.96\nRevenue Actual: N/A\nRevenue Forecast: 22.22B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.99\nRevenue Actual: N/A\nRevenue Forecast: 22.22B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Progressive Corp Earnings in 1 week
