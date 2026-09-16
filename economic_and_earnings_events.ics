@@ -382,7 +382,7 @@ UID:eco-FedInterestRateDecision-20260916@investing.com
 SUMMARY:Fed Interest Rate Decision
 DTSTART:20260916T180000Z
 DTEND:20260916T183000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 4%\nPrevious: 3.75%
+DESCRIPTION:Currency: USD\nActual: 4%\nForecast: 4%\nPrevious: 3.75%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Fed Interest Rate Decision in 1 week
@@ -1164,7 +1164,7 @@ UID:earn-LEN-20260916@investing.com
 SUMMARY:[Earning] Lennar Corporation
 DTSTART:20260916T201500Z
 DTEND:20260916T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.29\nRevenue Actual: N/A\nRevenue Forecast: 8.31B
+DESCRIPTION:EPS Actual: 1.19\nEPS Forecast: 1.29\nRevenue Actual: 8.05B\nRevenue Forecast: 8.31B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Lennar Corporation Earnings in 1 week
@@ -1691,7 +1691,7 @@ UID:eco-CrudeOilInventories-20260916@investing.com
 SUMMARY:Crude Oil Inventories
 DTSTART:20260916T143000Z
 DTEND:20260916T150000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: -1.6M\nPrevious: -0.391M
+DESCRIPTION:Currency: USD\nActual: -0.64M\nForecast: -1.6M\nPrevious: -0.391M
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Crude Oil Inventories in 1 week
