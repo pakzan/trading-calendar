@@ -348,7 +348,7 @@ UID:eco-CoreRetailSalesMoM-20260916@investing.com
 SUMMARY:Core Retail Sales (MoM)
 DTSTART:20260916T123000Z
 DTEND:20260916T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 0.5%\nPrevious: -0.3%
+DESCRIPTION:Currency: USD\nActual: 1.4%\nForecast: 0.6%\nPrevious: -0.2%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Core Retail Sales (MoM) in 1 week
@@ -365,7 +365,7 @@ UID:eco-RetailSalesMoM-20260916@investing.com
 SUMMARY:Retail Sales (MoM)
 DTSTART:20260916T123000Z
 DTEND:20260916T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 0.8%\nPrevious: -0.6%
+DESCRIPTION:Currency: USD\nActual: 1.2%\nForecast: 0.8%\nPrevious: -0.5%
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Retail Sales (MoM) in 1 week
@@ -399,7 +399,7 @@ UID:eco-PhiladelphiaFedManufacturingIndex-20260917@investing.com
 SUMMARY:Philadelphia Fed Manufacturing Index
 DTSTART:20260917T123000Z
 DTEND:20260917T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 28.9\nPrevious: 47.4
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 31.3\nPrevious: 47.4
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Philadelphia Fed Manufacturing Index in 1 week
@@ -1232,7 +1232,7 @@ UID:eco-InitialJoblessClaims-20260917@investing.com
 SUMMARY:Initial Jobless Claims
 DTSTART:20260917T123000Z
 DTEND:20260917T130000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 209K\nPrevious: 206K
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 207K\nPrevious: 206K
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Initial Jobless Claims in 1 week
@@ -1691,7 +1691,7 @@ UID:eco-CrudeOilInventories-20260916@investing.com
 SUMMARY:Crude Oil Inventories
 DTSTART:20260916T143000Z
 DTEND:20260916T150000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: -0.391M
+DESCRIPTION:Currency: USD\nActual: N/A\nForecast: -1.6M\nPrevious: -0.391M
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Crude Oil Inventories in 1 week
@@ -2159,6 +2159,142 @@ END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Pool Corporation Earnings in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:earn-CCL-20260929@investing.com
+SUMMARY:[Earning] Carnival Corporation
+DTSTART:20260929T120000Z
+DTEND:20260929T130000Z
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.42\nRevenue Actual: N/A\nRevenue Forecast: 8.54B
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Carnival Corporation Earnings in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Carnival Corporation Earnings in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:earn-UNH-20261013@investing.com
+SUMMARY:[Earning] Unitedhealth Group
+DTSTART:20261013T120000Z
+DTEND:20261013T130000Z
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.09\nRevenue Actual: N/A\nRevenue Forecast: 111.31B
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Unitedhealth Group Earnings in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Unitedhealth Group Earnings in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:earn-SLB-20261016@investing.com
+SUMMARY:[Earning] Slb NV
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.6186\nRevenue Actual: N/A\nRevenue Forecast: 9.27B
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Slb NV Earnings in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Slb NV Earnings in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:earn-TRV-20261016@investing.com
+SUMMARY:[Earning] Travelers Companies
+DTSTART:20261016T120000Z
+DTEND:20261016T130000Z
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.77\nRevenue Actual: N/A\nRevenue Forecast: 11.31B
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Travelers Companies Earnings in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Travelers Companies Earnings in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:earn-RF-20261016@investing.com
+SUMMARY:[Earning] Regions Financial Corporation
+DTSTART:20261016T120000Z
+DTEND:20261016T130000Z
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.6596\nRevenue Actual: N/A\nRevenue Forecast: 1.99B
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Regions Financial Corporation Earnings in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Regions Financial Corporation Earnings in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:earn-MTB-20261016@investing.com
+SUMMARY:[Earning] M&T Bank Corp
+DTSTART:20261016T120000Z
+DTEND:20261016T130000Z
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.94\nRevenue Actual: N/A\nRevenue Forecast: 2.53B
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: M&T Bank Corp Earnings in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: M&T Bank Corp Earnings in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:earn-CFG-20261016@investing.com
+SUMMARY:[Earning] Citizens Financial Group Inc
+DTSTART:20261016T120000Z
+DTEND:20261016T130000Z
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.4\nRevenue Actual: N/A\nRevenue Forecast: 2.34B
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Citizens Financial Group Inc Earnings in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Citizens Financial Group Inc Earnings in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:earn-TFC-20261016@investing.com
+SUMMARY:[Earning] Truist Financial Corp
+DTSTART:20261016T120000Z
+DTEND:20261016T130000Z
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.12\nRevenue Actual: N/A\nRevenue Forecast: 5.34B
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Truist Financial Corp Earnings in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Truist Financial Corp Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
