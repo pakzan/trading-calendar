@@ -705,7 +705,7 @@ UID:earn-AZO-20260922@investing.com
 SUMMARY:[Earning] AutoZone Inc
 DTSTART:20260922T120000Z
 DTEND:20260922T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 54.58\nRevenue Actual: N/A\nRevenue Forecast: 6.72B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 54.3\nRevenue Actual: N/A\nRevenue Forecast: 6.71B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: AutoZone Inc Earnings in 1 week
@@ -722,7 +722,7 @@ UID:earn-GIS-20260923@investing.com
 SUMMARY:[Earning] General Mills Inc
 DTSTART:20260923T120000Z
 DTEND:20260923T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7168\nRevenue Actual: N/A\nRevenue Forecast: 4.34B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7195\nRevenue Actual: N/A\nRevenue Forecast: 4.34B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: General Mills Inc Earnings in 1 week
@@ -773,7 +773,7 @@ UID:earn-COST-20260924@investing.com
 SUMMARY:[Earning] Costco Wholesale Corp
 DTSTART:20260924T201500Z
 DTEND:20260924T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.55\nRevenue Actual: N/A\nRevenue Forecast: 94.73B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.55\nRevenue Actual: N/A\nRevenue Forecast: 94.85B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Costco Wholesale Corp Earnings in 1 week
@@ -790,7 +790,7 @@ UID:earn-KMX-20260929@investing.com
 SUMMARY:[Earning] CarMax Inc
 DTSTART:20260929T120000Z
 DTEND:20260929T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7175\nRevenue Actual: N/A\nRevenue Forecast: 6.93B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7137\nRevenue Actual: N/A\nRevenue Forecast: 6.94B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: CarMax Inc Earnings in 1 week
@@ -841,7 +841,7 @@ UID:earn-MU-20260930@investing.com
 SUMMARY:[Earning] Micron Technology Inc
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 31.14\nRevenue Actual: N/A\nRevenue Forecast: 50.41B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 31.16\nRevenue Actual: N/A\nRevenue Forecast: 50.45B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Micron Technology Inc Earnings in 1 week
@@ -943,7 +943,7 @@ UID:earn-ACN-20261001@investing.com
 SUMMARY:[Earning] Accenture plc
 DTSTART:20261001T120000Z
 DTEND:20261001T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.18\nRevenue Actual: N/A\nRevenue Forecast: 18.05B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.19\nRevenue Actual: N/A\nRevenue Forecast: 18.05B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Accenture plc Earnings in 1 week
@@ -960,7 +960,7 @@ UID:earn-NKE-20261001@investing.com
 SUMMARY:[Earning] Nike Inc
 DTSTART:20261001T201500Z
 DTEND:20261001T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.445\nRevenue Actual: N/A\nRevenue Forecast: 11.37B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.4446\nRevenue Actual: N/A\nRevenue Forecast: 11.35B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Nike Inc Earnings in 1 week
@@ -977,7 +977,7 @@ UID:earn-CAG-20260930@investing.com
 SUMMARY:[Earning] Conagra Brands Inc
 DTSTART:20260930T120000Z
 DTEND:20260930T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.2827\nRevenue Actual: N/A\nRevenue Forecast: 2.59B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.2825\nRevenue Actual: N/A\nRevenue Forecast: 2.59B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Conagra Brands Inc Earnings in 1 week
@@ -994,7 +994,7 @@ UID:earn-MKC-20261001@investing.com
 SUMMARY:[Earning] McCormick & Company Incorporated
 DTSTART:20261001T120000Z
 DTEND:20261001T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7555\nRevenue Actual: N/A\nRevenue Forecast: 1.98B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7558\nRevenue Actual: N/A\nRevenue Forecast: 1.98B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: McCormick & Company Incorporated Earnings in 1 week
@@ -1096,7 +1096,7 @@ UID:earn-FDS-20260930@investing.com
 SUMMARY:[Earning] FactSet Research Systems Inc
 DTSTART:20260930T120000Z
 DTEND:20260930T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.34\nRevenue Actual: N/A\nRevenue Forecast: 629.70M
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.35\nRevenue Actual: N/A\nRevenue Forecast: 629.74M
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: FactSet Research Systems Inc Earnings in 1 week
@@ -1266,7 +1266,7 @@ UID:earn-DAL-20261008@investing.com
 SUMMARY:[Earning] Delta Air Lines Inc
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.05\nRevenue Actual: N/A\nRevenue Forecast: 17.59B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.03\nRevenue Actual: N/A\nRevenue Forecast: 17.59B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Delta Air Lines Inc Earnings in 1 week
@@ -1283,7 +1283,7 @@ UID:earn-PGR-20261008@investing.com
 SUMMARY:[Earning] Progressive Corp
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.99\nRevenue Actual: N/A\nRevenue Forecast: 22.22B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.09\nRevenue Actual: N/A\nRevenue Forecast: 22.28B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Progressive Corp Earnings in 1 week
@@ -1453,7 +1453,7 @@ UID:earn-BLK-20261009@investing.com
 SUMMARY:[Earning] BlackRock Inc
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 14.27\nRevenue Actual: N/A\nRevenue Forecast: 7.41B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 14.28\nRevenue Actual: N/A\nRevenue Forecast: 7.44B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: BlackRock Inc Earnings in 1 week
@@ -1674,7 +1674,7 @@ UID:earn-STZ-20261006@investing.com
 SUMMARY:[Earning] Constellation Brands Inc Class A
 DTSTART:20261006T201500Z
 DTEND:20261006T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.61\nRevenue Actual: N/A\nRevenue Forecast: 2.55B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.61\nRevenue Actual: N/A\nRevenue Forecast: 2.54B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Constellation Brands Inc Class A Earnings in 1 week
@@ -1708,7 +1708,7 @@ UID:earn-GS-20261013@investing.com
 SUMMARY:[Earning] Goldman Sachs Group Inc
 DTSTART:20261013T120000Z
 DTEND:20261013T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 16.42\nRevenue Actual: N/A\nRevenue Forecast: 17.64B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 16.23\nRevenue Actual: N/A\nRevenue Forecast: 17.64B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Goldman Sachs Group Inc Earnings in 1 week
@@ -1742,7 +1742,7 @@ UID:earn-WFC-20261013@investing.com
 SUMMARY:[Earning] Wells Fargo & Company
 DTSTART:20261013T120000Z
 DTEND:20261013T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.84\nRevenue Actual: N/A\nRevenue Forecast: 22.37B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.85\nRevenue Actual: N/A\nRevenue Forecast: 22.37B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Wells Fargo & Company Earnings in 1 week
@@ -1759,7 +1759,7 @@ UID:earn-JNJ-20261013@investing.com
 SUMMARY:[Earning] Johnson & Johnson
 DTSTART:20261013T120000Z
 DTEND:20261013T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.9\nRevenue Actual: N/A\nRevenue Forecast: 25.33B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.88\nRevenue Actual: N/A\nRevenue Forecast: 25.33B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Johnson & Johnson Earnings in 1 week
@@ -1793,7 +1793,7 @@ UID:earn-JPM-20261013@investing.com
 SUMMARY:[Earning] JPMorgan Chase & Co
 DTSTART:20261013T120000Z
 DTEND:20261013T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 5.83\nRevenue Actual: N/A\nRevenue Forecast: 50.59B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 5.83\nRevenue Actual: N/A\nRevenue Forecast: 50.56B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: JPMorgan Chase & Co Earnings in 1 week
@@ -1878,7 +1878,7 @@ UID:earn-STT-20261014@investing.com
 SUMMARY:[Earning] State Street Corp
 DTSTART:20261014T120000Z
 DTEND:20261014T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.61\nRevenue Actual: N/A\nRevenue Forecast: 4.00B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.62\nRevenue Actual: N/A\nRevenue Forecast: 4.00B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: State Street Corp Earnings in 1 week
@@ -1895,7 +1895,7 @@ UID:earn-ASML-20261014@investing.com
 SUMMARY:[Earning] ASML Holding NV ADR
 DTSTART:20261014T120000Z
 DTEND:20261014T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 11.75\nRevenue Actual: N/A\nRevenue Forecast: 13.00B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 11.81\nRevenue Actual: N/A\nRevenue Forecast: 13.06B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: ASML Holding NV ADR Earnings in 1 week
@@ -1912,7 +1912,7 @@ UID:earn-BAC-20261014@investing.com
 SUMMARY:[Earning] Bank of America Corp
 DTSTART:20261014T120000Z
 DTEND:20261014T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.18\nRevenue Actual: N/A\nRevenue Forecast: 31.26B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.17\nRevenue Actual: N/A\nRevenue Forecast: 31.24B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Bank of America Corp Earnings in 1 week
@@ -1929,7 +1929,7 @@ UID:earn-FAST-20261014@investing.com
 SUMMARY:[Earning] Fastenal Company
 DTSTART:20261014T120000Z
 DTEND:20261014T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.3361\nRevenue Actual: N/A\nRevenue Forecast: 2.43B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.3375\nRevenue Actual: N/A\nRevenue Forecast: 2.43B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Fastenal Company Earnings in 1 week
@@ -2014,7 +2014,7 @@ UID:earn-BX-20261015@investing.com
 SUMMARY:[Earning] Blackstone Inc
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.37\nRevenue Actual: N/A\nRevenue Forecast: 3.46B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.36\nRevenue Actual: N/A\nRevenue Forecast: 3.46B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Blackstone Inc Earnings in 1 week
@@ -2031,7 +2031,7 @@ UID:earn-CSX-20261015@investing.com
 SUMMARY:[Earning] CSX Corporation
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.5381\nRevenue Actual: N/A\nRevenue Forecast: 3.93B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.5373\nRevenue Actual: N/A\nRevenue Forecast: 3.93B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: CSX Corporation Earnings in 1 week
@@ -2048,7 +2048,7 @@ UID:earn-FCX-20261015@investing.com
 SUMMARY:[Earning] Freeport-McMoran Copper & Gold Inc
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7166\nRevenue Actual: N/A\nRevenue Forecast: 7.32B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7306\nRevenue Actual: N/A\nRevenue Forecast: 7.32B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Freeport-McMoran Copper & Gold Inc Earnings in 1 week
@@ -2133,7 +2133,7 @@ UID:earn-SNA-20261015@investing.com
 SUMMARY:[Earning] Snap-On Inc
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.96\nRevenue Actual: N/A\nRevenue Forecast: 1.24B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.97\nRevenue Actual: N/A\nRevenue Forecast: 1.24B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Snap-On Inc Earnings in 1 week
@@ -2184,7 +2184,7 @@ UID:earn-UNH-20261013@investing.com
 SUMMARY:[Earning] Unitedhealth Group
 DTSTART:20261013T120000Z
 DTEND:20261013T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.09\nRevenue Actual: N/A\nRevenue Forecast: 111.31B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.11\nRevenue Actual: N/A\nRevenue Forecast: 111.31B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Unitedhealth Group Earnings in 1 week
@@ -2235,7 +2235,7 @@ UID:earn-RF-20261016@investing.com
 SUMMARY:[Earning] Regions Financial Corporation
 DTSTART:20261016T120000Z
 DTEND:20261016T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.6596\nRevenue Actual: N/A\nRevenue Forecast: 1.99B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.6611\nRevenue Actual: N/A\nRevenue Forecast: 1.99B
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Regions Financial Corporation Earnings in 1 week
@@ -2312,6 +2312,40 @@ END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder: Crude Oil Inventories in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:earn-STLD-20261019@investing.com
+SUMMARY:[Earning] Steel Dynamics Inc
+DTSTART:20261019T201500Z
+DTEND:20261019T211500Z
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 5.5\nRevenue Actual: N/A\nRevenue Forecast: 6.42B
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Steel Dynamics Inc Earnings in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Steel Dynamics Inc Earnings in 2 days
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:earn-FITB-20261019@investing.com
+SUMMARY:[Earning] Fifth Third Bancorp
+DTSTART:20261019T120000Z
+DTEND:20261019T130000Z
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.8413\nRevenue Actual: N/A\nRevenue Forecast: 3.34B
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Fifth Third Bancorp Earnings in 1 week
+TRIGGER:-P1W
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Fifth Third Bancorp Earnings in 2 days
 TRIGGER:-P2D
 END:VALARM
 END:VEVENT
