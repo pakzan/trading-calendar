@@ -192,17 +192,36 @@ if token:
     if res_earn:
         earnings_data = res_earn.json().get("earnings", [])
         if earnings_data:
+            # Extract unique IDs as strings
             instrument_ids = list(set([str(e["instrument_id"]) for e in earnings_data]))
-            ids_query = "&".join([f"instrument_ids={i}" for i in instrument_ids])
+            instruments_lookup = {}
             
-            print("Fetching Company Tickers for Earnings...")
-            url_inst = f"https://endpoints.investing.com/pd-instruments/v1/instruments?domain_id=1&{ids_query}"
-            res_inst = fetch_with_retry(url_inst)
+            print(f"Fetching Company Tickers for {len(instrument_ids)} instruments in batches...")
             
-            instruments_lookup = {i["id"]: i for i in res_inst.json()} if res_inst else {}
+            # --- THE FIX: CHUNK THE REQUESTS ---
+            # Process a maximum of 40 IDs at a time to prevent API truncation or URL length limits
+            chunk_size = 40
+            for i in range(0, len(instrument_ids), chunk_size):
+                chunk = instrument_ids[i : i + chunk_size]
+                ids_query = "&".join([f"instrument_ids={id_val}" for id_val in chunk])
+                
+                url_inst = f"https://endpoints.investing.com/pd-instruments/v1/instruments?domain_id=1&{ids_query}"
+                res_inst = fetch_with_retry(url_inst)
+                
+                if res_inst:
+                    try:
+                        # Enforce string keys to guarantee matching with the earnings data
+                        for item in res_inst.json():
+                            instruments_lookup[str(item.get("id"))] = item
+                    except Exception as e:
+                        print(f"Error parsing instruments chunk: {e}")
+                
+                time.sleep(0.5) # Gentle delay between batches to respect rate limits
+            # -----------------------------------
             
             for earn in earnings_data:
-                inst_id = earn.get("instrument_id")
+                # Convert the incoming ID to string to perfectly match our lookup dictionary
+                inst_id = str(earn.get("instrument_id"))
                 inst_details = instruments_lookup.get(inst_id, {})
                 
                 # Fetch Symbol and Company Full Name
