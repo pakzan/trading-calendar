@@ -1,19 +1,23 @@
 from curl_cffi import requests
 import json
 import datetime
+import random
 import re
 import time
 import os
 
-# --- THE FIX: CREATE A GLOBAL SESSION ---
-# This ensures Cloudflare cookies are saved and passed to all subsequent requests.
+# ==========================================
+# 1. SETUP GLOBAL SESSION
+# ==========================================
+# This ensures Cloudflare cookies/trust are saved across all requests.
 session = requests.Session(impersonate="chrome")
 
 # ==========================================
-# HELPER FUNCTIONS
+# 2. HELPER FUNCTIONS
 # ==========================================
 
 def format_large_number(value):
+    """Formats large numbers into Billions (B) or Millions (M)."""
     if value is None or value == "N/A": return "N/A"
     try:
         v = float(value)
@@ -24,43 +28,46 @@ def format_large_number(value):
         return str(value)
 
 def get_utc_from_ny(date_str, hour, minute):
+    """Converts a specific US Eastern Time to UTC, accounting for US DST."""
     dt = datetime.datetime.strptime(date_str, "%Y-%m-%d").replace(hour=hour, minute=minute)
     year = dt.year
+    
     mar_1 = datetime.datetime(year, 3, 1)
     mar_2nd_sun = mar_1 + datetime.timedelta(days=(6 - mar_1.weekday() + 7) % 7 + 7)
     nov_1 = datetime.datetime(year, 11, 1)
     nov_1st_sun = nov_1 + datetime.timedelta(days=(6 - nov_1.weekday()) % 7)
+    
     offset = -4 if (mar_2nd_sun.date() <= dt.date() < nov_1st_sun.date()) else -5
     return dt - datetime.timedelta(hours=offset)
 
 def fetch_with_retry(url, headers=None, retries=3):
     """Centralized request handler with retry logic and session persistence."""
-    default_headers = {
-        "accept": "*/*",
-        "accept-language": "en-US,en;q=0.9",
+    # We purposefully DO NOT set 'accept' or 'user-agent' here. 
+    # Letting curl_cffi use its default impersonated headers prevents Cloudflare from blocking us.
+    req_headers = {
         "origin": "https://www.investing.com",
         "referer": "https://www.investing.com/"
     }
     if headers:
-        default_headers.update(headers)
+        req_headers.update(headers)
 
     for attempt in range(retries):
         try:
-            # --- THE FIX: USE session.get() INSTEAD OF requests.get() ---
-            res = session.get(url, headers=default_headers)
+            res = session.get(url, headers=req_headers, timeout=15)
             if res.status_code == 200:
                 return res
             
             print(f"⚠️ Attempt {attempt+1} Failed! HTTP Status: {res.status_code} for URL: {url.split('?')[0]}")
-            time.sleep(2)
+            time.sleep(3) # Wait longer between retries if blocked
         except Exception as e:
             print(f"⚠️ Attempt {attempt+1} Network Exception: {e}")
-            time.sleep(2)
+            time.sleep(3)
             
     print("❌ Request completely failed after 3 attempts.")
     return None
 
 def get_anonymous_token():
+    """Hits the homepage to get the session JWT and pass Cloudflare's initial check."""
     print("Scraping fresh Auth Token and warming up Cloudflare cookies...")
     res = fetch_with_retry("https://www.investing.com/")
     if res:
@@ -72,6 +79,7 @@ def get_anonymous_token():
     return None
 
 def build_vevent(uid, title, dtstart_line, dtend_line, description, alarm_name):
+    """Creates the standard iCalendar event string."""
     return "\n".join([
         "BEGIN:VEVENT",
         f"UID:{uid}",
@@ -83,8 +91,9 @@ def build_vevent(uid, title, dtstart_line, dtend_line, description, alarm_name):
         "BEGIN:VALARM", "ACTION:DISPLAY", f"DESCRIPTION:Reminder: {alarm_name} in 2 days", "TRIGGER:-P2D", "END:VALARM",
         "END:VEVENT"
     ])
+
 # ==========================================
-# PART 1: LOAD EXISTING EVENTS
+# 3. LOAD EXISTING EVENTS
 # ==========================================
 FILENAME = "economic_and_earnings_events.ics"
 existing_events = {}
@@ -114,10 +123,10 @@ else:
 
 
 # ==========================================
-# PART 2: FETCH NEW DATA
+# 4. FETCH NEW DATA
 # ==========================================
 now = datetime.datetime.now()
-start_date_obj = now - datetime.timedelta(days=2) # Start from 2 days ago
+start_date_obj = now - datetime.timedelta(days=2)
 future = now + datetime.timedelta(days=30) 
 
 tz_offset = "%2B08%3A00" # URL encoded "+08:00"
@@ -128,7 +137,11 @@ start_date_earn = start_date_obj.strftime("%Y-%m-%dT00%%3A00%%3A00.000Z")
 end_date_earn = future.strftime("%Y-%m-%dT23%%3A59%%3A59.999Z")
 
 new_events = {}
-print(f"Fetching new data from {start_date_obj.strftime('%Y-%m-%d')} to {future.strftime('%Y-%m-%d')}...")
+print(f"\nFetching new data from {start_date_obj.strftime('%Y-%m-%d')} to {future.strftime('%Y-%m-%d')}...")
+
+# --- WARM UP SESSION FIRST ---
+# Doing this first establishes trust with Cloudflare for all subsequent API requests
+token = get_anonymous_token()
 
 # --- FETCH ECONOMIC EVENTS ---
 print("\n--- Fetching Economic Events ---")
@@ -173,8 +186,6 @@ if res_eco:
 
 # --- FETCH EARNINGS EVENTS ---
 print("\n--- Fetching Earnings Events ---")
-token = get_anonymous_token()
-
 if token:
     url_earn = (
         "https://endpoints.investing.com/earnings/v1/instruments/earnings"
@@ -186,15 +197,14 @@ if token:
     if res_earn:
         earnings_data = res_earn.json().get("earnings", [])
         if earnings_data:
-            # Extract unique IDs as strings
             instrument_ids = list(set([str(e["instrument_id"]) for e in earnings_data]))
             instruments_lookup = {}
             
             print(f"Fetching Company Tickers for {len(instrument_ids)} instruments in batches...")
             
-            # --- THE FIX: CHUNK THE REQUESTS ---
-            # Process a maximum of 40 IDs at a time to prevent API truncation or URL length limits
-            chunk_size = 40
+            # --- CHUNK REQUESTS ---
+            # Reduced to 15 items per batch to avoid "URL Too Long" errors and CF Blocks
+            chunk_size = 15
             for i in range(0, len(instrument_ids), chunk_size):
                 chunk = instrument_ids[i : i + chunk_size]
                 ids_query = "&".join([f"instrument_ids={id_val}" for id_val in chunk])
@@ -204,24 +214,21 @@ if token:
                 
                 if res_inst:
                     try:
-                        # Enforce string keys to guarantee matching with the earnings data
                         for item in res_inst.json():
                             instruments_lookup[str(item.get("id"))] = item
                     except Exception as e:
                         print(f"Error parsing instruments chunk: {e}")
                 
-                time.sleep(0.5) # Gentle delay between batches to respect rate limits
-            # -----------------------------------
+                # Human-like random delay between batches
+                delay = random.uniform(1.5, 3.0)
+                time.sleep(delay)
             
             for earn in earnings_data:
-                # Convert the incoming ID to string to perfectly match our lookup dictionary
                 inst_id = str(earn.get("instrument_id"))
                 inst_details = instruments_lookup.get(inst_id, {})
                 
-                # Fetch Symbol and Company Full Name
                 symbol = inst_details.get("symbol", f"ID-{inst_id}")
                 company_name = inst_details.get("long_name") or inst_details.get("short_name") or symbol
-                
                 date_str = earn.get("date")
                 
                 if not date_str: continue
@@ -249,7 +256,6 @@ if token:
                 
                 uid = f"earn-{symbol}-{date_str.replace('-', '')}@investing.com"
                 
-                # Use company_name for title instead of symbol
                 new_events[uid] = build_vevent(uid, f"[Earning] {company_name}", dtstart_line, dtend_line, description, f"{company_name} Earnings")
         print(f"✅ Parsed Earnings Events.")
 else:
@@ -257,7 +263,7 @@ else:
 
 
 # ==========================================
-# PART 3: SMART MERGE AND SAVE
+# 5. SMART MERGE AND SAVE
 # ==========================================
 merged_events = existing_events.copy()
 merged_events.update(new_events)
