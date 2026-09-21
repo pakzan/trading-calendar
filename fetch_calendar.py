@@ -40,30 +40,49 @@ def get_utc_from_ny(date_str, hour, minute):
     offset = -4 if (mar_2nd_sun.date() <= dt.date() < nov_1st_sun.date()) else -5
     return dt - datetime.timedelta(hours=offset)
 
-def fetch_with_retry(url, headers=None, retries=3):
-    """Centralized request handler with retry logic and session persistence."""
-    # We purposefully DO NOT set 'accept' or 'user-agent' here. 
-    # Letting curl_cffi use its default impersonated headers prevents Cloudflare from blocking us.
-    req_headers = {
-        "origin": "https://www.investing.com",
-        "referer": "https://www.investing.com/"
-    }
+def fetch_with_retry(url, headers=None, retries=4):
+    """Centralized request handler with retry logic and perfect Chrome headers."""
+    
+    # Check if we are hitting the API or the Homepage and mimic Chrome accordingly
+    if "endpoints.investing.com" in url:
+        # API CORS Request Headers
+        req_headers = {
+            "accept": "*/*",
+            "origin": "https://www.investing.com",
+            "referer": "https://www.investing.com/",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-site"
+        }
+    else:
+        # Standard Homepage Navigation Headers
+        req_headers = {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "none",
+            "sec-fetch-user": "?1",
+            "upgrade-insecure-requests": "1"
+        }
+        
     if headers:
         req_headers.update(headers)
 
     for attempt in range(retries):
         try:
+            # We use session.get to maintain Cloudflare clearance cookies
             res = session.get(url, headers=req_headers, timeout=15)
             if res.status_code == 200:
                 return res
             
             print(f"⚠️ Attempt {attempt+1} Failed! HTTP Status: {res.status_code} for URL: {url.split('?')[0]}")
-            time.sleep(3) # Wait longer between retries if blocked
+            # Randomized human-like delay before trying again
+            time.sleep(random.uniform(2.5, 4.5)) 
         except Exception as e:
             print(f"⚠️ Attempt {attempt+1} Network Exception: {e}")
-            time.sleep(3)
+            time.sleep(random.uniform(2.5, 4.5))
             
-    print("❌ Request completely failed after 3 attempts.")
+    print("❌ Request completely failed after retries.")
     return None
 
 def get_anonymous_token():
