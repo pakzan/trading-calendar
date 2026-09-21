@@ -5,12 +5,15 @@ import re
 import time
 import os
 
+# --- THE FIX: CREATE A GLOBAL SESSION ---
+# This ensures Cloudflare cookies are saved and passed to all subsequent requests.
+session = requests.Session(impersonate="chrome")
+
 # ==========================================
 # HELPER FUNCTIONS
 # ==========================================
 
 def format_large_number(value):
-    """Formats large numbers into Billions (B) or Millions (M)."""
     if value is None or value == "N/A": return "N/A"
     try:
         v = float(value)
@@ -21,22 +24,17 @@ def format_large_number(value):
         return str(value)
 
 def get_utc_from_ny(date_str, hour, minute):
-    """Converts a specific US Eastern Time to UTC, accounting for US DST."""
     dt = datetime.datetime.strptime(date_str, "%Y-%m-%d").replace(hour=hour, minute=minute)
     year = dt.year
-    
-    # DST math
     mar_1 = datetime.datetime(year, 3, 1)
     mar_2nd_sun = mar_1 + datetime.timedelta(days=(6 - mar_1.weekday() + 7) % 7 + 7)
     nov_1 = datetime.datetime(year, 11, 1)
     nov_1st_sun = nov_1 + datetime.timedelta(days=(6 - nov_1.weekday()) % 7)
-    
     offset = -4 if (mar_2nd_sun.date() <= dt.date() < nov_1st_sun.date()) else -5
     return dt - datetime.timedelta(hours=offset)
 
 def fetch_with_retry(url, headers=None, retries=3):
-    """Centralized request handler with retry logic and deep diagnostic logging."""
-    # Base headers that mimic a real browser request to help bypass 403s
+    """Centralized request handler with retry logic and session persistence."""
     default_headers = {
         "accept": "*/*",
         "accept-language": "en-US,en;q=0.9",
@@ -48,13 +46,12 @@ def fetch_with_retry(url, headers=None, retries=3):
 
     for attempt in range(retries):
         try:
-            res = requests.get(url, impersonate="chrome", headers=default_headers)
+            # --- THE FIX: USE session.get() INSTEAD OF requests.get() ---
+            res = session.get(url, headers=default_headers)
             if res.status_code == 200:
                 return res
             
             print(f"⚠️ Attempt {attempt+1} Failed! HTTP Status: {res.status_code} for URL: {url.split('?')[0]}")
-            print(f"🔍 SERVER HEADERS: {dict(res.headers)}")
-            print(f"📄 ERROR SNIPPET:\n{res.text[:1000]}\n")
             time.sleep(2)
         except Exception as e:
             print(f"⚠️ Attempt {attempt+1} Network Exception: {e}")
@@ -64,19 +61,17 @@ def fetch_with_retry(url, headers=None, retries=3):
     return None
 
 def get_anonymous_token():
-    """Scrapes the session JWT Token from the homepage."""
-    print("Scraping fresh Auth Token from Investing.com...")
+    print("Scraping fresh Auth Token and warming up Cloudflare cookies...")
     res = fetch_with_retry("https://www.investing.com/")
     if res:
         match = re.search(r'(eyJhbGciOiJIUzI1NiIs[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+)', res.text)
         if match:
             print("✅ Successfully generated new session token!")
             return match.group(1)
-        print("❌ Connected successfully, but no token found in HTML. Did they serve a Captcha?")
+        print("❌ Connected successfully, but no token found in HTML.")
     return None
 
 def build_vevent(uid, title, dtstart_line, dtend_line, description, alarm_name):
-    """Creates the standard iCalendar event string."""
     return "\n".join([
         "BEGIN:VEVENT",
         f"UID:{uid}",
@@ -88,7 +83,6 @@ def build_vevent(uid, title, dtstart_line, dtend_line, description, alarm_name):
         "BEGIN:VALARM", "ACTION:DISPLAY", f"DESCRIPTION:Reminder: {alarm_name} in 2 days", "TRIGGER:-P2D", "END:VALARM",
         "END:VEVENT"
     ])
-
 # ==========================================
 # PART 1: LOAD EXISTING EVENTS
 # ==========================================
