@@ -48,10 +48,24 @@ if os.path.exists(ICS_FILE):
         events[re.search(r"UID:(.+)", b).group(1).strip()] = "BEGIN:VEVENT\n" + b.strip()
 mapping = json.load(open(MAP_FILE, encoding="utf-8")) if os.path.exists(MAP_FILE) else {}
 
-# --- 2. Setup Timeframes & Authenticate ---
+# --- 2. Setup Timeframes & Clean Up Existing Window ---
 now = datetime.datetime.now()
-t_start = (now - datetime.timedelta(days=2)).strftime("%Y-%m-%dT00%%3A00%%3A00.000")
-t_end = (now + datetime.timedelta(days=30)).strftime("%Y-%m-%dT23%%3A59%%3A59.999")
+t_start_dt = now - datetime.timedelta(days=2)
+t_end_dt = now + datetime.timedelta(days=30)
+
+t_start = t_start_dt.strftime("%Y-%m-%dT00%%3A00%%3A00.000")
+t_end = t_end_dt.strftime("%Y-%m-%dT23%%3A59%%3A59.999")
+
+# Define the date bounds in YYYYMMDD format for safe string comparison
+t_start_str = t_start_dt.strftime("%Y%m%d")
+t_end_str = t_end_dt.strftime("%Y%m%d")
+
+# WIPE ALL EVENTS COVERED BY THE DATE RANGE BEFORE FETCHING (Removes old shifted dates)
+for uid in list(events.keys()):
+    if match := re.search(r"DTSTART(?:;VALUE=DATE)?:(\d{8})", events[uid]):
+        event_date = match.group(1)
+        if t_start_str <= event_date <= t_end_str:
+            del events[uid]
 
 print("Scraping homepage token...")
 home = fetch("https://www.investing.com/", api=False)
