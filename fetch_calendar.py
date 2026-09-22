@@ -71,7 +71,7 @@ if res_eco := fetch(f"https://endpoints.investing.com/pd-instruments/v1/calendar
         
         d_start, d_end = f"DTSTART:{dt.strftime('%Y%m%dT%H%M%SZ')}", f"DTEND:{(dt + datetime.timedelta(minutes=30)).strftime('%Y%m%dT%H%M%SZ')}"
         desc = f"Currency: {info.get('currency', 'N/A')}\\nActual: {act}{unit if act!='N/A' else ''}\\nForecast: {fcst}{unit if fcst!='N/A' else ''}\\nPrevious: {prev}{unit if prev!='N/A' else ''}"
-        uid = f"eco-{re.sub(r'[^a-zA-Z0-9]', '', name)}-{dt.strftime('%Y%m%d')}@investing.com"
+        uid = f"eco-{re.sub(r'[^a-zA-Z0-9]', '', name)}-{dt.strftime('%Y%m%d')}"
         events[uid] = build_vevent(uid, name, d_start, d_end, desc)
 
 # --- 4. Process Earnings Events ---
@@ -104,7 +104,7 @@ if token and (res_earn := fetch(f"https://endpoints.investing.com/earnings/v1/in
             d_start, d_end = f"DTSTART;VALUE=DATE:{d_obj.strftime('%Y%m%d')}", f"DTEND;VALUE=DATE:{(d_obj + datetime.timedelta(days=1)).strftime('%Y%m%d')}"
 
         desc = f"EPS Actual: {e.get('eps_actual','N/A')}\\nEPS Forecast: {e.get('eps_forecast','N/A')}\\nRevenue Actual: {fmt_num(e.get('revenue_actual'))}\\nRevenue Forecast: {fmt_num(e.get('revenue_forecast'))}"
-        uid = f"earn-{sym}-{d.replace('-', '')}@investing.com"
+        uid = f"earn-{sym}-{d.replace('-', '')}"
         events[uid] = build_vevent(uid, f"[Earning] {name}", d_start, d_end, desc)
 
 # --- 5. Save ICS ---
