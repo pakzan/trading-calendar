@@ -90,7 +90,7 @@ if res_eco := fetch(f"https://endpoints.investing.com/pd-instruments/v1/calendar
 
 # --- 4. Process Earnings Events ---
 print("Fetching Earnings Events...")
-if token and (res_earn := fetch(f"https://endpoints.investing.com/earnings/v1/instruments/earnings?start_date={t_start}Z&end_date={t_end}Z&country_ids=5&importance=high&limit=200&deduplicate=true", auth=f"Bearer {token}")):
+if token and (res_earn := fetch(f"https://endpoints.investing.com/earnings/v1/instruments/earnings?start_date={t_start}Z&end_date={t_end}Z&country_ids=5&sectors=31,24,29,27&importance=high&limit=200&deduplicate=true", auth=f"Bearer {token}")):
     earns = res_earn.json().get("earnings", [])
     
     # Auto-Heal Local JSON cache
