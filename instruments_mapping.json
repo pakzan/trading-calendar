@@ -1,0 +1,582 @@
+{
+    "8282": {
+        "symbol": "AZO",
+        "name": "AutoZone Inc"
+    },
+    "263": {
+        "symbol": "GIS",
+        "name": "General Mills Inc"
+    },
+    "6406": {
+        "symbol": "PAYX",
+        "name": "Paychex Inc"
+    },
+    "6360": {
+        "symbol": "CTAS",
+        "name": "Cintas Corporation"
+    },
+    "7916": {
+        "symbol": "DRI",
+        "name": "Darden Restaurants Inc"
+    },
+    "6443": {
+        "symbol": "COST",
+        "name": "Costco Wholesale Corp"
+    },
+    "13836": {
+        "symbol": "KMX",
+        "name": "CarMax Inc"
+    },
+    "22696": {
+        "symbol": "CCL",
+        "name": "Carnival Corporation"
+    },
+    "8225": {
+        "symbol": "CAG",
+        "name": "Conagra Brands Inc"
+    },
+    "20322": {
+        "symbol": "FDS",
+        "name": "FactSet Research Systems Inc"
+    },
+    "8092": {
+        "symbol": "MU",
+        "name": "Micron Technology Inc"
+    },
+    "8181": {
+        "symbol": "JBL",
+        "name": "Jabil Circuit Inc"
+    },
+    "7884": {
+        "symbol": "ACN",
+        "name": "Accenture plc"
+    },
+    "8948": {
+        "symbol": "NKE",
+        "name": "Nike Inc"
+    },
+    "7924": {
+        "symbol": "MKC",
+        "name": "McCormick & Company Incorporated"
+    },
+    "8034": {
+        "symbol": "STZ",
+        "name": "Constellation Brands Inc Class A"
+    },
+    "993236": {
+        "symbol": "LW",
+        "name": "Lamb Weston Holdings Inc"
+    },
+    "8358": {
+        "symbol": "PEP",
+        "name": "PepsiCo Inc"
+    },
+    "7968": {
+        "symbol": "PGR",
+        "name": "Progressive Corp"
+    },
+    "8944": {
+        "symbol": "DAL",
+        "name": "Delta Air Lines Inc"
+    },
+    "13078": {
+        "symbol": "BLK",
+        "name": "BlackRock Inc"
+    },
+    "266": {
+        "symbol": "GS",
+        "name": "Goldman Sachs Group Inc"
+    },
+    "8359": {
+        "symbol": "UNH",
+        "name": "Unitedhealth Group"
+    },
+    "20861": {
+        "symbol": "DPZ",
+        "name": "Domino\u2019s Pizza Inc"
+    },
+    "7992": {
+        "symbol": "WFC",
+        "name": "Wells Fargo & Company"
+    },
+    "8177": {
+        "symbol": "JNJ",
+        "name": "Johnson & Johnson"
+    },
+    "241": {
+        "symbol": "C",
+        "name": "Citigroup Inc"
+    },
+    "267": {
+        "symbol": "JPM",
+        "name": "JPMorgan Chase & Co"
+    },
+    "8056": {
+        "symbol": "MS",
+        "name": "Morgan Stanley"
+    },
+    "7967": {
+        "symbol": "STT",
+        "name": "State Street Corp"
+    },
+    "39320": {
+        "symbol": "ASML",
+        "name": "ASML Holding NV ADR"
+    },
+    "243": {
+        "symbol": "BAC",
+        "name": "Bank of America Corp"
+    },
+    "6409": {
+        "symbol": "FAST",
+        "name": "Fastenal Company"
+    },
+    "6491": {
+        "symbol": "SCHW",
+        "name": "Charles Schwab Corp"
+    },
+    "8328": {
+        "symbol": "MRSH",
+        "name": "Marsh & McLennan Companies Inc"
+    },
+    "8352": {
+        "symbol": "BNY",
+        "name": "Bank of New York Mellon Corp"
+    },
+    "13933": {
+        "symbol": "BX",
+        "name": "Blackstone Inc"
+    },
+    "7906": {
+        "symbol": "CSX",
+        "name": "CSX Corporation"
+    },
+    "8281": {
+        "symbol": "FCX",
+        "name": "Freeport-McMoran Copper & Gold Inc"
+    },
+    "7923": {
+        "symbol": "PLD",
+        "name": "Prologis Inc"
+    },
+    "7979": {
+        "symbol": "GPC",
+        "name": "Genuine Parts Co"
+    },
+    "8057": {
+        "symbol": "PNC",
+        "name": "PNC Financial Services Group Inc"
+    },
+    "8310": {
+        "symbol": "USB",
+        "name": "U.S. Bancorp"
+    },
+    "8001": {
+        "symbol": "SNA",
+        "name": "Snap-On Inc"
+    },
+    "16943": {
+        "symbol": "POOL",
+        "name": "Pool Corporation"
+    },
+    "8354": {
+        "symbol": "SLB",
+        "name": "Slb NV"
+    },
+    "8159": {
+        "symbol": "TRV",
+        "name": "Travelers Companies"
+    },
+    "7945": {
+        "symbol": "RF",
+        "name": "Regions Financial Corporation"
+    },
+    "8275": {
+        "symbol": "MTB",
+        "name": "M&T Bank Corp"
+    },
+    "941642": {
+        "symbol": "CFG",
+        "name": "Citizens Financial Group Inc"
+    },
+    "7918": {
+        "symbol": "TFC",
+        "name": "Truist Financial Corp"
+    },
+    "6387": {
+        "symbol": "STLD",
+        "name": "Steel Dynamics Inc"
+    },
+    "6358": {
+        "symbol": "FITB",
+        "name": "Fifth Third Bancorp"
+    },
+    "7921": {
+        "symbol": "HAL",
+        "name": "Halliburton Company"
+    },
+    "239": {
+        "symbol": "GM",
+        "name": "General Motors Company"
+    },
+    "13082": {
+        "symbol": "JBHT",
+        "name": "JB Hunt Transport Services Inc"
+    },
+    "6393": {
+        "symbol": "ISRG",
+        "name": "Intuitive Surgical Inc"
+    },
+    "7861": {
+        "symbol": "NOC",
+        "name": "Northrop Grumman Corporation"
+    },
+    "8193": {
+        "symbol": "GE",
+        "name": "GE Aerospace"
+    },
+    "13063": {
+        "symbol": "NFLX",
+        "name": "Netflix Inc"
+    },
+    "21232": {
+        "symbol": "MSCI",
+        "name": "MSCI Inc"
+    },
+    "8129": {
+        "symbol": "OMC",
+        "name": "Omnicom Group Inc"
+    },
+    "8039": {
+        "symbol": "PM",
+        "name": "Philip Morris International Inc"
+    },
+    "13061": {
+        "symbol": "UAL",
+        "name": "United Airlines Holdings Inc"
+    },
+    "8105": {
+        "symbol": "KEY",
+        "name": "KeyCorp"
+    },
+    "8127": {
+        "symbol": "VZ",
+        "name": "Verizon Communications Inc"
+    },
+    "6445": {
+        "symbol": "LRCX",
+        "name": "Lam Research Corp"
+    },
+    "32518": {
+        "symbol": "KMI",
+        "name": "Kinder Morgan Inc"
+    },
+    "6419": {
+        "symbol": "NTRS",
+        "name": "Northern Trust Corporation"
+    },
+    "8118": {
+        "symbol": "PPG",
+        "name": "PPG Industries Inc"
+    },
+    "8082": {
+        "symbol": "IBM",
+        "name": "International Business Machines"
+    },
+    "8192": {
+        "symbol": "ABT",
+        "name": "Abbott Laboratories"
+    },
+    "8280": {
+        "symbol": "LVS",
+        "name": "Las Vegas Sands Corp"
+    },
+    "940815": {
+        "symbol": "SYF",
+        "name": "Synchrony Financial"
+    },
+    "8123": {
+        "symbol": "ELV",
+        "name": "Elevance Health Inc"
+    },
+    "20651": {
+        "symbol": "MOH",
+        "name": "Molina Healthcare Inc"
+    },
+    "8007": {
+        "symbol": "EFX",
+        "name": "Equifax Inc"
+    },
+    "13080": {
+        "symbol": "CME",
+        "name": "CME Group Inc"
+    },
+    "16631": {
+        "symbol": "MKTX",
+        "name": "MarketAxess Holdings Inc"
+    },
+    "6395": {
+        "symbol": "NDAQ",
+        "name": "Nasdaq Inc"
+    },
+    "7914": {
+        "symbol": "LUV",
+        "name": "Southwest Airlines Company"
+    },
+    "32337": {
+        "symbol": "CCI",
+        "name": "Crown Castle International Corp"
+    },
+    "244": {
+        "symbol": "T",
+        "name": "AT&T Inc"
+    },
+    "39262": {
+        "symbol": "PKG",
+        "name": "Packaging Corp of America"
+    },
+    "13091": {
+        "symbol": "NEE",
+        "name": "Nextera Energy Inc"
+    },
+    "8016": {
+        "symbol": "CMS",
+        "name": "CMS Energy Corporation"
+    },
+    "7868": {
+        "symbol": "DTE",
+        "name": "DTE Energy Company"
+    },
+    "8231": {
+        "symbol": "FE",
+        "name": "FirstEnergy Corporation"
+    },
+    "8144": {
+        "symbol": "AEP",
+        "name": "American Electric Power Company Inc"
+    },
+    "953524": {
+        "symbol": "SHOP",
+        "name": "Shopify Inc"
+    },
+    "8241": {
+        "symbol": "VLO",
+        "name": "Valero Energy Corporation"
+    },
+    "32381": {
+        "symbol": "DECK",
+        "name": "Deckers Outdoor Corporation"
+    },
+    "8119": {
+        "symbol": "SPGI",
+        "name": "S&P Global Inc"
+    },
+    "8117": {
+        "symbol": "WDC",
+        "name": "Western Digital Corporation"
+    },
+    "8952": {
+        "symbol": "PG",
+        "name": "Procter & Gamble Company"
+    },
+    "13862": {
+        "symbol": "RSG",
+        "name": "Republic Services Inc"
+    },
+    "10548": {
+        "symbol": "KDP",
+        "name": "Keurig Dr Pepper Inc"
+    },
+    "8050": {
+        "symbol": "HIG",
+        "name": "Hartford Financial Services Group"
+    },
+    "29740": {
+        "symbol": "WTW",
+        "name": "Willis Towers Watson PLC"
+    },
+    "39263": {
+        "symbol": "AJG",
+        "name": "Arthur J Gallagher & Co"
+    },
+    "29680": {
+        "symbol": "TFX",
+        "name": "Teleflex Incorporated"
+    },
+    "251": {
+        "symbol": "INTC",
+        "name": "Intel Corporation"
+    },
+    "259": {
+        "symbol": "DOW",
+        "name": "Dow Inc"
+    },
+    "6516": {
+        "symbol": "CMCSA",
+        "name": "Comcast Corp"
+    },
+    "8083": {
+        "symbol": "UNP",
+        "name": "Union Pacific Corporation"
+    },
+    "8250": {
+        "symbol": "COF",
+        "name": "Capital One Financial Corporation"
+    },
+    "8305": {
+        "symbol": "TXT",
+        "name": "Textron Inc"
+    },
+    "7864": {
+        "symbol": "MA",
+        "name": "Mastercard Inc"
+    },
+    "8237": {
+        "symbol": "PHM",
+        "name": "PulteGroup Inc"
+    },
+    "13846": {
+        "symbol": "LHX",
+        "name": "L3Harris Technologies Inc"
+    },
+    "272": {
+        "symbol": "MCD",
+        "name": "McDonald\u2019s Corporation"
+    },
+    "8052": {
+        "symbol": "HSY",
+        "name": "Hershey Co"
+    },
+    "39190": {
+        "symbol": "BG",
+        "name": "Bunge Limited"
+    },
+    "1159534": {
+        "symbol": "CARR",
+        "name": "Carrier Global\u00a0Corp"
+    },
+    "1208282": {
+        "symbol": "LIN",
+        "name": "Linde PLC"
+    },
+    "6480": {
+        "symbol": "TROW",
+        "name": "T. Rowe Price Group Inc"
+    },
+    "8113": {
+        "symbol": "LH",
+        "name": "Labcorp Holdings Inc"
+    },
+    "8267": {
+        "symbol": "PFG",
+        "name": "Principal Financial Group Inc"
+    },
+    "20486": {
+        "symbol": "DLR",
+        "name": "Digital Realty Trust Inc"
+    },
+    "24282": {
+        "symbol": "WST",
+        "name": "West Pharmaceutical Services Inc"
+    },
+    "39171": {
+        "symbol": "CPT",
+        "name": "Camden Property Trust"
+    },
+    "8150": {
+        "symbol": "NEM",
+        "name": "Newmont Goldcorp Corp"
+    },
+    "8126": {
+        "symbol": "EMN",
+        "name": "Eastman Chemical Company"
+    },
+    "8351": {
+        "symbol": "HAS",
+        "name": "Hasbro Inc"
+    },
+    "13847": {
+        "symbol": "DOC",
+        "name": "Healthpeak Properties Inc"
+    },
+    "8160": {
+        "symbol": "SWK",
+        "name": "Stanley Black & Decker Inc"
+    },
+    "7980": {
+        "symbol": "CBRE",
+        "name": "CBRE Group Inc Class A"
+    },
+    "39291": {
+        "symbol": "AOS",
+        "name": "Smith AO Corporation"
+    },
+    "21180": {
+        "symbol": "RMD",
+        "name": "ResMed Inc"
+    },
+    "39172": {
+        "symbol": "MHK",
+        "name": "Mohawk Industries Inc"
+    },
+    "8036": {
+        "symbol": "AMT",
+        "name": "American Tower Corp"
+    },
+    "8953": {
+        "symbol": "WY",
+        "name": "Weyerhaeuser Company"
+    },
+    "15951": {
+        "symbol": "DXCM",
+        "name": "DexCom Inc"
+    },
+    "8251": {
+        "symbol": "PCG",
+        "name": "PG&E Corp"
+    },
+    "6493": {
+        "symbol": "HBAN",
+        "name": "Huntington Bancshares Incorporated"
+    },
+    "6407": {
+        "symbol": "VRSN",
+        "name": "VeriSign Inc"
+    },
+    "6365": {
+        "symbol": "GILD",
+        "name": "Gilead Sciences Inc"
+    },
+    "7858": {
+        "symbol": "DOV",
+        "name": "Dover Corporation"
+    },
+    "8272": {
+        "symbol": "HON",
+        "name": "Honeywell International Inc"
+    },
+    "32379": {
+        "symbol": "TSCO",
+        "name": "Tractor Supply Company"
+    },
+    "6507": {
+        "symbol": "CINF",
+        "name": "Cincinnati Financial Corporation"
+    },
+    "7875": {
+        "symbol": "XEL",
+        "name": "Xcel Energy Inc"
+    },
+    "48361": {
+        "symbol": "ALLE",
+        "name": "Allegion PLC"
+    },
+    "16017": {
+        "symbol": "ERIE",
+        "name": "Erie Indemnity Company"
+    },
+    "13999": {
+        "symbol": "NBIS",
+        "name": "Nebius Group NV"
+    }
+}
