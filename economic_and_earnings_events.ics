@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Cached Calendar//EN
+PRODID:-//Economic & Earnings Calendar//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
@@ -1678,7 +1678,7 @@ DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.47\nRevenue Actual: N/A\nRevenue Fo
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-CARR-20261022
-SUMMARY:[Earning] Carrier Global Corp
+SUMMARY:[Earning] Carrier Global Corp
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7689\nRevenue Actual: N/A\nRevenue Forecast: 5.97B
