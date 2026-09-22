@@ -1,303 +1,115 @@
 from curl_cffi import requests
-import json
-import datetime
-import random
-import re
-import time
-import os
+import json, datetime, random, re, time, os
 
-# ==========================================
-# 1. SETUP GLOBAL SESSION
-# ==========================================
-# This ensures Cloudflare cookies/trust are saved across all requests.
+# --- Configuration & Global Session ---
+ICS_FILE, MAP_FILE = "economic_and_earnings_events.ics", "instruments_mapping.json"
 session = requests.Session(impersonate="chrome")
 
-# ==========================================
-# 2. HELPER FUNCTIONS
-# ==========================================
+# --- Helper Functions ---
+def fetch(url, api=True, auth=None):
+    """Handles all web requests with Cloudflare bypass headers & retries."""
+    headers = {
+        "accept": "*/*" if api else "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "sec-fetch-dest": "empty" if api else "document",
+        "sec-fetch-mode": "cors" if api else "navigate",
+        "sec-fetch-site": "same-site" if api else "none"
+    }
+    if api: headers.update({"origin": "https://www.investing.com", "referer": "https://www.investing.com/"})
+    else: headers.update({"sec-fetch-user": "?1", "upgrade-insecure-requests": "1"})
+    if auth: headers["authorization"] = auth
 
-def format_large_number(value):
-    """Formats large numbers into Billions (B) or Millions (M)."""
-    if value is None or value == "N/A": return "N/A"
-    try:
-        v = float(value)
-        if v >= 1e9: return f"{v/1e9:.2f}B"
-        if v >= 1e6: return f"{v/1e6:.2f}M"
-        return f"{v:.2f}"
-    except:
-        return str(value)
-
-def get_utc_from_ny(date_str, hour, minute):
-    """Converts a specific US Eastern Time to UTC, accounting for US DST."""
-    dt = datetime.datetime.strptime(date_str, "%Y-%m-%d").replace(hour=hour, minute=minute)
-    year = dt.year
-    
-    mar_1 = datetime.datetime(year, 3, 1)
-    mar_2nd_sun = mar_1 + datetime.timedelta(days=(6 - mar_1.weekday() + 7) % 7 + 7)
-    nov_1 = datetime.datetime(year, 11, 1)
-    nov_1st_sun = nov_1 + datetime.timedelta(days=(6 - nov_1.weekday()) % 7)
-    
-    offset = -4 if (mar_2nd_sun.date() <= dt.date() < nov_1st_sun.date()) else -5
-    return dt - datetime.timedelta(hours=offset)
-
-def fetch_with_retry(url, headers=None, retries=4):
-    """Centralized request handler with retry logic and perfect Chrome headers."""
-    
-    # Check if we are hitting the API or the Homepage and mimic Chrome accordingly
-    if "endpoints.investing.com" in url:
-        # API CORS Request Headers
-        req_headers = {
-            "accept": "*/*",
-            "origin": "https://www.investing.com",
-            "referer": "https://www.investing.com/",
-            "sec-fetch-dest": "empty",
-            "sec-fetch-mode": "cors",
-            "sec-fetch-site": "same-site"
-        }
-    else:
-        # Standard Homepage Navigation Headers
-        req_headers = {
-            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
-            "sec-fetch-dest": "document",
-            "sec-fetch-mode": "navigate",
-            "sec-fetch-site": "none",
-            "sec-fetch-user": "?1",
-            "upgrade-insecure-requests": "1"
-        }
-        
-    if headers:
-        req_headers.update(headers)
-
-    for attempt in range(retries):
+    for _ in range(4):
         try:
-            # We use session.get to maintain Cloudflare clearance cookies
-            res = session.get(url, headers=req_headers, timeout=15)
-            if res.status_code == 200:
-                return res
-            
-            print(f"⚠️ Attempt {attempt+1} Failed! HTTP Status: {res.status_code} for URL: {url.split('?')[0]}")
-            # Randomized human-like delay before trying again
-            time.sleep(random.uniform(2.5, 4.5)) 
-        except Exception as e:
-            print(f"⚠️ Attempt {attempt+1} Network Exception: {e}")
-            time.sleep(random.uniform(2.5, 4.5))
-            
-    print("❌ Request completely failed after retries.")
+            if (res := session.get(url, headers=headers, timeout=15)).status_code == 200: return res
+        except: pass
+        time.sleep(random.uniform(2.5, 4.5))
     return None
 
-def get_anonymous_token():
-    """Hits the homepage to get the session JWT and pass Cloudflare's initial check."""
-    print("Scraping fresh Auth Token and warming up Cloudflare cookies...")
-    res = fetch_with_retry("https://www.investing.com/")
-    if res:
-        match = re.search(r'(eyJhbGciOiJIUzI1NiIs[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+)', res.text)
-        if match:
-            print("✅ Successfully generated new session token!")
-            return match.group(1)
-        print("❌ Connected successfully, but no token found in HTML.")
-    return None
+def fmt_num(v):
+    try: return f"{float(v)/1e9:.2f}B" if float(v)>=1e9 else f"{float(v)/1e6:.2f}M" if float(v)>=1e6 else f"{float(v):.2f}"
+    except: return str(v) if v else "N/A"
 
-def build_vevent(uid, title, dtstart_line, dtend_line, description, alarm_name):
-    """Creates the standard iCalendar event string."""
-    return "\n".join([
-        "BEGIN:VEVENT",
-        f"UID:{uid}",
-        f"SUMMARY:{title}",
-        dtstart_line,
-        dtend_line,
-        f"DESCRIPTION:{description}",
-        "BEGIN:VALARM", "ACTION:DISPLAY", f"DESCRIPTION:Reminder: {alarm_name} in 1 week", "TRIGGER:-P1W", "END:VALARM",
-        "BEGIN:VALARM", "ACTION:DISPLAY", f"DESCRIPTION:Reminder: {alarm_name} in 2 days", "TRIGGER:-P2D", "END:VALARM",
-        "END:VEVENT"
-    ])
+def get_utc(d_str, h, m):
+    """Converts US Eastern Time to UTC, auto-calculating US DST changes."""
+    dt = datetime.datetime.strptime(d_str, "%Y-%m-%d").replace(hour=h, minute=m)
+    y = dt.year
+    sun2_mar = datetime.datetime(y, 3, 1) + datetime.timedelta(days=(13 - datetime.datetime(y, 3, 1).weekday()) % 7)
+    sun1_nov = datetime.datetime(y, 11, 1) + datetime.timedelta(days=(6 - datetime.datetime(y, 11, 1).weekday()) % 7)
+    return dt - datetime.timedelta(hours=-4 if sun2_mar.date() <= dt.date() < sun1_nov.date() else -5)
 
-# ==========================================
-# 3. LOAD EXISTING EVENTS
-# ==========================================
-FILENAME = "economic_and_earnings_events.ics"
-existing_events = {}
+def build_vevent(uid, title, start, end, desc):
+    """Creates the VEVENT string without alarms/reminders."""
+    return f"BEGIN:VEVENT\nUID:{uid}\nSUMMARY:{title}\n{start}\n{end}\nDESCRIPTION:{desc}\nEND:VEVENT"
 
-if os.path.exists(FILENAME):
-    print(f"📂 Reading existing '{FILENAME}' to prevent deletion of old events...")
-    with open(FILENAME, "r", encoding="utf-8") as f:
-        lines = f.read().splitlines()
-        
-    in_event, current_uid = False, None
-    current_event_lines = []
-    
-    for line in lines:
-        if line.strip() == "BEGIN:VEVENT":
-            in_event, current_uid, current_event_lines = True, None, []
-            
-        if in_event:
-            current_event_lines.append(line)
-            if line.startswith("UID:"): current_uid = line.split("UID:")[1].strip()
-                
-        if line.strip() == "END:VEVENT" and in_event:
-            if current_uid: existing_events[current_uid] = "\n".join(current_event_lines)
-            in_event = False
-    print(f"✅ Loaded {len(existing_events)} historical events.")
-else:
-    print(f"📂 No existing '{FILENAME}' found. Starting fresh.")
+# --- 1. Load Local Files ---
+events = {}
+if os.path.exists(ICS_FILE):
+    for b in open(ICS_FILE, encoding="utf-8").read().split("BEGIN:VEVENT\n")[1:]:
+        events[re.search(r"UID:(.+)", b).group(1).strip()] = "BEGIN:VEVENT\n" + b.strip()
+mapping = json.load(open(MAP_FILE, encoding="utf-8")) if os.path.exists(MAP_FILE) else {}
 
-
-# ==========================================
-# 4. FETCH NEW DATA
-# ==========================================
+# --- 2. Setup Timeframes & Authenticate ---
 now = datetime.datetime.now()
-start_date_obj = now - datetime.timedelta(days=2)
-future = now + datetime.timedelta(days=30) 
+t_start = (now - datetime.timedelta(days=2)).strftime("%Y-%m-%dT00%%3A00%%3A00.000")
+t_end = (now + datetime.timedelta(days=30)).strftime("%Y-%m-%dT23%%3A59%%3A59.999")
 
-tz_offset = "%2B08%3A00" # URL encoded "+08:00"
-start_date_eco = start_date_obj.strftime("%Y-%m-%dT00%%3A00%%3A00.000") + tz_offset
-end_date_eco = future.strftime("%Y-%m-%dT23%%3A59%%3A59.999") + tz_offset
+print("Scraping homepage token...")
+home = fetch("https://www.investing.com/", api=False)
+token = re.search(r'(eyJhbGciOiJIUzI1NiIs[\w-]+\.[\w-]+\.[\w-]+)', home.text).group(1) if home else None
 
-start_date_earn = start_date_obj.strftime("%Y-%m-%dT00%%3A00%%3A00.000Z")
-end_date_earn = future.strftime("%Y-%m-%dT23%%3A59%%3A59.999Z")
-
-new_events = {}
-print(f"\nFetching new data from {start_date_obj.strftime('%Y-%m-%d')} to {future.strftime('%Y-%m-%d')}...")
-
-# --- WARM UP SESSION FIRST ---
-# Doing this first establishes trust with Cloudflare for all subsequent API requests
-token = get_anonymous_token()
-
-# --- FETCH ECONOMIC EVENTS ---
-print("\n--- Fetching Economic Events ---")
-url_eco = (
-    "https://endpoints.investing.com/pd-instruments/v1/calendars/economic/events/occurrences"
-    f"?domain_id=1&limit=200&start_date={start_date_eco}&end_date={end_date_eco}"
-    "&country_ids=5,35&importance=high"
-)
-res_eco = fetch_with_retry(url_eco)
-if res_eco:
-    data_eco = res_eco.json()
-    events_lookup = {e["event_id"]: e for e in data_eco.get("events", [])}
-
-    for occ in data_eco.get("occurrences", []):
-        event_info = events_lookup.get(occ.get("event_id"), {})
-        name = event_info.get("event_translated") or event_info.get("short_name") or "Economic Event"
+# --- 3. Process Economic Events ---
+print("Fetching Economic Events...")
+if res_eco := fetch(f"https://endpoints.investing.com/pd-instruments/v1/calendars/economic/events/occurrences?domain_id=1&limit=200&start_date={t_start}%2B08%3A00&end_date={t_end}%2B08%3A00&country_ids=5,35&importance=high"):
+    d = res_eco.json()
+    lkp = {e["event_id"]: e for e in d.get("events", [])}
+    for o in d.get("occurrences", []):
+        if not (t := o.get("occurrence_time")): continue
+        dt = datetime.datetime.fromisoformat(t.replace('Z', '+00:00')).astimezone(datetime.timezone.utc)
+        info = lkp.get(o.get("event_id"), {})
+        name = info.get("event_translated") or info.get("short_name") or "Economic Event"
+        act, fcst, prev, unit = o.get("actual","N/A"), o.get("forecast","N/A"), o.get("previous","N/A"), o.get("unit","")
         
-        time_str = occ.get("occurrence_time")
-        if not time_str: continue
-        
-        try:
-            dt_utc = datetime.datetime.fromisoformat(time_str.replace('Z', '+00:00')).astimezone(datetime.timezone.utc)
-        except: continue
+        d_start, d_end = f"DTSTART:{dt.strftime('%Y%m%dT%H%M%SZ')}", f"DTEND:{(dt + datetime.timedelta(minutes=30)).strftime('%Y%m%dT%H%M%SZ')}"
+        desc = f"Currency: {info.get('currency', 'N/A')}\\nActual: {act}{unit if act!='N/A' else ''}\\nForecast: {fcst}{unit if fcst!='N/A' else ''}\\nPrevious: {prev}{unit if prev!='N/A' else ''}"
+        uid = f"eco-{re.sub(r'[^a-zA-Z0-9]', '', name)}-{dt.strftime('%Y%m%d')}@investing.com"
+        events[uid] = build_vevent(uid, name, d_start, d_end, desc)
 
-        dtstart_line = f"DTSTART:{dt_utc.strftime('%Y%m%dT%H%M%SZ')}"
-        dtend_line = f"DTEND:{(dt_utc + datetime.timedelta(minutes=30)).strftime('%Y%m%dT%H%M%SZ')}"
-
-        act = occ.get("actual", "N/A")
-        fcst = occ.get("forecast", "N/A")
-        prev = occ.get("previous", "N/A")
-        unit = occ.get("unit", "")
-        
-        if act != "N/A": act = f"{act}{unit}"
-        if fcst != "N/A": fcst = f"{fcst}{unit}"
-        if prev != "N/A": prev = f"{prev}{unit}"
-        
-        description = f"Currency: {event_info.get('currency', 'N/A')}\\nActual: {act}\\nForecast: {fcst}\\nPrevious: {prev}"
-        
-        uid = f"eco-{re.sub(r'[^a-zA-Z0-9]', '', name)}-{dt_utc.strftime('%Y%m%d')}@investing.com"
-        new_events[uid] = build_vevent(uid, name, dtstart_line, dtend_line, description, name)
-    print(f"✅ Parsed Economic Events.")
-
-# --- FETCH EARNINGS EVENTS ---
-print("\n--- Fetching Earnings Events ---")
-if token:
-    url_earn = (
-        "https://endpoints.investing.com/earnings/v1/instruments/earnings"
-        f"?start_date={start_date_earn}&end_date={end_date_earn}"
-        "&country_ids=5&importance=high&limit=200&deduplicate=true"
-    )
-    res_earn = fetch_with_retry(url_earn, headers={"authorization": f"Bearer {token}"})
+# --- 4. Process Earnings Events ---
+print("Fetching Earnings Events...")
+if token and (res_earn := fetch(f"https://endpoints.investing.com/earnings/v1/instruments/earnings?start_date={t_start}Z&end_date={t_end}Z&country_ids=5&importance=high&limit=200&deduplicate=true", auth=f"Bearer {token}")):
+    earns = res_earn.json().get("earnings", [])
     
-    if res_earn:
-        earnings_data = res_earn.json().get("earnings", [])
-        if earnings_data:
-            instrument_ids = list(set([str(e["instrument_id"]) for e in earnings_data]))
-            instruments_lookup = {}
-            
-            print(f"Fetching Company Tickers for {len(instrument_ids)} instruments in batches...")
-            
-            # --- CHUNK REQUESTS ---
-            # Reduced to 15 items per batch to avoid "URL Too Long" errors and CF Blocks
-            chunk_size = 15
-            for i in range(0, len(instrument_ids), chunk_size):
-                chunk = instrument_ids[i : i + chunk_size]
-                ids_query = "&".join([f"instrument_ids={id_val}" for id_val in chunk])
-                
-                url_inst = f"https://endpoints.investing.com/pd-instruments/v1/instruments?domain_id=1&{ids_query}"
-                res_inst = fetch_with_retry(url_inst)
-                
-                if res_inst:
-                    try:
-                        for item in res_inst.json():
-                            instruments_lookup[str(item.get("id"))] = item
-                    except Exception as e:
-                        print(f"Error parsing instruments chunk: {e}")
-                
-                # Human-like random delay between batches
-                delay = random.uniform(1.5, 3.0)
-                time.sleep(delay)
-            
-            for earn in earnings_data:
-                inst_id = str(earn.get("instrument_id"))
-                inst_details = instruments_lookup.get(inst_id, {})
-                
-                symbol = inst_details.get("symbol", f"ID-{inst_id}")
-                company_name = inst_details.get("long_name") or inst_details.get("short_name") or symbol
-                date_str = earn.get("date")
-                
-                if not date_str: continue
-                
-                phase = earn.get("market_phase", "")
-                if phase == "PRE_MARKET":
-                    dt_utc = get_utc_from_ny(date_str, 8, 0)
-                    dtstart_line = f"DTSTART:{dt_utc.strftime('%Y%m%dT%H%M%SZ')}"
-                    dtend_line = f"DTEND:{(dt_utc + datetime.timedelta(hours=1)).strftime('%Y%m%dT%H%M%SZ')}"
-                elif phase == "AFTER_HOURS":
-                    dt_utc = get_utc_from_ny(date_str, 16, 15)
-                    dtstart_line = f"DTSTART:{dt_utc.strftime('%Y%m%dT%H%M%SZ')}"
-                    dtend_line = f"DTEND:{(dt_utc + datetime.timedelta(hours=1)).strftime('%Y%m%dT%H%M%SZ')}"
-                else:
-                    date_obj = datetime.datetime.strptime(date_str, "%Y-%m-%d")
-                    dtstart_line = f"DTSTART;VALUE=DATE:{date_obj.strftime('%Y%m%d')}"
-                    dtend_line = f"DTEND;VALUE=DATE:{(date_obj + datetime.timedelta(days=1)).strftime('%Y%m%d')}"
-                
-                eps_act = earn.get("eps_actual", "N/A")
-                eps_fcst = earn.get("eps_forecast", "N/A")
-                rev_act = format_large_number(earn.get("revenue_actual", "N/A"))
-                rev_fcst = format_large_number(earn.get("revenue_forecast", "N/A"))
-                
-                description = f"EPS Actual: {eps_act}\\nEPS Forecast: {eps_fcst}\\nRevenue Actual: {rev_act}\\nRevenue Forecast: {rev_fcst}"
-                
-                uid = f"earn-{symbol}-{date_str.replace('-', '')}@investing.com"
-                
-                new_events[uid] = build_vevent(uid, f"[Earning] {company_name}", dtstart_line, dtend_line, description, f"{company_name} Earnings")
-        print(f"✅ Parsed Earnings Events.")
-else:
-    print("⚠️ Skipping Earnings. No token available.")
+    # Auto-Heal Local JSON cache
+    if missing := [str(e["instrument_id"]) for e in earns if str(e["instrument_id"]) not in mapping]:
+        print(f"Fetching {len(missing)} unknown companies for local cache...")
+        for i in range(0, len(missing), 15):
+            q = "&".join([f"instrument_ids={x}" for x in missing[i:i+15]])
+            if r := fetch(f"https://endpoints.investing.com/pd-instruments/v1/instruments?domain_id=1&{q}"):
+                for item in r.json(): mapping[str(item["id"])] = {"symbol": item.get("symbol"), "name": item.get("long_name") or item.get("short_name")}
+            time.sleep(random.uniform(1.5, 3.0))
+        json.dump(mapping, open(MAP_FILE, "w", encoding="utf-8"), indent=4)
+    
+    for e in earns:
+        if not (d := e.get("date")): continue
+        iid = str(e.get("instrument_id"))
+        sym = mapping.get(iid, {}).get("symbol") or f"ID-{iid}"
+        name = mapping.get(iid, {}).get("name") or sym
+        phase = e.get("market_phase", "")
+        
+        if phase in ("PRE_MARKET", "AFTER_HOURS"):
+            dt = get_utc(d, 8 if phase=="PRE_MARKET" else 16, 0 if phase=="PRE_MARKET" else 15)
+            d_start, d_end = f"DTSTART:{dt.strftime('%Y%m%dT%H%M%SZ')}", f"DTEND:{(dt + datetime.timedelta(hours=1)).strftime('%Y%m%dT%H%M%SZ')}"
+        else:
+            d_obj = datetime.datetime.strptime(d, "%Y-%m-%d")
+            d_start, d_end = f"DTSTART;VALUE=DATE:{d_obj.strftime('%Y%m%d')}", f"DTEND;VALUE=DATE:{(d_obj + datetime.timedelta(days=1)).strftime('%Y%m%d')}"
 
+        desc = f"EPS Actual: {e.get('eps_actual','N/A')}\\nEPS Forecast: {e.get('eps_forecast','N/A')}\\nRevenue Actual: {fmt_num(e.get('revenue_actual'))}\\nRevenue Forecast: {fmt_num(e.get('revenue_forecast'))}"
+        uid = f"earn-{sym}-{d.replace('-', '')}@investing.com"
+        events[uid] = build_vevent(uid, f"[Earning] {name}", d_start, d_end, desc)
 
-# ==========================================
-# 5. SMART MERGE AND SAVE
-# ==========================================
-merged_events = existing_events.copy()
-merged_events.update(new_events)
+# --- 5. Save ICS ---
+with open(ICS_FILE, "w", encoding="utf-8") as f:
+    f.write("BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Cached Calendar//EN\nCALSCALE:GREGORIAN\nMETHOD:PUBLISH\n" + 
+            "\n".join(events.values()) + "\nEND:VCALENDAR")
 
-final_ics = [
-    "BEGIN:VCALENDAR",
-    "VERSION:2.0",
-    "PRODID:-//Python Economic & Earnings Calendar Fetcher//EN",
-    "CALSCALE:GREGORIAN",
-    "METHOD:PUBLISH"
-]
-final_ics.extend(merged_events.values())
-final_ics.append("END:VCALENDAR")
-
-with open(FILENAME, "w", encoding="utf-8") as f:
-    f.write("\n".join(final_ics))
-
-print(f"\n✅ Successfully saved {len(merged_events)} total merged events to '{FILENAME}'!")
+print(f"✅ Master process complete! Saved {len(events)} events to {ICS_FILE}")
