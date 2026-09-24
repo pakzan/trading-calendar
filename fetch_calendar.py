@@ -3,7 +3,7 @@ import json, datetime, random, re, time, os
 
 # --- Configuration & Global Session ---
 ICS_FILE, MAP_FILE = "economic_and_earnings_events.ics", "instruments_mapping.json"
-session = requests.Session(impersonate="chrome120")
+session = requests.Session(impersonate="safari17_0")
 
 # --- Helper Functions ---
 def fetch(url, api=True, auth=None):
