@@ -21,7 +21,7 @@ def fetch(url, api=True, auth=None):
     for _ in range(4):
         try:
             if (res := session.get(url, headers=headers, timeout=15)).status_code == 200: return res
-        except: pass
+        except Exception as e: print(e)
         time.sleep(random.uniform(2.5, 4.5))
     return None
 
