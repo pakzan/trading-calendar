@@ -578,5 +578,25 @@
     "13999": {
         "symbol": "NBIS",
         "name": "Nebius Group NV"
+    },
+    "39220": {
+        "symbol": "WRB",
+        "name": "W. R. Berkley Corp"
+    },
+    "240": {
+        "symbol": "CVX",
+        "name": "Chevron Corp"
+    },
+    "7888": {
+        "symbol": "XOM",
+        "name": "ExxonMobil Holdings Corporation"
+    },
+    "8350": {
+        "symbol": "AON",
+        "name": "Aon PLC"
+    },
+    "8182": {
+        "symbol": "AXP",
+        "name": "American Express Company"
     }
 }
