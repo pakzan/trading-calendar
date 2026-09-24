@@ -3,13 +3,14 @@ import json, datetime, random, re, time, os
 
 # --- Configuration & Global Session ---
 ICS_FILE, MAP_FILE = "economic_and_earnings_events.ics", "instruments_mapping.json"
-session = requests.Session(impersonate="chrome")
+session = requests.Session(impersonate="chrome120")
 
 # --- Helper Functions ---
 def fetch(url, api=True, auth=None):
     """Handles all web requests with Cloudflare bypass headers, retries & logging."""
     headers = {
         "accept": "*/*" if api else "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "accept-language": "en-US,en;q=0.9",
         "sec-fetch-dest": "empty" if api else "document",
         "sec-fetch-mode": "cors" if api else "navigate",
         "sec-fetch-site": "same-site" if api else "none"
