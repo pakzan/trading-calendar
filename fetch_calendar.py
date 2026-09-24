@@ -21,7 +21,7 @@ def fetch(url, api=True, auth=None):
     for _ in range(4):
         try:
             if (res := session.get(url, headers=headers, timeout=15)).status_code == 200: return res
-        except Exception as e: print(e)
+        except: pass
         time.sleep(random.uniform(2.5, 4.5))
     return None
 
@@ -64,11 +64,12 @@ print("Scraping homepage token...")
 home = fetch("https://www.investing.com/", api=False)
 token = re.search(r'(eyJhbGciOiJIUzI1NiIs[\w-]+\.[\w-]+\.[\w-]+)', home.text).group(1) if home else None
 
-# --- 3. Process Economic Events ---
-print("Fetching Economic Events...")
-if token and (res_eco := fetch(f"https://endpoints.investing.com/pd-instruments/v1/calendars/economic/events/occurrences?domain_id=1&limit=200&start_date={t_start}%2B08%3A00&end_date={t_end}%2B08%3A00&country_ids=5,35&importance=high", auth=f"Bearer {token}")):
+# --- 3. Process Economic Events & Fed Speeches ---
+print("Fetching Economic Events & Fed Speeches...")
+# FIX: Adjusted limit to 1000 and added `importance=high,medium` to catch the speeches
+if token and (res_eco := fetch(f"https://endpoints.investing.com/pd-instruments/v1/calendars/economic/events/occurrences?domain_id=1&limit=1000&start_date={t_start}%2B08%3A00&end_date={t_end}%2B08%3A00&country_ids=5,35&importance=high,medium", auth=f"Bearer {token}")):
     
-    # SAFE WIPE - We only delete old economic events once we successfully fetched new data
+    # Safe Wipe old cached items
     for uid in list(events.keys()):
         if uid.startswith("eco-") and (match := re.search(r"DTSTART(?:;VALUE=DATE)?:(\d{8})", events[uid])):
             if t_start_str <= match.group(1) <= t_end_str:
@@ -78,21 +79,42 @@ if token and (res_eco := fetch(f"https://endpoints.investing.com/pd-instruments/
     lkp = {e["event_id"]: e for e in d.get("events", [])}
     for o in d.get("occurrences", []):
         if not (t := o.get("occurrence_time")): continue
-        dt = datetime.datetime.fromisoformat(t.replace('Z', '+00:00')).astimezone(datetime.timezone.utc)
         info = lkp.get(o.get("event_id"), {})
+        
+        # --- FILTER LOGIC ---
+        is_high_impact = info.get("importance") == "high"
+        # Check if it's a Fed/FOMC related event
+        is_fed_speech = (
+            "FOMC" in info.get("short_name", "") or 
+            "Fed " in info.get("short_name", "")
+        ) and info.get("event_type") == "speech"
+        
+        # Skip events that are "medium" UNLESS they are a Fed speech
+        if not (is_high_impact or is_fed_speech):
+            continue
+
+        dt = datetime.datetime.fromisoformat(t.replace('Z', '+00:00')).astimezone(datetime.timezone.utc)
         name = info.get("event_translated") or info.get("short_name") or "Economic Event"
-        act, fcst, prev, unit = o.get("actual","N/A"), o.get("forecast","N/A"), o.get("previous","N/A"), o.get("unit","")
         
         d_start, d_end = f"DTSTART:{dt.strftime('%Y%m%dT%H%M%SZ')}", f"DTEND:{(dt + datetime.timedelta(minutes=30)).strftime('%Y%m%dT%H%M%SZ')}"
-        desc = f"Currency: {info.get('currency', 'N/A')}\\nActual: {act}{unit if act!='N/A' else ''}\\nForecast: {fcst}{unit if fcst!='N/A' else ''}\\nPrevious: {prev}{unit if prev!='N/A' else ''}"
-        uid = f"eco-{re.sub(r'[^a-zA-Z0-9]', '', name)}-{dt.strftime('%Y%m%d')}"
-        events[uid] = build_vevent(uid, name, d_start, d_end, desc)
+        
+        # Format explicitly for Speeches vs Standard Economic Data
+        if is_fed_speech:
+            title = f"🎤 [Fed Speech] {name}"
+            desc = f"Source: {info.get('source', 'Federal Reserve')}"
+        else:
+            act, fcst, prev, unit = o.get("actual","N/A"), o.get("forecast","N/A"), o.get("previous","N/A"), o.get("unit","")
+            title = name
+            desc = f"Currency: {info.get('currency', 'N/A')}\\nActual: {act}{unit if act!='N/A' else ''}\\nForecast: {fcst}{unit if fcst!='N/A' else ''}\\nPrevious: {prev}{unit if prev!='N/A' else ''}"
+        
+        # Appended %H%M to prevent speeches on the same day overwriting each other
+        uid = f"eco-{re.sub(r'[^a-zA-Z0-9]', '', name)}-{dt.strftime('%Y%m%d%H%M')}"
+        events[uid] = build_vevent(uid, title, d_start, d_end, desc)
 
 # --- 4. Process Earnings Events ---
 print("Fetching Earnings Events...")
 if token and (res_earn := fetch(f"https://endpoints.investing.com/earnings/v1/instruments/earnings?start_date={t_start}Z&end_date={t_end}Z&country_ids=5&sectors=24,27,29,31&importance=high&limit=200&deduplicate=true", auth=f"Bearer {token}")):
     
-    # SAFE WIPE - We only delete old earning events once we successfully fetched new data
     for uid in list(events.keys()):
         if uid.startswith("earn-") and (match := re.search(r"DTSTART(?:;VALUE=DATE)?:(\d{8})", events[uid])):
             if t_start_str <= match.group(1) <= t_end_str:
@@ -105,7 +127,6 @@ if token and (res_earn := fetch(f"https://endpoints.investing.com/earnings/v1/in
         print(f"Fetching {len(missing)} unknown companies for local cache...")
         for i in range(0, len(missing), 15):
             q = "&".join([f"instrument_ids={x}" for x in missing[i:i+15]])
-            # FIX: Added auth=f"Bearer {token}" here as well to prevent cache-lookup blocks
             if r := fetch(f"https://endpoints.investing.com/pd-instruments/v1/instruments?domain_id=1&{q}", auth=f"Bearer {token}"):
                 for item in r.json(): mapping[str(item["id"])] = {"symbol": item.get("symbol"), "name": item.get("long_name") or item.get("short_name")}
             time.sleep(random.uniform(1.5, 3.0))
