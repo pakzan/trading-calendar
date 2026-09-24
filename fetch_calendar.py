@@ -81,11 +81,12 @@ token = re.search(r'(eyJhbGciOiJIUzI1NiIs[\w-]+\.[\w-]+\.[\w-]+)', home.text).gr
 if token:
     print(f"✅ Token acquired: {token[:15]}...")
 else:
-    print("❌ Failed to acquire token! Subsequent API calls will likely fail.")
+    print("❌ Failed to acquire token! Exiting early.")
+    exit()
 
 # --- 3. Process Economic Events & Fed Speeches ---
 print("\nFetching Economic Events & Fed Speeches...")
-if token and (res_eco := fetch(f"https://endpoints.investing.com/pd-instruments/v1/calendars/economic/events/occurrences?domain_id=1&limit=1000&start_date={t_start}%2B08%3A00&end_date={t_end}%2B08%3A00&country_ids=5,35&importance=high,medium", auth=f"Bearer {token}")):
+if res_eco := fetch(f"https://endpoints.investing.com/pd-instruments/v1/calendars/economic/events/occurrences?domain_id=1&limit=1000&start_date={t_start}%2B08%3A00&end_date={t_end}%2B08%3A00&country_ids=5,35&importance=high,medium", auth=f"Bearer {token}"):
     
     # Safe Wipe old cached items
     for uid in list(events.keys()):
@@ -133,7 +134,7 @@ else:
 
 # --- 4. Process Earnings Events ---
 print("\nFetching Earnings Events...")
-if token and (res_earn := fetch(f"https://endpoints.investing.com/earnings/v1/instruments/earnings?start_date={t_start}Z&end_date={t_end}Z&country_ids=5&sectors=24,27,29,31&importance=high&limit=200&deduplicate=true", auth=f"Bearer {token}")):
+if res_earn := fetch(f"https://endpoints.investing.com/earnings/v1/instruments/earnings?start_date={t_start}Z&end_date={t_end}Z&country_ids=5&sectors=24,27,29,31&importance=high&limit=200&deduplicate=true", auth=f"Bearer {token}"):
     
     for uid in list(events.keys()):
         if uid.startswith("earn-") and (match := re.search(r"DTSTART(?:;VALUE=DATE)?:(\d{8})", events[uid])):
