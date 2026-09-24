@@ -104,12 +104,12 @@ if res_eco := fetch(f"https://endpoints.investing.com/pd-instruments/v1/calendar
         info = lkp.get(o.get("event_id"), {})
         
         is_high_impact = info.get("importance") == "high"
-        is_fed_event = (
+        is_fed_speech = (
             "FOMC" in info.get("short_name", "") or 
             "Fed " in info.get("short_name", "")
-        )
+        ) and info.get("event_type") == "speech"
         
-        if not (is_high_impact or is_fed_event):
+        if not (is_high_impact or is_fed_speech):
             continue
 
         dt = datetime.datetime.fromisoformat(t.replace('Z', '+00:00')).astimezone(datetime.timezone.utc)
