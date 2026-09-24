@@ -7,7 +7,7 @@ session = requests.Session(impersonate="chrome")
 
 # --- Helper Functions ---
 def fetch(url, api=True, auth=None):
-    """Handles all web requests with Cloudflare bypass headers & retries."""
+    """Handles all web requests with Cloudflare bypass headers, retries & logging."""
     headers = {
         "accept": "*/*" if api else "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "sec-fetch-dest": "empty" if api else "document",
@@ -18,11 +18,24 @@ def fetch(url, api=True, auth=None):
     else: headers.update({"sec-fetch-user": "?1", "upgrade-insecure-requests": "1"})
     if auth: headers["authorization"] = auth
 
-    for _ in range(4):
+    # Shorten URL for clean logging
+    log_url = url.split("?")[0].replace("https://www.investing.com", "").replace("https://endpoints.investing.com", "")
+    if not log_url: log_url = "/"
+
+    for attempt in range(1, 5):
         try:
-            if (res := session.get(url, headers=headers, timeout=15)).status_code == 200: return res
-        except Exception as e: print(e)
+            res = session.get(url, headers=headers, timeout=15)
+            if res.status_code == 200:
+                print(f"  -> [200 OK] Fetched {log_url}")
+                return res
+            else:
+                print(f"  -> [{res.status_code}] Failed {log_url} (Attempt {attempt}/4)")
+        except Exception as e: 
+            print(f"  -> [Error: {e.__class__.__name__}] Failed {log_url} (Attempt {attempt}/4)")
+            
         time.sleep(random.uniform(2.5, 4.5))
+        
+    print(f"  ❌ Gave up on {log_url} after 4 attempts.")
     return None
 
 def fmt_num(v):
@@ -44,7 +57,6 @@ def build_vevent(uid, title, start, end, desc):
 # --- 1. Load Local Files ---
 events = {}
 if os.path.exists(ICS_FILE):
-    # FIX: Remove END:VCALENDAR before parsing so it doesn't get attached to the last event
     raw_ics = open(ICS_FILE, encoding="utf-8").read().replace("END:VCALENDAR", "").strip()
     for b in raw_ics.split("BEGIN:VEVENT\n")[1:]:
         events[re.search(r"UID:(.+)", b).group(1).strip()] = "BEGIN:VEVENT\n" + b.strip()
@@ -58,16 +70,20 @@ t_end_dt = now + datetime.timedelta(days=30)
 t_start = t_start_dt.strftime("%Y-%m-%dT00%%3A00%%3A00.000")
 t_end = t_end_dt.strftime("%Y-%m-%dT23%%3A59%%3A59.999")
 
-# Define the date bounds in YYYYMMDD format for safe string comparison
 t_start_str = t_start_dt.strftime("%Y%m%d")
 t_end_str = t_end_dt.strftime("%Y%m%d")
 
 print("Scraping homepage token...")
 home = fetch("https://www.investing.com/", api=False)
-token = re.search(r'(eyJhbGciOiJIUzI1NiIs[\w-]+\.[\w-]+\.[\w-]+)', home.text).group(1) if home else None
+token = re.search(r'(eyJhbGciOiJIUzI1NiIs[\w-]+\.[\w-]+\.[\w-]+)', home.text).group(1) if home and home.text else None
+
+if token:
+    print(f"✅ Token acquired: {token[:15]}...")
+else:
+    print("❌ Failed to acquire token! Subsequent API calls will likely fail.")
 
 # --- 3. Process Economic Events & Fed Speeches ---
-print("Fetching Economic Events...")
+print("\nFetching Economic Events & Fed Speeches...")
 if token and (res_eco := fetch(f"https://endpoints.investing.com/pd-instruments/v1/calendars/economic/events/occurrences?domain_id=1&limit=1000&start_date={t_start}%2B08%3A00&end_date={t_end}%2B08%3A00&country_ids=5,35&importance=high,medium", auth=f"Bearer {token}")):
     
     # Safe Wipe old cached items
@@ -78,18 +94,19 @@ if token and (res_eco := fetch(f"https://endpoints.investing.com/pd-instruments/
                 
     d = res_eco.json()
     lkp = {e["event_id"]: e for e in d.get("events", [])}
-    for o in d.get("occurrences", []):
+    occurrences = d.get("occurrences", [])
+    
+    added_eco_count = 0
+    for o in occurrences:
         if not (t := o.get("occurrence_time")): continue
         info = lkp.get(o.get("event_id"), {})
         
-        # --- FILTER LOGIC ---
         is_high_impact = info.get("importance") == "high"
         is_fed_event = (
             "FOMC" in info.get("short_name", "") or 
             "Fed " in info.get("short_name", "")
         )
         
-        # Skip events that are "medium" UNLESS they are a Fed event
         if not (is_high_impact or is_fed_event):
             continue
 
@@ -98,7 +115,6 @@ if token and (res_eco := fetch(f"https://endpoints.investing.com/pd-instruments/
         
         d_start, d_end = f"DTSTART:{dt.strftime('%Y%m%dT%H%M%SZ')}", f"DTEND:{(dt + datetime.timedelta(minutes=30)).strftime('%Y%m%dT%H%M%SZ')}"
         
-        # Format explicitly for Speeches vs Standard Economic Data
         title = name
         if info.get("event_type") == "speech":
             desc = f"Source: {info.get('source', 'N/A')}"
@@ -106,12 +122,16 @@ if token and (res_eco := fetch(f"https://endpoints.investing.com/pd-instruments/
             act, fcst, prev, unit = o.get("actual","N/A"), o.get("forecast","N/A"), o.get("previous","N/A"), o.get("unit","")
             desc = f"Currency: {info.get('currency', 'N/A')}\\nActual: {act}{unit if act!='N/A' else ''}\\nForecast: {fcst}{unit if fcst!='N/A' else ''}\\nPrevious: {prev}{unit if prev!='N/A' else ''}"
         
-        # Appended %H%M to prevent speeches on the same day overwriting each other
         uid = f"eco-{re.sub(r'[^a-zA-Z0-9]', '', name)}-{dt.strftime('%Y%m%d%H%M')}"
         events[uid] = build_vevent(uid, title, d_start, d_end, desc)
+        added_eco_count += 1
+        
+    print(f"✅ Economic Events updated successfully! Parsed {added_eco_count} target events out of {len(occurrences)} total.")
+else:
+    print("❌ Failed to update Economic Events.")
 
 # --- 4. Process Earnings Events ---
-print("Fetching Earnings Events...")
+print("\nFetching Earnings Events...")
 if token and (res_earn := fetch(f"https://endpoints.investing.com/earnings/v1/instruments/earnings?start_date={t_start}Z&end_date={t_end}Z&country_ids=5&sectors=24,27,29,31&importance=high&limit=200&deduplicate=true", auth=f"Bearer {token}")):
     
     for uid in list(events.keys()):
@@ -123,7 +143,7 @@ if token and (res_earn := fetch(f"https://endpoints.investing.com/earnings/v1/in
     
     # Auto-Heal Local JSON cache
     if missing := [str(e["instrument_id"]) for e in earns if str(e["instrument_id"]) not in mapping]:
-        print(f"Fetching {len(missing)} unknown companies for local cache...")
+        print(f"  -> Missing names for {len(missing)} instruments. Fetching map...")
         for i in range(0, len(missing), 15):
             q = "&".join([f"instrument_ids={x}" for x in missing[i:i+15]])
             if r := fetch(f"https://endpoints.investing.com/pd-instruments/v1/instruments?domain_id=1&{q}", auth=f"Bearer {token}"):
@@ -149,9 +169,14 @@ if token and (res_earn := fetch(f"https://endpoints.investing.com/earnings/v1/in
         uid = f"earn-{sym}-{d.replace('-', '')}"
         events[uid] = build_vevent(uid, f"[Earning] {name}", d_start, d_end, desc)
 
+    print(f"✅ Earning Events updated successfully! Parsed {len(earns)} earnings.")
+else:
+    print("❌ Failed to update Earning Events.")
+
 # --- 5. Save ICS ---
+print(f"\nSaving to {ICS_FILE}...")
 with open(ICS_FILE, "w", encoding="utf-8") as f:
     f.write("BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Economic & Earnings Calendar//EN\nCALSCALE:GREGORIAN\nMETHOD:PUBLISH\n" + 
             "\n".join(events.values()) + "\nEND:VCALENDAR")
 
-print(f"✅ Master process complete! Saved {len(events)} events to {ICS_FILE}")
+print(f"✅ Master process complete! Active saved events: {len(events)}")
