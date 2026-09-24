@@ -44,7 +44,9 @@ def build_vevent(uid, title, start, end, desc):
 # --- 1. Load Local Files ---
 events = {}
 if os.path.exists(ICS_FILE):
-    for b in open(ICS_FILE, encoding="utf-8").read().split("BEGIN:VEVENT\n")[1:]:
+    # FIX: Remove END:VCALENDAR before parsing so it doesn't get attached to the last event
+    raw_ics = open(ICS_FILE, encoding="utf-8").read().replace("END:VCALENDAR", "").strip()
+    for b in raw_ics.split("BEGIN:VEVENT\n")[1:]:
         events[re.search(r"UID:(.+)", b).group(1).strip()] = "BEGIN:VEVENT\n" + b.strip()
 mapping = json.load(open(MAP_FILE, encoding="utf-8")) if os.path.exists(MAP_FILE) else {}
 
@@ -66,7 +68,6 @@ token = re.search(r'(eyJhbGciOiJIUzI1NiIs[\w-]+\.[\w-]+\.[\w-]+)', home.text).gr
 
 # --- 3. Process Economic Events & Fed Speeches ---
 print("Fetching Economic Events...")
-# FIX: Adjusted limit to 1000 and added `importance=high,medium` to catch the speeches
 if token and (res_eco := fetch(f"https://endpoints.investing.com/pd-instruments/v1/calendars/economic/events/occurrences?domain_id=1&limit=1000&start_date={t_start}%2B08%3A00&end_date={t_end}%2B08%3A00&country_ids=5,35&importance=high,medium", auth=f"Bearer {token}")):
     
     # Safe Wipe old cached items
