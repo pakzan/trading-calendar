@@ -65,7 +65,7 @@ home = fetch("https://www.investing.com/", api=False)
 token = re.search(r'(eyJhbGciOiJIUzI1NiIs[\w-]+\.[\w-]+\.[\w-]+)', home.text).group(1) if home else None
 
 # --- 3. Process Economic Events & Fed Speeches ---
-print("Fetching Economic Events & Fed Speeches...")
+print("Fetching Economic Events...")
 # FIX: Adjusted limit to 1000 and added `importance=high,medium` to catch the speeches
 if token and (res_eco := fetch(f"https://endpoints.investing.com/pd-instruments/v1/calendars/economic/events/occurrences?domain_id=1&limit=1000&start_date={t_start}%2B08%3A00&end_date={t_end}%2B08%3A00&country_ids=5,35&importance=high,medium", auth=f"Bearer {token}")):
     
@@ -83,14 +83,13 @@ if token and (res_eco := fetch(f"https://endpoints.investing.com/pd-instruments/
         
         # --- FILTER LOGIC ---
         is_high_impact = info.get("importance") == "high"
-        # Check if it's a Fed/FOMC related event
-        is_fed_speech = (
+        is_fed_event = (
             "FOMC" in info.get("short_name", "") or 
             "Fed " in info.get("short_name", "")
-        ) and info.get("event_type") == "speech"
+        )
         
-        # Skip events that are "medium" UNLESS they are a Fed speech
-        if not (is_high_impact or is_fed_speech):
+        # Skip events that are "medium" UNLESS they are a Fed event
+        if not (is_high_impact or is_fed_event):
             continue
 
         dt = datetime.datetime.fromisoformat(t.replace('Z', '+00:00')).astimezone(datetime.timezone.utc)
@@ -99,12 +98,11 @@ if token and (res_eco := fetch(f"https://endpoints.investing.com/pd-instruments/
         d_start, d_end = f"DTSTART:{dt.strftime('%Y%m%dT%H%M%SZ')}", f"DTEND:{(dt + datetime.timedelta(minutes=30)).strftime('%Y%m%dT%H%M%SZ')}"
         
         # Format explicitly for Speeches vs Standard Economic Data
-        if is_fed_speech:
-            title = f"🎤 [Fed Speech] {name}"
-            desc = f"Source: {info.get('source', 'Federal Reserve')}"
+        title = name
+        if info.get("event_type") == "speech":
+            desc = f"Source: {info.get('source', 'N/A')}"
         else:
             act, fcst, prev, unit = o.get("actual","N/A"), o.get("forecast","N/A"), o.get("previous","N/A"), o.get("unit","")
-            title = name
             desc = f"Currency: {info.get('currency', 'N/A')}\\nActual: {act}{unit if act!='N/A' else ''}\\nForecast: {fcst}{unit if fcst!='N/A' else ''}\\nPrevious: {prev}{unit if prev!='N/A' else ''}"
         
         # Appended %H%M to prevent speeches on the same day overwriting each other
