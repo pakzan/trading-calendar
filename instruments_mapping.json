@@ -598,5 +598,9 @@
     "8182": {
         "symbol": "AXP",
         "name": "American Express Company"
+    },
+    "6388": {
+        "symbol": "CDNS",
+        "name": "Cadence Design Systems Inc"
     }
 }
