@@ -602,5 +602,49 @@
     "6388": {
         "symbol": "CDNS",
         "name": "Cadence Design Systems Inc"
+    },
+    "252": {
+        "symbol": "MSFT",
+        "name": "Microsoft Corporation"
+    },
+    "31028": {
+        "symbol": "ENPH",
+        "name": "Enphase Energy Inc"
+    },
+    "8175": {
+        "symbol": "CB",
+        "name": "Chubb Ltd"
+    },
+    "8268": {
+        "symbol": "TXN",
+        "name": "Texas Instruments Incorporated"
+    },
+    "13851": {
+        "symbol": "IVZ",
+        "name": "Invesco Plc"
+    },
+    "6369": {
+        "symbol": "GOOGL",
+        "name": "Alphabet Inc Class A"
+    },
+    "8362": {
+        "symbol": "TER",
+        "name": "Teradyne Inc"
+    },
+    "21255": {
+        "symbol": "NVR",
+        "name": "NVR Inc"
+    },
+    "100160": {
+        "symbol": "GOOG",
+        "name": "Alphabet Inc Class C"
+    },
+    "13989": {
+        "symbol": "NXPI",
+        "name": "NXP Semiconductors NV"
+    },
+    "15828": {
+        "symbol": "CSGP",
+        "name": "CoStar Group Inc"
     }
 }
