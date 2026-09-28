@@ -646,5 +646,93 @@
     "15828": {
         "symbol": "CSGP",
         "name": "CoStar Group Inc"
+    },
+    "32531": {
+        "symbol": "PSX",
+        "name": "Phillips 66"
+    },
+    "8940": {
+        "symbol": "STX",
+        "name": "Seagate Technology PLC"
+    },
+    "13994": {
+        "symbol": "TSLA",
+        "name": "Tesla Inc"
+    },
+    "6462": {
+        "symbol": "KLAC",
+        "name": "KLA Corporation"
+    },
+    "24312": {
+        "symbol": "TYL",
+        "name": "Tyler Technologies Inc"
+    },
+    "20380": {
+        "symbol": "RJF",
+        "name": "Raymond James Financial Inc"
+    },
+    "255": {
+        "symbol": "F",
+        "name": "Ford Motor Company"
+    },
+    "13841": {
+        "symbol": "EQT",
+        "name": "EQT Corporation"
+    },
+    "20717": {
+        "symbol": "EG",
+        "name": "Everest Re Group Ltd"
+    },
+    "8320": {
+        "symbol": "BKR",
+        "name": "Baker Hughes Co"
+    },
+    "24297": {
+        "symbol": "TDY",
+        "name": "Teledyne Technologies Incorporated"
+    },
+    "41239": {
+        "symbol": "NOW",
+        "name": "ServiceNow Inc"
+    },
+    "26490": {
+        "symbol": "META",
+        "name": "Meta Platforms Inc"
+    },
+    "8184": {
+        "symbol": "MAS",
+        "name": "Masco Corporation"
+    },
+    "13837": {
+        "symbol": "CMG",
+        "name": "Chipotle Mexican Grill Inc"
+    },
+    "44408": {
+        "symbol": "HLT",
+        "name": "Hilton Worldwide Holdings Inc"
+    },
+    "8234": {
+        "symbol": "GL",
+        "name": "Globe Life Inc"
+    },
+    "13833": {
+        "symbol": "APH",
+        "name": "Amphenol Corporation"
+    },
+    "19694": {
+        "symbol": "TMUS",
+        "name": "T-Mobile US Inc"
+    },
+    "13074": {
+        "symbol": "ORLY",
+        "name": "O\u2019Reilly Automotive Inc"
+    },
+    "13863": {
+        "symbol": "ROP",
+        "name": "Roper Technologies Inc"
+    },
+    "6442": {
+        "symbol": "GRMN",
+        "name": "Garmin Ltd"
     }
 }
