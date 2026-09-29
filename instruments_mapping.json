@@ -834,5 +834,17 @@
     "39152": {
         "symbol": "LKQ",
         "name": "LKQ Corporation"
+    },
+    "264": {
+        "symbol": "GLW",
+        "name": "Corning Incorporated"
+    },
+    "39321": {
+        "symbol": "ACGL",
+        "name": "Arch Capital Group Ltd"
+    },
+    "7862": {
+        "symbol": "MGM",
+        "name": "MGM Resorts International"
     }
 }
