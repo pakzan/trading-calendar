@@ -734,5 +734,105 @@
     "6442": {
         "symbol": "GRMN",
         "name": "Garmin Ltd"
+    },
+    "6391": {
+        "symbol": "MCHP",
+        "name": "Microchip Technology Inc"
+    },
+    "19693": {
+        "symbol": "BWA",
+        "name": "BorgWarner Inc"
+    },
+    "32331": {
+        "symbol": "APTV",
+        "name": "Aptiv PLC"
+    },
+    "13569": {
+        "symbol": "FSLR",
+        "name": "First Solar Inc"
+    },
+    "1123483": {
+        "symbol": "FOXA",
+        "name": "Fox Corp Class A"
+    },
+    "1123484": {
+        "symbol": "FOX",
+        "name": "Fox Corp Class B"
+    },
+    "32341": {
+        "symbol": "EPAM",
+        "name": "EPAM Systems Inc"
+    },
+    "6449": {
+        "symbol": "EXPE",
+        "name": "Expedia Inc"
+    },
+    "1115848": {
+        "symbol": "UBER",
+        "name": "Uber Technologies Inc"
+    },
+    "6408": {
+        "symbol": "AAPL",
+        "name": "Apple Inc"
+    },
+    "6500": {
+        "symbol": "SBUX",
+        "name": "Starbucks Corporation"
+    },
+    "32378": {
+        "symbol": "SWKS",
+        "name": "Skyworks Solutions Inc"
+    },
+    "7876": {
+        "symbol": "DHI",
+        "name": "DR Horton Inc"
+    },
+    "24321": {
+        "symbol": "TRGP",
+        "name": "Targa Resources Inc"
+    },
+    "8020": {
+        "symbol": "AMP",
+        "name": "Ameriprise Financial Inc"
+    },
+    "6435": {
+        "symbol": "AMZN",
+        "name": "Amazon.com Inc"
+    },
+    "7907": {
+        "symbol": "ICE",
+        "name": "Intercontinental Exchange Inc"
+    },
+    "8218": {
+        "symbol": "CMI",
+        "name": "Cummins Inc"
+    },
+    "8136": {
+        "symbol": "MAR",
+        "name": "Marriott International Inc"
+    },
+    "16141": {
+        "symbol": "FTNT",
+        "name": "Fortinet Inc"
+    },
+    "948325": {
+        "symbol": "GDDY",
+        "name": "Godaddy Inc"
+    },
+    "20298": {
+        "symbol": "LYV",
+        "name": "Live Nation Entertainment Inc"
+    },
+    "276": {
+        "symbol": "MSI",
+        "name": "Motorola Solutions Inc"
+    },
+    "15572": {
+        "symbol": "BLDR",
+        "name": "Builders FirstSource Inc"
+    },
+    "39152": {
+        "symbol": "LKQ",
+        "name": "LKQ Corporation"
     }
 }
