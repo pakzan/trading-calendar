@@ -846,5 +846,13 @@
     "7862": {
         "symbol": "MGM",
         "name": "MGM Resorts International"
+    },
+    "39325": {
+        "symbol": "CBOE",
+        "name": "Cboe Global Markets Inc"
+    },
+    "15722": {
+        "symbol": "CHTR",
+        "name": "Charter Communications Inc Class A"
     }
 }
