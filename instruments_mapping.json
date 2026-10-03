@@ -862,5 +862,29 @@
     "20849": {
         "symbol": "BRO",
         "name": "Brown & Brown Inc"
+    },
+    "8122": {
+        "symbol": "WMB",
+        "name": "The Williams Companies, Inc"
+    },
+    "40062": {
+        "symbol": "FANG",
+        "name": "Diamondback Energy Inc"
+    },
+    "13763": {
+        "symbol": "FFIV",
+        "name": "F5, Inc"
+    },
+    "16812": {
+        "symbol": "ON",
+        "name": "ON Semiconductor Corporation"
+    },
+    "103925": {
+        "symbol": "ANET",
+        "name": "Arista Networks"
+    },
+    "13083": {
+        "symbol": "L",
+        "name": "Loews Corp"
     }
 }
