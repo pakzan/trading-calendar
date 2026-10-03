@@ -869,84 +869,84 @@ UID:earn-TSLA-20261002
 SUMMARY:[Earning] Tesla Inc
 DTSTART:20261002T120000Z
 DTEND:20261002T130000Z
-DESCRIPTION:EPS Actual: 0.45\nEPS Forecast: 0.4637\nRevenue Actual: 28.21B\nRevenue Forecast: 27.52B
+DESCRIPTION:EPS Actual: 0.45\nEPS Forecast: 0.4528\nRevenue Actual: 28.42B\nRevenue Forecast: 27.49B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-PGR-20261008
 SUMMARY:[Earning] Progressive Corp
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.15\nRevenue Actual: N/A\nRevenue Forecast: 22.43B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.18\nRevenue Actual: N/A\nRevenue Forecast: 22.54B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-GS-20261013
 SUMMARY:[Earning] Goldman Sachs Group Inc
 DTSTART:20261013T120000Z
 DTEND:20261013T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 15.44\nRevenue Actual: N/A\nRevenue Forecast: 17.49B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 14.5\nRevenue Actual: N/A\nRevenue Forecast: 17.15B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-DPZ-20261013
 SUMMARY:[Earning] Domino’s Pizza Inc
 DTSTART:20261013T120000Z
 DTEND:20261013T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.38\nRevenue Actual: N/A\nRevenue Forecast: 1.17B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.36\nRevenue Actual: N/A\nRevenue Forecast: 1.17B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-WFC-20261013
 SUMMARY:[Earning] Wells Fargo & Company
 DTSTART:20261013T120000Z
 DTEND:20261013T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.85\nRevenue Actual: N/A\nRevenue Forecast: 22.37B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.85\nRevenue Actual: N/A\nRevenue Forecast: 22.36B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-C-20261013
 SUMMARY:[Earning] Citigroup Inc
 DTSTART:20261013T120000Z
 DTEND:20261013T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.67\nRevenue Actual: N/A\nRevenue Forecast: 23.73B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.67\nRevenue Actual: N/A\nRevenue Forecast: 23.71B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-JPM-20261013
 SUMMARY:[Earning] JPMorgan Chase & Co
 DTSTART:20261013T120000Z
 DTEND:20261013T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 5.85\nRevenue Actual: N/A\nRevenue Forecast: 50.67B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 5.89\nRevenue Actual: N/A\nRevenue Forecast: 50.99B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-MS-20261014
 SUMMARY:[Earning] Morgan Stanley
 DTSTART:20261014T120000Z
 DTEND:20261014T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.1\nRevenue Actual: N/A\nRevenue Forecast: 20.36B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.05\nRevenue Actual: N/A\nRevenue Forecast: 20.11B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-BLK-20261014
 SUMMARY:[Earning] BlackRock Inc
 DTSTART:20261014T120000Z
 DTEND:20261014T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 14.28\nRevenue Actual: N/A\nRevenue Forecast: 7.44B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 14.26\nRevenue Actual: N/A\nRevenue Forecast: 7.45B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-STT-20261014
 SUMMARY:[Earning] State Street Corp
 DTSTART:20261014T120000Z
 DTEND:20261014T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.61\nRevenue Actual: N/A\nRevenue Forecast: 4.00B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.64\nRevenue Actual: N/A\nRevenue Forecast: 4.02B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-ASML-20261014
 SUMMARY:[Earning] ASML Holding NV ADR
 DTSTART:20261014T120000Z
 DTEND:20261014T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 11.81\nRevenue Actual: N/A\nRevenue Forecast: 13.06B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 11.97\nRevenue Actual: N/A\nRevenue Forecast: 13.13B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-BAC-20261014
 SUMMARY:[Earning] Bank of America Corp
 DTSTART:20261014T120000Z
 DTEND:20261014T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.15\nRevenue Actual: N/A\nRevenue Forecast: 31.17B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.12\nRevenue Actual: N/A\nRevenue Forecast: 30.83B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-SCHW-20261015
@@ -960,21 +960,21 @@ UID:earn-MRSH-20261015
 SUMMARY:[Earning] Marsh & McLennan Companies Inc
 DTSTART:20261015T120000Z
 DTEND:20261015T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.98\nRevenue Actual: N/A\nRevenue Forecast: 6.66B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.97\nRevenue Actual: N/A\nRevenue Forecast: 6.65B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-BNY-20261015
 SUMMARY:[Earning] Bank of New York Mellon Corp
 DTSTART:20261015T120000Z
 DTEND:20261015T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.25\nRevenue Actual: N/A\nRevenue Forecast: 5.53B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.27\nRevenue Actual: N/A\nRevenue Forecast: 5.54B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-BX-20261015
 SUMMARY:[Earning] Blackstone Inc
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.36\nRevenue Actual: N/A\nRevenue Forecast: 3.46B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.35\nRevenue Actual: N/A\nRevenue Forecast: 3.43B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-PNC-20261015
@@ -988,7 +988,7 @@ UID:earn-USB-20261015
 SUMMARY:[Earning] U.S. Bancorp
 DTSTART:20261015T120000Z
 DTEND:20261015T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.31\nRevenue Actual: N/A\nRevenue Forecast: 7.97B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.31\nRevenue Actual: N/A\nRevenue Forecast: 7.98B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-POOL-20261015
@@ -1002,14 +1002,14 @@ UID:earn-TRV-20261016
 SUMMARY:[Earning] Travelers Companies
 DTSTART:20261016T120000Z
 DTEND:20261016T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.77\nRevenue Actual: N/A\nRevenue Forecast: 11.31B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.87\nRevenue Actual: N/A\nRevenue Forecast: 11.31B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-RF-20261016
 SUMMARY:[Earning] Regions Financial Corporation
 DTSTART:20261016T120000Z
 DTEND:20261016T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.6611\nRevenue Actual: N/A\nRevenue Forecast: 1.99B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.6605\nRevenue Actual: N/A\nRevenue Forecast: 1.99B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-MTB-20261016
@@ -1037,21 +1037,21 @@ UID:earn-WRB-20261019
 SUMMARY:[Earning] W. R. Berkley Corp
 DTSTART:20261019T201500Z
 DTEND:20261019T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.12\nRevenue Actual: N/A\nRevenue Forecast: 3.77B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.13\nRevenue Actual: N/A\nRevenue Forecast: 3.77B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-FITB-20261019
 SUMMARY:[Earning] Fifth Third Bancorp
 DTSTART:20261019T120000Z
 DTEND:20261019T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.8426\nRevenue Actual: N/A\nRevenue Forecast: 3.34B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.8399\nRevenue Actual: N/A\nRevenue Forecast: 3.34B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-HAL-20261020
 SUMMARY:[Earning] Halliburton Company
 DTSTART:20261020T120000Z
 DTEND:20261020T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.5855\nRevenue Actual: N/A\nRevenue Forecast: 5.58B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.5842\nRevenue Actual: N/A\nRevenue Forecast: 5.58B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-GM-20261020
@@ -1065,28 +1065,28 @@ UID:earn-CB-20261020
 SUMMARY:[Earning] Chubb Ltd
 DTSTART:20261020T201500Z
 DTEND:20261020T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.34\nRevenue Actual: N/A\nRevenue Forecast: 15.42B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.41\nRevenue Actual: N/A\nRevenue Forecast: 15.68B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-COF-20261020
 SUMMARY:[Earning] Capital One Financial Corporation
 DTSTART:20261020T201500Z
 DTEND:20261020T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 5.47\nRevenue Actual: N/A\nRevenue Forecast: 16.27B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 5.49\nRevenue Actual: N/A\nRevenue Forecast: 16.26B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-NFLX-20261020
 SUMMARY:[Earning] Netflix Inc
 DTSTART:20261020T201500Z
 DTEND:20261020T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.8204\nRevenue Actual: N/A\nRevenue Forecast: 12.87B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.8205\nRevenue Actual: N/A\nRevenue Forecast: 12.87B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-SYF-20261020
 SUMMARY:[Earning] Synchrony Financial
 DTSTART:20261020T120000Z
 DTEND:20261020T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.38\nRevenue Actual: N/A\nRevenue Forecast: 3.83B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.4\nRevenue Actual: N/A\nRevenue Forecast: 3.82B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-OMC-20261020
@@ -1100,7 +1100,7 @@ UID:earn-HAS-20261020
 SUMMARY:[Earning] Hasbro Inc
 DTSTART:20261020T120000Z
 DTEND:20261020T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.87\nRevenue Actual: N/A\nRevenue Forecast: 1.47B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.86\nRevenue Actual: N/A\nRevenue Forecast: 1.47B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-GPC-20261020
@@ -1114,7 +1114,7 @@ UID:earn-KEY-20261020
 SUMMARY:[Earning] KeyCorp
 DTSTART:20261020T120000Z
 DTEND:20261020T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.4602\nRevenue Actual: N/A\nRevenue Forecast: 2.04B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.461\nRevenue Actual: N/A\nRevenue Forecast: 2.04B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-LRCX-20261021
@@ -1128,35 +1128,35 @@ UID:earn-KMI-20261021
 SUMMARY:[Earning] Kinder Morgan Inc
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.3212\nRevenue Actual: N/A\nRevenue Forecast: 4.38B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.3201\nRevenue Actual: N/A\nRevenue Forecast: 4.38B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-NTRS-20261021
 SUMMARY:[Earning] Northern Trust Corporation
 DTSTART:20261021T120000Z
 DTEND:20261021T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.84\nRevenue Actual: N/A\nRevenue Forecast: 2.25B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.85\nRevenue Actual: N/A\nRevenue Forecast: 2.26B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-IBM-20261021
 SUMMARY:[Earning] International Business Machines
 DTSTART:20261021T201500Z
 DTEND:20261021T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.87\nRevenue Actual: N/A\nRevenue Forecast: 16.82B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.86\nRevenue Actual: N/A\nRevenue Forecast: 16.81B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-LVS-20261021
 SUMMARY:[Earning] Las Vegas Sands Corp
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7518\nRevenue Actual: N/A\nRevenue Forecast: 3.41B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7497\nRevenue Actual: N/A\nRevenue Forecast: 3.41B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-CME-20261021
 SUMMARY:[Earning] CME Group Inc
 DTSTART:20261021T120000Z
 DTEND:20261021T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.93\nRevenue Actual: N/A\nRevenue Forecast: 1.69B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.95\nRevenue Actual: N/A\nRevenue Forecast: 1.70B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-MKTX-20261021
@@ -1177,21 +1177,21 @@ UID:earn-T-20261021
 SUMMARY:[Earning] AT&T Inc
 DTSTART:20261021T120000Z
 DTEND:20261021T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.6031\nRevenue Actual: N/A\nRevenue Forecast: 31.72B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.6015\nRevenue Actual: N/A\nRevenue Forecast: 31.70B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-SHOP-20261022
 SUMMARY:[Earning] Shopify Inc
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.4661\nRevenue Actual: N/A\nRevenue Forecast: 3.74B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.466\nRevenue Actual: N/A\nRevenue Forecast: 3.74B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-VLO-20261022
 SUMMARY:[Earning] Valero Energy Corporation
 DTSTART:20261022T120000Z
 DTEND:20261022T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 18.71\nRevenue Actual: N/A\nRevenue Forecast: 39.53B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 18.92\nRevenue Actual: N/A\nRevenue Forecast: 40.16B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-DECK-20261022
@@ -1212,7 +1212,7 @@ UID:earn-HIG-20261022
 SUMMARY:[Earning] Hartford Financial Services Group
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.06\nRevenue Actual: N/A\nRevenue Forecast: 7.27B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.08\nRevenue Actual: N/A\nRevenue Forecast: 7.27B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-WTW-20261022
@@ -1226,21 +1226,21 @@ UID:earn-AJG-20261022
 SUMMARY:[Earning] Arthur J Gallagher & Co
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.03\nRevenue Actual: N/A\nRevenue Forecast: 4.03B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.02\nRevenue Actual: N/A\nRevenue Forecast: 4.02B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-INTC-20261022
 SUMMARY:[Earning] Intel Corporation
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.3904\nRevenue Actual: N/A\nRevenue Forecast: 16.40B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.394\nRevenue Actual: N/A\nRevenue Forecast: 16.40B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-CMCSA-20261022
 SUMMARY:[Earning] Comcast Corp
 DTSTART:20261022T120000Z
 DTEND:20261022T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.9878\nRevenue Actual: N/A\nRevenue Forecast: 29.28B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.9848\nRevenue Actual: N/A\nRevenue Forecast: 29.24B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-MA-20261022
@@ -1282,7 +1282,7 @@ UID:earn-HBAN-20261022
 SUMMARY:[Earning] Huntington Bancshares Incorporated
 DTSTART:20261022T120000Z
 DTEND:20261022T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.3542\nRevenue Actual: N/A\nRevenue Forecast: 2.84B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.3532\nRevenue Actual: N/A\nRevenue Forecast: 2.83B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-VRSN-20261022
@@ -1303,14 +1303,14 @@ UID:earn-TSCO-20261022
 SUMMARY:[Earning] Tractor Supply Company
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.4033\nRevenue Actual: N/A\nRevenue Forecast: 3.80B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.4042\nRevenue Actual: N/A\nRevenue Forecast: 3.80B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-CINF-20261022
 SUMMARY:[Earning] Cincinnati Financial Corporation
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.95\nRevenue Actual: N/A\nRevenue Forecast: 2.65B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.96\nRevenue Actual: N/A\nRevenue Forecast: 2.65B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-ALLE-20261022
@@ -1331,28 +1331,28 @@ UID:earn-SLB-20261023
 SUMMARY:[Earning] Slb NV
 DTSTART:20261023T120000Z
 DTEND:20261023T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.6185\nRevenue Actual: N/A\nRevenue Forecast: 9.27B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.6187\nRevenue Actual: N/A\nRevenue Forecast: 9.27B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-XOM-20261023
 SUMMARY:[Earning] ExxonMobil Holdings Corporation
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.59\nRevenue Actual: N/A\nRevenue Forecast: 109.37B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.73\nRevenue Actual: N/A\nRevenue Forecast: 110.13B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-AON-20261023
 SUMMARY:[Earning] Aon PLC
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.37\nRevenue Actual: N/A\nRevenue Forecast: 4.09B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.34\nRevenue Actual: N/A\nRevenue Forecast: 4.08B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-AXP-20261023
 SUMMARY:[Earning] American Express Company
 DTSTART:20261023T120000Z
 DTEND:20261023T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.56\nRevenue Actual: N/A\nRevenue Forecast: 20.13B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.53\nRevenue Actual: N/A\nRevenue Forecast: 20.11B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-BRO-20261026
@@ -1373,7 +1373,7 @@ UID:earn-VZ-20261026
 SUMMARY:[Earning] Verizon Communications Inc
 DTSTART:20261026T120000Z
 DTEND:20261026T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.28\nRevenue Actual: N/A\nRevenue Forecast: 34.77B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.28\nRevenue Actual: N/A\nRevenue Forecast: 34.78B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-CDNS-20261026
@@ -1394,63 +1394,63 @@ UID:earn-ENPH-20261027
 SUMMARY:[Earning] Enphase Energy Inc
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.5136\nRevenue Actual: N/A\nRevenue Forecast: 305.07M
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.5151\nRevenue Actual: N/A\nRevenue Forecast: 305.10M
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-TXN-20261027
 SUMMARY:[Earning] Texas Instruments Incorporated
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.42\nRevenue Actual: N/A\nRevenue Forecast: 5.89B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.42\nRevenue Actual: N/A\nRevenue Forecast: 5.92B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-BKR-20261027
 SUMMARY:[Earning] Baker Hughes Co
 DTSTART:20261027T201500Z
 DTEND:20261027T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.5993\nRevenue Actual: N/A\nRevenue Forecast: 7.28B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.606\nRevenue Actual: N/A\nRevenue Forecast: 7.70B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-IVZ-20261027
 SUMMARY:[Earning] Invesco Plc
 DTSTART:20261027T120000Z
 DTEND:20261027T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7371\nRevenue Actual: N/A\nRevenue Forecast: 1.39B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7346\nRevenue Actual: N/A\nRevenue Forecast: 1.39B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-GLW-20261027
 SUMMARY:[Earning] Corning Incorporated
 DTSTART:20261027T120000Z
 DTEND:20261027T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.8754\nRevenue Actual: N/A\nRevenue Forecast: 5.00B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.8734\nRevenue Actual: N/A\nRevenue Forecast: 5.00B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-GOOGL-20261027
 SUMMARY:[Earning] Alphabet Inc Class A
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.04\nRevenue Actual: N/A\nRevenue Forecast: 127.22B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.04\nRevenue Actual: N/A\nRevenue Forecast: 127.23B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-TER-20261027
 SUMMARY:[Earning] Teradyne Inc
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.56\nRevenue Actual: N/A\nRevenue Forecast: 1.06B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.08\nRevenue Actual: N/A\nRevenue Forecast: 1.26B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-NVR-20261027
 SUMMARY:[Earning] NVR Inc
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 104.43\nRevenue Actual: N/A\nRevenue Forecast: 2.59B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 104.11\nRevenue Actual: N/A\nRevenue Forecast: 2.59B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-GOOG-20261027
 SUMMARY:[Earning] Alphabet Inc Class C
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.03\nRevenue Actual: N/A\nRevenue Forecast: 127.22B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.04\nRevenue Actual: N/A\nRevenue Forecast: 127.24B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-NXPI-20261027
@@ -1464,14 +1464,14 @@ UID:earn-HLT-20261027
 SUMMARY:[Earning] Hilton Worldwide Holdings Inc
 DTSTART:20261027T120000Z
 DTEND:20261027T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.35\nRevenue Actual: N/A\nRevenue Forecast: 3.36B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.35\nRevenue Actual: N/A\nRevenue Forecast: 3.37B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-ACGL-20261027
 SUMMARY:[Earning] Arch Capital Group Ltd
 DTSTART:20261027T201500Z
 DTEND:20261027T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.85\nRevenue Actual: N/A\nRevenue Forecast: 4.08B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.92\nRevenue Actual: N/A\nRevenue Forecast: 4.08B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-CSGP-20261027
@@ -1485,14 +1485,14 @@ UID:earn-PSX-20261028
 SUMMARY:[Earning] Phillips 66
 DTSTART:20261028T120000Z
 DTEND:20261028T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 10.51\nRevenue Actual: N/A\nRevenue Forecast: 41.51B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 10.97\nRevenue Actual: N/A\nRevenue Forecast: 43.44B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-STX-20261028
 SUMMARY:[Earning] Seagate Technology PLC
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 7.36\nRevenue Actual: N/A\nRevenue Forecast: 4.09B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 7.37\nRevenue Actual: N/A\nRevenue Forecast: 4.12B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-KLAC-20261028
@@ -1520,28 +1520,28 @@ UID:earn-F-20261028
 SUMMARY:[Earning] Ford Motor Company
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.4152\nRevenue Actual: N/A\nRevenue Forecast: 48.42B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.4152\nRevenue Actual: N/A\nRevenue Forecast: 48.83B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-EQT-20261028
 SUMMARY:[Earning] EQT Corporation
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.4416\nRevenue Actual: N/A\nRevenue Forecast: 1.84B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.4056\nRevenue Actual: N/A\nRevenue Forecast: 1.80B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-EG-20261028
 SUMMARY:[Earning] Everest Re Group Ltd
 DTSTART:20261028T201500Z
 DTEND:20261028T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 8.42\nRevenue Actual: N/A\nRevenue Forecast: 3.81B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 8.53\nRevenue Actual: N/A\nRevenue Forecast: 3.81B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-TDY-20261028
 SUMMARY:[Earning] Teledyne Technologies Incorporated
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.15\nRevenue Actual: N/A\nRevenue Forecast: 1.65B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.16\nRevenue Actual: N/A\nRevenue Forecast: 1.65B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-NOW-20261028
@@ -1555,7 +1555,7 @@ UID:earn-META-20261028
 SUMMARY:[Earning] Meta Platforms Inc
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.77\nRevenue Actual: N/A\nRevenue Forecast: 63.27B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.77\nRevenue Actual: N/A\nRevenue Forecast: 63.28B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-MAS-20261028
@@ -1569,14 +1569,14 @@ UID:earn-CMG-20261028
 SUMMARY:[Earning] Chipotle Mexican Grill Inc
 DTSTART:20261028T201500Z
 DTEND:20261028T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.2907\nRevenue Actual: N/A\nRevenue Forecast: 3.28B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.2906\nRevenue Actual: N/A\nRevenue Forecast: 3.28B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-MGM-20261028
 SUMMARY:[Earning] MGM Resorts International
 DTSTART:20261028T201500Z
 DTEND:20261028T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.149\nRevenue Actual: N/A\nRevenue Forecast: 4.28B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.1576\nRevenue Actual: N/A\nRevenue Forecast: 4.28B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-GL-20261028
@@ -1590,7 +1590,7 @@ UID:earn-APH-20261028
 SUMMARY:[Earning] Amphenol Corporation
 DTSTART:20261028T120000Z
 DTEND:20261028T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7141\nRevenue Actual: N/A\nRevenue Forecast: 9.39B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7147\nRevenue Actual: N/A\nRevenue Forecast: 9.40B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-TMUS-20261028
@@ -1632,21 +1632,21 @@ UID:earn-APTV-20261029
 SUMMARY:[Earning] Aptiv PLC
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.34\nRevenue Actual: N/A\nRevenue Forecast: 3.18B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.33\nRevenue Actual: N/A\nRevenue Forecast: 3.18B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-FSLR-20261029
 SUMMARY:[Earning] First Solar Inc
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.67\nRevenue Actual: N/A\nRevenue Forecast: 1.28B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.66\nRevenue Actual: N/A\nRevenue Forecast: 1.28B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-FOXA-20261029
 SUMMARY:[Earning] Fox Corp Class A
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.06\nRevenue Actual: N/A\nRevenue Forecast: 4.32B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.06\nRevenue Actual: N/A\nRevenue Forecast: 4.31B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-FOX-20261029
@@ -1667,28 +1667,28 @@ UID:earn-EXPE-20261029
 SUMMARY:[Earning] Expedia Inc
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 8.8\nRevenue Actual: N/A\nRevenue Forecast: 4.73B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 8.84\nRevenue Actual: N/A\nRevenue Forecast: 4.73B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-UBER-20261029
 SUMMARY:[Earning] Uber Technologies Inc
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.865\nRevenue Actual: N/A\nRevenue Forecast: 14.68B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.8641\nRevenue Actual: N/A\nRevenue Forecast: 14.68B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-AAPL-20261029
 SUMMARY:[Earning] Apple Inc
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.98\nRevenue Actual: N/A\nRevenue Forecast: 113.20B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.98\nRevenue Actual: N/A\nRevenue Forecast: 113.21B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-SBUX-20261029
 SUMMARY:[Earning] Starbucks Corporation
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7116\nRevenue Actual: N/A\nRevenue Forecast: 9.21B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7109\nRevenue Actual: N/A\nRevenue Forecast: 9.21B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-SWKS-20261029
@@ -1702,7 +1702,7 @@ UID:earn-DHI-20261029
 SUMMARY:[Earning] DR Horton Inc
 DTSTART:20261029T120000Z
 DTEND:20261029T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.04\nRevenue Actual: N/A\nRevenue Forecast: 9.11B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.03\nRevenue Actual: N/A\nRevenue Forecast: 9.11B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-TRGP-20261029
@@ -1716,14 +1716,14 @@ UID:earn-AMP-20261029
 SUMMARY:[Earning] Ameriprise Financial Inc
 DTSTART:20261029T120000Z
 DTEND:20261029T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 11.8\nRevenue Actual: N/A\nRevenue Forecast: 5.08B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 11.8\nRevenue Actual: N/A\nRevenue Forecast: 5.09B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-AMZN-20261029
 SUMMARY:[Earning] Amazon.com Inc
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.96\nRevenue Actual: N/A\nRevenue Forecast: 202.10B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.96\nRevenue Actual: N/A\nRevenue Forecast: 202.12B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-ICE-20261029
@@ -1737,7 +1737,7 @@ UID:earn-CMI-20261029
 SUMMARY:[Earning] Cummins Inc
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 8.21\nRevenue Actual: N/A\nRevenue Forecast: 9.83B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 8.21\nRevenue Actual: N/A\nRevenue Forecast: 9.85B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-MAR-20261029
@@ -1751,7 +1751,7 @@ UID:earn-FTNT-20261029
 SUMMARY:[Earning] Fortinet Inc
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.8582\nRevenue Actual: N/A\nRevenue Forecast: 2.06B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.858\nRevenue Actual: N/A\nRevenue Forecast: 2.06B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-GDDY-20261029
@@ -1765,7 +1765,7 @@ UID:earn-LYV-20261029
 SUMMARY:[Earning] Live Nation Entertainment Inc
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.94\nRevenue Actual: N/A\nRevenue Forecast: 9.50B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.56\nRevenue Actual: N/A\nRevenue Forecast: 9.59B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-MSI-20261029
@@ -1800,35 +1800,35 @@ UID:earn-CVX-20261030
 SUMMARY:[Earning] Chevron Corp
 DTSTART:20261030T120000Z
 DTEND:20261030T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.68\nRevenue Actual: N/A\nRevenue Forecast: 57.70B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.7\nRevenue Actual: N/A\nRevenue Forecast: 57.70B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-CBOE-20261030
 SUMMARY:[Earning] Cboe Global Markets Inc
 DTSTART:20261030T120000Z
 DTEND:20261030T130000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.39\nRevenue Actual: N/A\nRevenue Forecast: 707.09M
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.41\nRevenue Actual: N/A\nRevenue Forecast: 709.85M
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-CHTR-20261030
 SUMMARY:[Earning] Charter Communications Inc Class A
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 9.63\nRevenue Actual: N/A\nRevenue Forecast: 13.55B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 9.63\nRevenue Actual: N/A\nRevenue Forecast: 13.53B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-WMB-20261102
 SUMMARY:[Earning] The Williams Companies, Inc
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.5312\nRevenue Actual: N/A\nRevenue Forecast: 3.01B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.5336\nRevenue Actual: N/A\nRevenue Forecast: 2.99B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-FANG-20261102
 SUMMARY:[Earning] Diamondback Energy Inc
 DTSTART:20261102T211500Z
 DTEND:20261102T221500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.94\nRevenue Actual: N/A\nRevenue Forecast: 4.51B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.97\nRevenue Actual: N/A\nRevenue Forecast: 4.55B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-FFIV-20261102
