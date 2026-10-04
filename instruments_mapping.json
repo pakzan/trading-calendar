@@ -886,5 +886,57 @@
     "13083": {
         "symbol": "L",
         "name": "Loews Corp"
+    },
+    "13947": {
+        "symbol": "MPC",
+        "name": "Marathon Petroleum Corp"
+    },
+    "39135": {
+        "symbol": "IT",
+        "name": "Gartner Inc"
+    },
+    "13858": {
+        "symbol": "OKE",
+        "name": "ONEOK Inc"
+    },
+    "8167": {
+        "symbol": "BEN",
+        "name": "Franklin Templeton, Inc"
+    },
+    "17195": {
+        "symbol": "SMCI",
+        "name": "Super Micro Computer Inc"
+    },
+    "8274": {
+        "symbol": "AMD",
+        "name": "Advanced Micro Devices Inc"
+    },
+    "39254": {
+        "symbol": "RCL",
+        "name": "Royal Caribbean Cruises Ltd"
+    },
+    "961621": {
+        "symbol": "MTCH",
+        "name": "Match Group Inc"
+    },
+    "101887": {
+        "symbol": "PAYC",
+        "name": "Paycom Software, Inc"
+    },
+    "31022": {
+        "symbol": "CZR",
+        "name": "Caesars Entertainment Corporation"
+    },
+    "17608": {
+        "symbol": "ZBRA",
+        "name": "Zebra Technologies Corporation"
+    },
+    "8061": {
+        "symbol": "AIZ",
+        "name": "Assurant Inc"
+    },
+    "19696": {
+        "symbol": "LDOS",
+        "name": "Leidos Holdings Inc"
     }
 }
