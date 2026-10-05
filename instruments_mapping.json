@@ -938,5 +938,89 @@
     "19696": {
         "symbol": "LDOS",
         "name": "Leidos Holdings Inc"
+    },
+    "945074": {
+        "symbol": "QRVO",
+        "name": "Qorvo Inc"
+    },
+    "1206256": {
+        "symbol": "ARM",
+        "name": "Arm Holdings ADR"
+    },
+    "256": {
+        "symbol": "EBAY",
+        "name": "eBay Inc"
+    },
+    "13072": {
+        "symbol": "BKNG",
+        "name": "Booking Holdings Inc"
+    },
+    "16599": {
+        "symbol": "MELI",
+        "name": "MercadoLibre Inc"
+    },
+    "1167745": {
+        "symbol": "DASH",
+        "name": "DoorDash Inc"
+    },
+    "16932": {
+        "symbol": "PTC",
+        "name": "PTC Inc"
+    },
+    "8021": {
+        "symbol": "AIG",
+        "name": "American International Group Inc"
+    },
+    "8221": {
+        "symbol": "ALL",
+        "name": "Allstate Corp"
+    },
+    "8256": {
+        "symbol": "AFL",
+        "name": "Aflac Inc"
+    },
+    "6454": {
+        "symbol": "CTSH",
+        "name": "Cognizant Technology Solutions Corp"
+    },
+    "7947": {
+        "symbol": "MET",
+        "name": "MetLife Inc"
+    },
+    "8191": {
+        "symbol": "PRU",
+        "name": "Prudential Financial Inc"
+    },
+    "8327": {
+        "symbol": "YUM",
+        "name": "Yum! Brands Inc"
+    },
+    "41292": {
+        "symbol": "CDW",
+        "name": "CDW Corp"
+    },
+    "16662": {
+        "symbol": "MPWR",
+        "name": "Monolithic Power Systems Inc"
+    },
+    "8103": {
+        "symbol": "APA",
+        "name": "APA Corporation"
+    },
+    "40082": {
+        "symbol": "NCLH",
+        "name": "Norwegian Cruise Line Holdings Ltd"
+    },
+    "19701": {
+        "symbol": "TEL",
+        "name": "TE Connectivity Ltd"
+    },
+    "39337": {
+        "symbol": "TRMB",
+        "name": "Trimble Inc"
+    },
+    "16678": {
+        "symbol": "MSTR",
+        "name": "Strategy Inc"
     }
 }
