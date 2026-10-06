@@ -1022,5 +1022,61 @@
     "16678": {
         "symbol": "MSTR",
         "name": "Strategy Inc"
+    },
+    "7937": {
+        "symbol": "COP",
+        "name": "ConocoPhillips"
+    },
+    "13995": {
+        "symbol": "TTWO",
+        "name": "Take-Two Interactive Software Inc"
+    },
+    "13065": {
+        "symbol": "NWS",
+        "name": "News Corp Class B"
+    },
+    "13795": {
+        "symbol": "NWSA",
+        "name": "News Corp Class A"
+    },
+    "1167744": {
+        "symbol": "ABNB",
+        "name": "Airbnb Inc Class A"
+    },
+    "8342": {
+        "symbol": "EOG",
+        "name": "EOG Resources Inc"
+    },
+    "6392": {
+        "symbol": "WYNN",
+        "name": "Wynn Resorts Limited"
+    },
+    "7959": {
+        "symbol": "TPR",
+        "name": "Tapestry Inc"
+    },
+    "8022": {
+        "symbol": "RL",
+        "name": "Ralph Lauren Corp Class A"
+    },
+    "20210": {
+        "symbol": "MTD",
+        "name": "Mettler-Toledo International Inc"
+    },
+    "1152784": {
+        "symbol": "DDOG",
+        "name": "Datadog Inc"
+    },
+    "39340": {
+        "symbol": "VRSK",
+        "name": "Verisk Analytics Inc"
+    },
+    "6382": {
+        "symbol": "WBD",
+        "name": "Warner Bros Discovery Inc"
+    },
+    "1243846": {
+        "symbol": "SPCX",
+        "name": "Space Exploration Technologies Corp"
     }
 }
