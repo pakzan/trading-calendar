@@ -799,7 +799,7 @@ UID:eco-30YearBondAuction-202610081700
 SUMMARY:30-Year Bond Auction
 DTSTART:20261008T170000Z
 DTEND:20261008T173000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: N/A\nPrevious: 5.308%
+DESCRIPTION:Currency: USD\nActual: 5.618%\nForecast: N/A\nPrevious: 5.308%
 END:VEVENT
 BEGIN:VEVENT
 UID:eco-ExistingHomeSales-202610131400
