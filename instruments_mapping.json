@@ -1090,5 +1090,13 @@
     "1172509": {
         "symbol": "APP",
         "name": "Applovin Corp"
+    },
+    "8224": {
+        "symbol": "DVN",
+        "name": "Devon Energy Corporation"
+    },
+    "6460": {
+        "symbol": "AKAM",
+        "name": "Akamai Technologies Inc"
     }
 }
