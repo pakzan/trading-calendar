@@ -1098,5 +1098,17 @@
     "6460": {
         "symbol": "AKAM",
         "name": "Akamai Technologies Inc"
+    },
+    "41279": {
+        "symbol": "KKR",
+        "name": "KKR & Co LP"
+    },
+    "7954": {
+        "symbol": "OXY",
+        "name": "Occidental Petroleum Corporation"
+    },
+    "1166239": {
+        "symbol": "PLTR",
+        "name": "Palantir Technologies Inc"
     }
 }
