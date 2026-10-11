@@ -1110,5 +1110,17 @@
     "1166239": {
         "symbol": "PLTR",
         "name": "Palantir Technologies Inc"
+    },
+    "6494": {
+        "symbol": "GEN",
+        "name": "Gen Digital Inc"
+    },
+    "16428": {
+        "symbol": "JKHY",
+        "name": "Jack Henry & Associates Inc"
+    },
+    "8042": {
+        "symbol": "FIS",
+        "name": "Fidelity National Information Services Inc"
     }
 }
