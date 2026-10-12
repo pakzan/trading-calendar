@@ -1122,5 +1122,9 @@
     "8042": {
         "symbol": "FIS",
         "name": "Fidelity National Information Services Inc"
+    },
+    "6376": {
+        "symbol": "QCOM",
+        "name": "Qualcomm Incorporated"
     }
 }
