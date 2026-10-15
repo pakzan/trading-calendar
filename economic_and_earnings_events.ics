@@ -890,7 +890,7 @@ UID:eco-CrudeOilInventories-202610151600
 SUMMARY:Crude Oil Inventories
 DTSTART:20261015T160000Z
 DTEND:20261015T163000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: 0.2M\nPrevious: -3.186M
+DESCRIPTION:Currency: USD\nActual: -8.557M\nForecast: 0.2M\nPrevious: -3.186M
 END:VEVENT
 BEGIN:VEVENT
 UID:eco-FedChairWarshSpeaks-202610160330
