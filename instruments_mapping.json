@@ -1126,5 +1126,21 @@
     "6376": {
         "symbol": "QCOM",
         "name": "Qualcomm Incorporated"
+    },
+    "20529": {
+        "symbol": "FICO",
+        "name": "Fair Isaac Corporation"
+    },
+    "6437": {
+        "symbol": "ROST",
+        "name": "Ross Stores Inc"
+    },
+    "41268": {
+        "symbol": "PANW",
+        "name": "Palo Alto Networks Inc"
+    },
+    "6386": {
+        "symbol": "AMAT",
+        "name": "Applied Materials Inc"
     }
 }
