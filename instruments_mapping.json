@@ -1146,5 +1146,13 @@
     "1228090": {
         "symbol": "CRWV",
         "name": "CoreWeave Inc"
+    },
+    "8064": {
+        "symbol": "HD",
+        "name": "Home Depot Inc"
+    },
+    "258": {
+        "symbol": "DIS",
+        "name": "Walt Disney Company"
     }
 }
