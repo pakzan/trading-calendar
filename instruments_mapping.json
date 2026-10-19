@@ -1154,5 +1154,25 @@
     "258": {
         "symbol": "DIS",
         "name": "Walt Disney Company"
+    },
+    "10549": {
+        "symbol": "LOW",
+        "name": "Lowe\u2019s Companies Inc"
+    },
+    "8227": {
+        "symbol": "TJX",
+        "name": "The TJX Companies, Inc"
+    },
+    "8180": {
+        "symbol": "TGT",
+        "name": "Target Corporation"
+    },
+    "260": {
+        "symbol": "CSCO",
+        "name": "Cisco Systems Inc"
+    },
+    "39327": {
+        "symbol": "CPRT",
+        "name": "Copart Inc"
     }
 }
