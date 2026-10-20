@@ -1275,21 +1275,21 @@ UID:earn-CB-20261020
 SUMMARY:[Earning] Chubb Ltd
 DTSTART:20261020T201500Z
 DTEND:20261020T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.79\nRevenue Actual: N/A\nRevenue Forecast: 15.69B
+DESCRIPTION:EPS Actual: 7.3\nEPS Forecast: 6.79\nRevenue Actual: N/A\nRevenue Forecast: 15.69B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-COF-20261020
 SUMMARY:[Earning] Capital One Financial Corporation
 DTSTART:20261020T201500Z
 DTEND:20261020T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 5.5\nRevenue Actual: N/A\nRevenue Forecast: 16.25B
+DESCRIPTION:EPS Actual: 6.69\nEPS Forecast: 5.5\nRevenue Actual: 16.30B\nRevenue Forecast: 16.25B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-NFLX-20261020
 SUMMARY:[Earning] Netflix Inc
 DTSTART:20261020T201500Z
 DTEND:20261020T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.8211\nRevenue Actual: N/A\nRevenue Forecast: 12.87B
+DESCRIPTION:EPS Actual: 0.87\nEPS Forecast: 0.82\nRevenue Actual: 13.44B\nRevenue Forecast: 12.87B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-SYF-20261020
@@ -1324,7 +1324,7 @@ UID:earn-SPCX-20261020
 SUMMARY:[Earning] Space Exploration Technologies Corp
 DTSTART:20261020T201500Z
 DTEND:20261020T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: N/A\nRevenue Actual: N/A\nRevenue Forecast: N/A
+DESCRIPTION:EPS Actual: 0.35\nEPS Forecast: 0.13\nRevenue Actual: 14.58B\nRevenue Forecast: 12.87B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-TSLA-20261021
