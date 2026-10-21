@@ -1051,7 +1051,7 @@ UID:eco-CrudeOilInventories-202610211430
 SUMMARY:Crude Oil Inventories
 DTSTART:20261021T143000Z
 DTEND:20261021T150000Z
-DESCRIPTION:Currency: USD\nActual: N/A\nForecast: -0.1M\nPrevious: -8.557M
+DESCRIPTION:Currency: USD\nActual: -3.06M\nForecast: -0.1M\nPrevious: -8.557M
 END:VEVENT
 BEGIN:VEVENT
 UID:eco-InitialJoblessClaims-202610221230
@@ -1338,21 +1338,21 @@ UID:earn-TSLA-20261021
 SUMMARY:[Earning] Tesla Inc
 DTSTART:20261021T201500Z
 DTEND:20261021T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.4464\nRevenue Actual: N/A\nRevenue Forecast: 27.92B
+DESCRIPTION:EPS Actual: 0.48\nEPS Forecast: 0.45\nRevenue Actual: 28.05B\nRevenue Forecast: 27.92B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-LRCX-20261021
 SUMMARY:[Earning] Lam Research Corp
 DTSTART:20261021T201500Z
 DTEND:20261021T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.18\nRevenue Actual: N/A\nRevenue Forecast: 8.13B
+DESCRIPTION:EPS Actual: 2.2\nEPS Forecast: 2.18\nRevenue Actual: 8.22B\nRevenue Forecast: 8.13B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-KMI-20261021
 SUMMARY:[Earning] Kinder Morgan Inc
 DTSTART:20261021T201500Z
 DTEND:20261021T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.3195\nRevenue Actual: N/A\nRevenue Forecast: 4.37B
+DESCRIPTION:EPS Actual: 0.35\nEPS Forecast: 0.32\nRevenue Actual: 4.53B\nRevenue Forecast: 4.37B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-NTRS-20261021
@@ -1366,21 +1366,21 @@ UID:earn-IBM-20261021
 SUMMARY:[Earning] International Business Machines
 DTSTART:20261021T201500Z
 DTEND:20261021T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.86\nRevenue Actual: N/A\nRevenue Forecast: 16.82B
+DESCRIPTION:EPS Actual: 2.95\nEPS Forecast: 2.86\nRevenue Actual: 17.10B\nRevenue Forecast: 16.82B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-TXN-20261021
 SUMMARY:[Earning] Texas Instruments Incorporated
 DTSTART:20261021T201500Z
 DTEND:20261021T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.42\nRevenue Actual: N/A\nRevenue Forecast: 5.92B
+DESCRIPTION:EPS Actual: 2.62\nEPS Forecast: 2.42\nRevenue Actual: 6.06B\nRevenue Forecast: 5.92B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-LVS-20261021
 SUMMARY:[Earning] Las Vegas Sands Corp
 DTSTART:20261021T201500Z
 DTEND:20261021T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7329\nRevenue Actual: N/A\nRevenue Forecast: 3.39B
+DESCRIPTION:EPS Actual: 0.54\nEPS Forecast: 0.73\nRevenue Actual: 3.22B\nRevenue Forecast: 3.33B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-TDY-20261021
@@ -1394,14 +1394,14 @@ UID:earn-META-20261021
 SUMMARY:[Earning] Meta Platforms Inc
 DTSTART:20261021T201500Z
 DTEND:20261021T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 6.58\nRevenue Actual: N/A\nRevenue Forecast: 63.34B
+DESCRIPTION:EPS Actual: 7.4\nEPS Forecast: 3.57\nRevenue Actual: 64.60B\nRevenue Forecast: 63.34B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-GL-20261021
 SUMMARY:[Earning] Globe Life Inc
 DTSTART:20261021T201500Z
 DTEND:20261021T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.91\nRevenue Actual: N/A\nRevenue Forecast: 1.56B
+DESCRIPTION:EPS Actual: 4.84\nEPS Forecast: 4.91\nRevenue Actual: 1.60B\nRevenue Forecast: 1.56B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-CME-20261021
