@@ -1178,5 +1178,17 @@
     "1089236": {
         "symbol": "PDD",
         "name": "PDD Holdings Inc DRC"
+    },
+    "8077": {
+        "symbol": "BBY",
+        "name": "Best Buy Co Inc"
+    },
+    "7869": {
+        "symbol": "ADI",
+        "name": "Analog Devices Inc"
+    },
+    "14776": {
+        "symbol": "DLTR",
+        "name": "Dollar Tree Inc"
     }
 }
