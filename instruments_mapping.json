@@ -1194,5 +1194,9 @@
     "6497": {
         "symbol": "NVDA",
         "name": "NVIDIA Corporation"
+    },
+    "6520": {
+        "symbol": "MRVL",
+        "name": "Marvell Technology Inc"
     }
 }

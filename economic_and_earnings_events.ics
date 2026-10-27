@@ -1590,21 +1590,21 @@ UID:earn-HIG-20261026
 SUMMARY:[Earning] Hartford Financial Services Group
 DTSTART:20261026T201500Z
 DTEND:20261026T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.17\nRevenue Actual: N/A\nRevenue Forecast: 7.39B
+DESCRIPTION:EPS Actual: 3.5\nEPS Forecast: 3.17\nRevenue Actual: 7.22B\nRevenue Forecast: 7.39B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-BRO-20261026
 SUMMARY:[Earning] Brown & Brown Inc
 DTSTART:20261026T201500Z
 DTEND:20261026T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.09\nRevenue Actual: N/A\nRevenue Forecast: 1.76B
+DESCRIPTION:EPS Actual: 1.07\nEPS Forecast: 1.09\nRevenue Actual: 1.72B\nRevenue Forecast: 1.76B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-PFG-20261026
 SUMMARY:[Earning] Principal Financial Group Inc
 DTSTART:20261026T201500Z
 DTEND:20261026T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.45\nRevenue Actual: N/A\nRevenue Forecast: 4.30B
+DESCRIPTION:EPS Actual: 2.22\nEPS Forecast: 2.45\nRevenue Actual: 4.27B\nRevenue Forecast: 4.30B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-VZ-20261026
@@ -1618,14 +1618,14 @@ UID:earn-CINF-20261026
 SUMMARY:[Earning] Cincinnati Financial Corporation
 DTSTART:20261026T201500Z
 DTEND:20261026T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.03\nRevenue Actual: N/A\nRevenue Forecast: 2.64B
+DESCRIPTION:EPS Actual: 2.86\nEPS Forecast: 2.03\nRevenue Actual: 2.69B\nRevenue Forecast: 2.64B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-CDNS-20261026
 SUMMARY:[Earning] Cadence Design Systems Inc
 DTSTART:20261026T201500Z
 DTEND:20261026T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.04\nRevenue Actual: N/A\nRevenue Forecast: 1.61B
+DESCRIPTION:EPS Actual: 2.11\nEPS Forecast: 2.04\nRevenue Actual: 1.63B\nRevenue Forecast: 1.61B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-STX-20261027
@@ -2662,5 +2662,12 @@ SUMMARY:[Earning] NVIDIA Corporation
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.47\nRevenue Actual: N/A\nRevenue Forecast: 108.82B
+END:VEVENT
+BEGIN:VEVENT
+UID:earn-MRVL-20261126
+SUMMARY:[Earning] Marvell Technology Inc
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.1\nRevenue Actual: N/A\nRevenue Forecast: 3.15B
 END:VEVENT
 END:VCALENDAR
