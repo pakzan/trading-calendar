@@ -1653,42 +1653,42 @@ UID:earn-STX-20261027
 SUMMARY:[Earning] Seagate Technology PLC
 DTSTART:20261027T201500Z
 DTEND:20261027T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 7.39\nRevenue Actual: N/A\nRevenue Forecast: 4.13B
+DESCRIPTION:EPS Actual: 7.68\nEPS Forecast: 7.39\nRevenue Actual: 4.20B\nRevenue Forecast: 4.13B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-OKE-20261027
 SUMMARY:[Earning] ONEOK Inc
 DTSTART:20261027T201500Z
 DTEND:20261027T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.5\nRevenue Actual: N/A\nRevenue Forecast: 10.51B
+DESCRIPTION:EPS Actual: 2.13\nEPS Forecast: 1.5\nRevenue Actual: 10.60B\nRevenue Forecast: 10.51B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-ENPH-20261027
 SUMMARY:[Earning] Enphase Energy Inc
 DTSTART:20261027T201500Z
 DTEND:20261027T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.5142\nRevenue Actual: N/A\nRevenue Forecast: 303.85M
+DESCRIPTION:EPS Actual: 0.41\nEPS Forecast: 0.51\nRevenue Actual: 293.33M\nRevenue Forecast: 303.85M
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-EQT-20261027
 SUMMARY:[Earning] EQT Corporation
 DTSTART:20261027T201500Z
 DTEND:20261027T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.388\nRevenue Actual: N/A\nRevenue Forecast: 1.80B
+DESCRIPTION:EPS Actual: 0.42\nEPS Forecast: 0.39\nRevenue Actual: 1.77B\nRevenue Forecast: 1.80B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-FFIV-20261027
 SUMMARY:[Earning] F5, Inc
 DTSTART:20261027T201500Z
 DTEND:20261027T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.26\nRevenue Actual: N/A\nRevenue Forecast: 884.03M
+DESCRIPTION:EPS Actual: 4.42\nEPS Forecast: 4.26\nRevenue Actual: 917.00M\nRevenue Forecast: 884.03M
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-BKR-20261027
 SUMMARY:[Earning] Baker Hughes Co
 DTSTART:20261027T201500Z
 DTEND:20261027T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.6012\nRevenue Actual: N/A\nRevenue Forecast: 7.69B
+DESCRIPTION:EPS Actual: 0.7\nEPS Forecast: 0.6\nRevenue Actual: 8.03B\nRevenue Forecast: 7.69B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-IVZ-20261027
@@ -1709,7 +1709,7 @@ UID:earn-TER-20261027
 SUMMARY:[Earning] Teradyne Inc
 DTSTART:20261027T201500Z
 DTEND:20261027T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.08\nRevenue Actual: N/A\nRevenue Forecast: 1.26B
+DESCRIPTION:EPS Actual: 2.29\nEPS Forecast: 2.08\nRevenue Actual: 1.31B\nRevenue Forecast: 1.26B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-RCL-20261027
@@ -1723,7 +1723,7 @@ UID:earn-NXPI-20261027
 SUMMARY:[Earning] NXP Semiconductors NV
 DTSTART:20261027T201500Z
 DTEND:20261027T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.11\nRevenue Actual: N/A\nRevenue Forecast: 3.76B
+DESCRIPTION:EPS Actual: 4.2\nEPS Forecast: 4.11\nRevenue Actual: 3.79B\nRevenue Forecast: 3.76B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-HLT-20261027
@@ -1737,21 +1737,21 @@ UID:earn-CZR-20261027
 SUMMARY:[Earning] Caesars Entertainment Corporation
 DTSTART:20261027T201500Z
 DTEND:20261027T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: -0.1045\nRevenue Actual: N/A\nRevenue Forecast: 2.97B
+DESCRIPTION:EPS Actual: -0.61\nEPS Forecast: -0.1\nRevenue Actual: 2.94B\nRevenue Forecast: 2.97B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-ACGL-20261027
 SUMMARY:[Earning] Arch Capital Group Ltd
 DTSTART:20261027T201500Z
 DTEND:20261027T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 2.3\nRevenue Actual: N/A\nRevenue Forecast: 4.06B
+DESCRIPTION:EPS Actual: 2.67\nEPS Forecast: 2.3\nRevenue Actual: 5.39B\nRevenue Forecast: 4.06B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-CSGP-20261027
 SUMMARY:[Earning] CoStar Group Inc
 DTSTART:20261027T201500Z
 DTEND:20261027T211500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.3369\nRevenue Actual: N/A\nRevenue Forecast: 945.00M
+DESCRIPTION:EPS Actual: 0.38\nEPS Forecast: 0.34\nRevenue Actual: 952.00M\nRevenue Forecast: 945.00M
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-PSX-20261028
