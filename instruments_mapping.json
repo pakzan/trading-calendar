@@ -1202,5 +1202,29 @@
     "6448": {
         "symbol": "INTU",
         "name": "Intuit Inc"
+    },
+    "1131557": {
+        "symbol": "CRWD",
+        "name": "CrowdStrike Holdings Inc"
+    },
+    "257": {
+        "symbol": "DELL",
+        "name": "Dell Technologies Inc"
+    },
+    "6363": {
+        "symbol": "ADSK",
+        "name": "Autodesk Inc"
+    },
+    "32361": {
+        "symbol": "WDAY",
+        "name": "Workday Inc"
+    },
+    "6440": {
+        "symbol": "NTAP",
+        "name": "NetApp Inc"
+    },
+    "8270": {
+        "symbol": "HPQ",
+        "name": "HP Inc"
     }
 }
