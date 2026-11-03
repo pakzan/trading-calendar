@@ -1230,5 +1230,21 @@
     "39335": {
         "symbol": "SNPS",
         "name": "Synopsys Inc"
+    },
+    "32383": {
+        "symbol": "LULU",
+        "name": "Lululemon Athletica Inc"
+    },
+    "39338": {
+        "symbol": "ULTA",
+        "name": "Ulta Beauty Inc"
+    },
+    "959998": {
+        "symbol": "HPE",
+        "name": "Hewlett Packard Enterprise Co"
+    },
+    "20744": {
+        "symbol": "DG",
+        "name": "Dollar General Corporation"
     }
 }

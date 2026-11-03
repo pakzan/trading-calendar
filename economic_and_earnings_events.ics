@@ -2164,28 +2164,28 @@ UID:earn-AAPL-20261102
 SUMMARY:[Earning] Apple Inc
 DTSTART:20261102T211500Z
 DTEND:20261102T221500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.99\nRevenue Actual: N/A\nRevenue Forecast: 113.38B
+DESCRIPTION:EPS Actual: 2.1\nEPS Forecast: 1.99\nRevenue Actual: 114.48B\nRevenue Forecast: 113.38B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-WMB-20261102
 SUMMARY:[Earning] The Williams Companies, Inc
 DTSTART:20261102T211500Z
 DTEND:20261102T221500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.5401\nRevenue Actual: N/A\nRevenue Forecast: 3.00B
+DESCRIPTION:EPS Actual: 0.54\nEPS Forecast: 0.54\nRevenue Actual: 3.22B\nRevenue Forecast: 3.00B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-FANG-20261102
 SUMMARY:[Earning] Diamondback Energy Inc
 DTSTART:20261102T211500Z
 DTEND:20261102T221500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 5.46\nRevenue Actual: N/A\nRevenue Forecast: 4.68B
+DESCRIPTION:EPS Actual: 5.86\nEPS Forecast: 5.46\nRevenue Actual: 5.43B\nRevenue Forecast: 4.68B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-MTCH-20261102
 SUMMARY:[Earning] Match Group Inc
 DTSTART:20261102T211500Z
 DTEND:20261102T221500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.7094\nRevenue Actual: N/A\nRevenue Forecast: 891.81M
+DESCRIPTION:EPS Actual: 0.73\nEPS Forecast: 0.7094\nRevenue Actual: 891.00M\nRevenue Forecast: 891.81M
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-MAR-20261102
@@ -2199,21 +2199,21 @@ UID:earn-ON-20261102
 SUMMARY:[Earning] ON Semiconductor Corporation
 DTSTART:20261102T211500Z
 DTEND:20261102T221500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.8748\nRevenue Actual: N/A\nRevenue Forecast: 1.70B
+DESCRIPTION:EPS Actual: 0.9\nEPS Forecast: 0.87\nRevenue Actual: 1.72B\nRevenue Forecast: 1.70B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-PLTR-20261102
 SUMMARY:[Earning] Palantir Technologies Inc
 DTSTART:20261102T211500Z
 DTEND:20261102T221500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.4105\nRevenue Actual: N/A\nRevenue Forecast: 2.17B
+DESCRIPTION:EPS Actual: 0.44\nEPS Forecast: 0.41\nRevenue Actual: 2.31B\nRevenue Forecast: 2.17B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-L-20261102
 SUMMARY:[Earning] Loews Corp
 DTSTART:20261102T130000Z
 DTEND:20261102T140000Z
-DESCRIPTION:EPS Actual: 0.75\nEPS Forecast: N/A\nRevenue Actual: 196.00M\nRevenue Forecast: N/A
+DESCRIPTION:EPS Actual: 1.5\nEPS Forecast: N/A\nRevenue Actual: 4.76B\nRevenue Forecast: N/A
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-SHOP-20261103
@@ -2795,5 +2795,33 @@ SUMMARY:[Earning] Synopsys Inc
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261203
 DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.12\nRevenue Actual: N/A\nRevenue Forecast: 2.56B
+END:VEVENT
+BEGIN:VEVENT
+UID:earn-LULU-20261203
+SUMMARY:[Earning] Lululemon Athletica Inc
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.01\nRevenue Actual: N/A\nRevenue Forecast: 2.31B
+END:VEVENT
+BEGIN:VEVENT
+UID:earn-ULTA-20261203
+SUMMARY:[Earning] Ulta Beauty Inc
+DTSTART:20261203T211500Z
+DTEND:20261203T221500Z
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 5.63\nRevenue Actual: N/A\nRevenue Forecast: 2.99B
+END:VEVENT
+BEGIN:VEVENT
+UID:earn-HPE-20261203
+SUMMARY:[Earning] Hewlett Packard Enterprise Co
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.27\nRevenue Actual: N/A\nRevenue Forecast: 14.35B
+END:VEVENT
+BEGIN:VEVENT
+UID:earn-DG-20261203
+SUMMARY:[Earning] Dollar General Corporation
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.41\nRevenue Actual: N/A\nRevenue Forecast: 11.14B
 END:VEVENT
 END:VCALENDAR
