@@ -3228,7 +3228,7 @@ UID:earn-AZO-20261208
 SUMMARY:[Earning] AutoZone Inc
 DTSTART:20261208T130000Z
 DTEND:20261208T140000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 35.45\nRevenue Actual: N/A\nRevenue Forecast: 4.94B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 35.41\nRevenue Actual: N/A\nRevenue Forecast: 4.94B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-SNPS-20261208
@@ -3263,7 +3263,7 @@ UID:earn-COST-20261210
 SUMMARY:[Earning] Costco Wholesale Corp
 DTSTART:20261210T211500Z
 DTEND:20261210T221500Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.93\nRevenue Actual: N/A\nRevenue Forecast: 74.32B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 4.92\nRevenue Actual: N/A\nRevenue Forecast: 74.35B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-ORCL-20261214
@@ -3277,14 +3277,14 @@ UID:earn-LEN-20261216
 SUMMARY:[Earning] Lennar Corporation Class A
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.44\nRevenue Actual: N/A\nRevenue Forecast: 8.74B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 1.43\nRevenue Actual: N/A\nRevenue Forecast: 8.74B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-ACN-20261217
 SUMMARY:[Earning] Accenture plc
 DTSTART:20261217T130000Z
 DTEND:20261217T140000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.95\nRevenue Actual: N/A\nRevenue Forecast: 19.39B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 3.95\nRevenue Actual: N/A\nRevenue Forecast: 19.38B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-MU-20261217
@@ -3298,14 +3298,14 @@ UID:earn-NKE-20261217
 SUMMARY:[Earning] Nike Inc
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.3813\nRevenue Actual: N/A\nRevenue Forecast: 11.13B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.3818\nRevenue Actual: N/A\nRevenue Forecast: 11.13B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-KMX-20261217
 SUMMARY:[Earning] CarMax Inc
 DTSTART:20261217T130000Z
 DTEND:20261217T140000Z
-DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.4253\nRevenue Actual: N/A\nRevenue Forecast: 6.60B
+DESCRIPTION:EPS Actual: N/A\nEPS Forecast: 0.4294\nRevenue Actual: N/A\nRevenue Forecast: 6.63B
 END:VEVENT
 BEGIN:VEVENT
 UID:earn-DRI-20261218
